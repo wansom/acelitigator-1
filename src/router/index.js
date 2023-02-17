@@ -33,6 +33,11 @@ let routes = [
 		component: () => import('../views/Know-Your-Courts.vue'),
 	},
 	{
+		path: '/single-court',
+		name: 'Single-Court',
+		component: () => import('../views/Single-Court.vue'),
+	},
+	{
 		path: '/landing',
 		name: 'Landing',
 		component: () => import('../views/Advocate-List.vue'),
