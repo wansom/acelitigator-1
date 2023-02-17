@@ -188,6 +188,15 @@ export default new Vuex.Store({
       )
 
     },
+    restPassword({commit},values){
+      commit("setLoading",true)
+      fb.auth.sendPasswordResetEmail(values.email).then(()=>{
+        commit("setLoading",false)
+        router.push("/sign-in")
+      }).catch((err)=>{
+        commit("setLoading",false)
+      })
+    },
     /*
     user registration start
     */

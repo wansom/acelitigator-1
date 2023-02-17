@@ -61,7 +61,7 @@
                     <input type="checkbox" id="save-pass" />
                     <span class="checkmark"></span>
                   </label>
-                  <a href="#" class="forget-pass">Forget your Password</a>
+                  <router-link to="forgot-password" class="forget-pass">Forget your Password</router-link>
                 </div>
               </div>
 

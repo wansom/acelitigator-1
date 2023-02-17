@@ -100,6 +100,11 @@ let routes = [
 		component: () => import('../views/Sign-Up.vue'),
 	},
 	{
+		path: '/forgot-password',
+		name: 'Forgot-Password',
+		component: () => import('../views/Forgot-Password.vue'),
+	},
+	{
 		path: '/advocate-listing',
 		name: 'Advocate-Listing',
 		component: () => import('../views/Advocate-List.vue'),
