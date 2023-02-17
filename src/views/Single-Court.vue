@@ -1,5 +1,8 @@
 <template>
- <section class="blog-details spad">
+    <div>
+        <Header></Header>
+        <Breadcrum/>
+        <section class="blog-details spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -127,10 +130,17 @@
             </div>
         </div>
     </section>
+    <Footer></Footer>
+    </div>
+
 </template>
 
 <script>
+import Header from '../components/home/Header.vue';
+import Footer from '../components/home/Footer.vue';
+import Breadcrum from '../components/Widgets/Breadcrum.vue';
 export default {
+    components:{Header,Footer,Breadcrum}
 
 }
 </script>

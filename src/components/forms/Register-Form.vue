@@ -154,7 +154,8 @@ export default {
       e.preventDefault();
       this.form.validateFieldsAndScroll((err, values) => {
         if (!err) {
-          this.$store.dispatch("signUp", values);
+        this.$store.dispatch("signUp", values);
+      
         }
       });
     },
