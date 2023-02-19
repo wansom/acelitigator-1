@@ -179,30 +179,72 @@
                   },
                 ]"
               >
-                <a-select-option v-for="i in categories" :key="i">
+                <a-select-option v-for="i in practiseAreas" :key="i">
                   {{ i }}
                 </a-select-option>
               </a-select>
             </a-form-item>
           </a-col>
           <a-col :span="12">
-            <a-form-item label="Other Practice Areas (Select all that apply)">
+            <a-form-item label="Other Practice Areas (Select upto 3 that apply)">
               <a-select
                 mode="tags"
+                :maxTagCount="3"
                 style="width: 100%"
                 placeholder="Type or search"
                 v-decorator="[
                   'practise_areas',
                   {
                     initialValue: user.practise_areas,
-                    rules: [{ required: true, message: 'field is required' }],
+                    rules: [{ required: true, message: 'field is required' },
+                  ],
                   },
                 ]"
               >
-                <a-select-option v-for="i in categories" :key="i">
+                <a-select-option v-for="i in practiseAreas" :key="i">
                   {{ i }}
                 </a-select-option>
               </a-select>
+            </a-form-item>
+          </a-col>
+        </a-row>
+        <a-row :gutter="16">
+          <a-col :span="12">
+            <a-form-item label="Your LinkedIn link">
+              <a-input
+                v-decorator="[
+                  'linkedIn',
+                  {
+                    initialValue: user.linkedIn,
+                    rules: [
+                      {
+                        required: false,
+                        message: 'Filed is required',
+                      },
+                    ],
+                  },
+                ]"
+                style="width: 100%"
+              />
+            </a-form-item>
+          </a-col>
+          <a-col :span="12">
+            <a-form-item label="Your Twitter Link">
+              <a-input
+                v-decorator="[
+                  'twitter',
+                  {
+                    initialValue: user.twitter,
+                    rules: [
+                      {
+                        required: false,
+                        message: 'Please enter your job title',
+                      },
+                    ],
+                  },
+                ]"
+                style="width: 100%"
+              />
             </a-form-item>
           </a-col>
         </a-row>
@@ -283,70 +325,6 @@ export default {
       image: null,
       fileList: [],
       uploading: false,
-      counties: [
-      "Nairobi City",
-        "Mombasa",
-        "Kwale",
-        "Kilifi",
-        "Tana River",
-        "Lamu",
-        "Taita/Taveta",
-        " Garissa",
-        "Wajir",
-        "Mandera",
-        "Marsabit",
-        "Isiolo",
-        "Meru",
-        "Tharaka-Nithi",
-        "Embu",
-        "Kitui",
-        "Machakos",
-        "Makueni",
-        "Nyandarua",
-        "Nyeri",
-        "Kirinyaga",
-        "Murang'a",
-        " Kiambu",
-        "Turkana",
-        "West Pokot",
-        "Samburu",
-        "Trans Nzoia",
-        "Uasin Gishu",
-        "Elgeyo/Marakwet",
-        "Nandi",
-        " Baringo",
-        "Laikipia",
-        "Nakuru",
-        "Narok",
-        "Kajiado",
-        "Kericho",
-        "Bomet",
-        "Kakamega",
-        "Vihiga",
-        "Bungoma",
-        "Busia",
-        "Siaya",
-        "Kisumu",
-        "Homa Bay",
-        "Migori",
-        "Kisii",
-        "Nyamira",
-
-      ],
-      categories: [
-        "Family",
-        "Employment",
-        "Criminal Defense",
-        "Real Estate",
-        "Business",
-        "Immigration",
-        "Personal Injury",
-        "Wills, Trusts & Estates",
-        "Bankruptcy & Finances",
-        "Government",
-        "Products & Services",
-        "Intellectual Property",
-      ],
 
     };
   },
@@ -402,12 +380,15 @@ export default {
             location: values.location ?? "",
             website: values.website ?? "",
             specialisation: values.specialisation ?? "",
-            practise_areas:values.practise_areas??"",
+            practise_areas:values.practise_areas.slice(0,3)??[],
             other_counties:values.other_counties,
             step: "general information",
             profile_photo:values.profile_photo?? url,
-            current:2
+            current:2,
+            twitter:values.twitter??"https://www.twitter.com/",
+            linkedIn:values.linkedIn??"https://www.linkedin.com/"
           };
+          console.log(payload)
           this.$store.dispatch("updateUser", payload);
         }
       });
@@ -420,7 +401,7 @@ export default {
     },
   },
   computed: {
-    ...mapState(["loading"]),
+    ...mapState(["loading","counties","practiseAreas"]),
   },
   mounted() {
   },

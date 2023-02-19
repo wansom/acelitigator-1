@@ -178,8 +178,8 @@ export default {
             postgraduate_diploma_end: values.postgraduate_diploma_start[1]?.format() ?? "",
             postgraduate_diploma_start: values.postgraduate_diploma_start[0]?.format()?? "",
             school2: values.school2 ?? "",
-            school2_end: values.school2_start[0]?.format() ?? "",
-            school2_start: values.school2_start[1]?.format()??"",
+            school2_end:  values.school2_start?values.school2_start[0]?.format():"",
+            school2_start: values.school2_start?values.school2_start[1]?.format():"",
             step:"education Information ",
             current:4
           };

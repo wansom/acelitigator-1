@@ -89,7 +89,7 @@
                   'prev1starting',
                   { 
                     rules: [
-                      { required: true, message: 'Field is required' },
+                      { required: false, message: 'Field is required' },
                     ],
                   },
                 ]"/>
@@ -120,7 +120,7 @@
                   'prev2starting',
                   { 
                     rules: [
-                      { required: true, message: 'Field is required' },
+                      { required: false, message: 'Field is required' },
                     ],
                   },
                 ]"/>
@@ -151,7 +151,7 @@
                   'prev3starting',
                   { 
                     rules: [
-                      { required: true, message: 'Field is required' },
+                      { required: false, message: 'Field is required' },
                     ],
                   },
                 ]"/>
@@ -182,7 +182,7 @@
                   'prev4starting',
                   { 
                     rules: [
-                      { required: true, message: 'Field is required' },
+                      { required: false, message: 'Field is required' },
                     ],
                   },
                 ]"/>
@@ -266,17 +266,17 @@ export default {
             current_starting:values.current_starting.format()??"",
 
             prev1:values.prev1?? "",
-            prev1ending:values.prev1starting[1].format()?? "",
-            prev1starting:values.prev1starting?values.prev1starting[0].format():"",
+            prev1ending:values.prev1starting?values.prev1starting[1].format():"",
+            prev1starting:values.prev1starting?values.prev1starting[0]?.format():"",
             prev2:values.prev2?values.prev2: "",
-            prev2ending:values.prev2ending?values.prev2starting[1].format():"",
-            prev2starting:values.prev2starting[0].format()??"",
+            prev2ending:values.prev2ending?values.prev2starting[1]?.format():"",
+            prev2starting:values.prev2starting?values.prev2starting[0]?.format():"",
             prev3:values.prev3?prev3: "",
-            prev3ending: values.prev3starting[1].format()??"",
-            prev3starting:values.prev3starting[0].format()??"",
+            prev3ending:values.prev3starting?values.prev3starting[1]?.format():"",
+            prev3starting:values.prev3starting?values.prev3starting[0]?.format():"",
             prev4: values.prev4??"",
-            prev4ending: values.prev4starting[1].format()??"",
-            prev4starting:values.prev4starting[0].format()??"",
+            prev4ending: values.prev4starting?values.prev4starting[1]?.format():"",
+            prev4starting:values.prev4starting?values.prev4starting[0]?.format():"",
             step:"employment information",
             current:3
           };
