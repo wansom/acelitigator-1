@@ -94,7 +94,7 @@ export default {
     return {
       visible: false,
       loading: false,
-      sdkSent:true
+      sdkSent:false
     };
   },
   methods: {
