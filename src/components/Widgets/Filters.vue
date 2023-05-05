@@ -6,6 +6,7 @@
           <a-col :span="24" :lg="6">
             <div>
               <div class="sidebar">
+                <h5>Filter By</h5>
                 <span class="line"></span>
 
                 <div class="filter-widget">

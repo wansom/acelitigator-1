@@ -2,7 +2,6 @@
   <div>
     <Header></Header>
     <main>
-    <section class="single-research-banner"></section>
             <Filters :advocates="advocates"></Filters>
     </main>
     <Footer></Footer>

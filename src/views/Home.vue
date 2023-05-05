@@ -7,7 +7,7 @@
         <div class="banner-mask">
           <div class="banner-container container">
             <div class="banner-text">
-              <h1>Improving Access to justice across the African continent</h1>
+              <h1>Improving access to justice across the African continent</h1>
               <p>
                 Our mission is to improve access to justice across Africa by
                 linking verified legal professionals in the justice sector to the market
@@ -125,7 +125,7 @@
                         width="24"
                         height="24"
                       >
-                        <rect width="24" height="24" fill="#D9D9D9" />
+                        <rect width="24" height="24" fill="#000000" />
                       </mask>
                       <g mask="url(#mask0_69_173)">
                         <path
@@ -606,8 +606,7 @@ html {
 
 /* == BANNER == */
 section.banner {
-  height: fit-content;
-  min-height: 800px;
+  height: 100vh;
   background-image: url("https://acelitigator.com/wp-content/uploads/2022/10/Analysis-of-Supreme-Court-30-of-2019.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -617,7 +616,6 @@ section.banner {
   background-color: #0000009c;
   height: 100%;
   width: 100%;
-  min-height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -631,7 +629,11 @@ section.banner {
 
 .banner-text {
   width: 100%;
-  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
   margin: auto;
 }
 
@@ -737,17 +739,19 @@ section.sponsors {
 }
 .overview-text button {
   outline: none;
-  border: 0;
-  width: 95%;
+  width: 50%;
   height: 50px;
-  background: #000000;
+  background: transparent;
   border-radius: 5px;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
-  color: #fcfcfc;
+ 
+  color: #000000;
+  border: 2px solid#e6353b ;
+
   margin: 10px auto;
 }
 
@@ -1099,7 +1103,8 @@ section.sponsors {
 }
 
 .offer-info button {
-  background: #000000;
+  background: transparent;
+  border:2px solid #e6353b;
   width: 240px;
   height: 50px;
   border-radius: 5px;
@@ -1107,9 +1112,14 @@ section.sponsors {
   align-items: center;
   justify-content: center;
   outline: none;
-  border: 0px;
   margin-top: 20px;
-  color: #ffffff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+ 
+  color: #000000;
 }
 
 /* == || OFFERS == */
