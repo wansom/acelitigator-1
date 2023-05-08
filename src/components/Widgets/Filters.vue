@@ -1,49 +1,47 @@
 <template>
-<section>
-  <div class="container py-4">
-    
-      <a-row :gutter="16" >
-          <a-col :span="24" :lg="6">
-            <div>
-              <div class="sidebar">
-                <h5>Filter By</h5>
-                <span class="line"></span>
+  <section>
+    <div class="container py-4">
+      <a-row :gutter="16">
+        <a-col :span="24" :lg="6">
+          <div>
+            <div class="sidebar">
+              <h6>Filter By</h6>
+              <span class="line"></span>
 
-                <div class="filter-widget">
-                  <a-collapse
-                    expand-icon-position="right"
-                    :bordered="false"
-                    default-active-key="1"
-                  >
-                    <template #expandIcon="props">
-                      <a-icon
-                        type="caret-down"
-                        :rotate="props.isActive ? 180 : 0"
-                      />
-                    </template>
-                    <a-collapse-panel key="1" header="Practice Areas">
-                      <div
-                        v-for="category in practiseAreas"
-                        :key="category"
-                        class="checkbox"
-                        @change="
-                          () => {
-                            setActive(category);
-                          }
-                        "
-                      >
-                        <label>
-                          <input type="checkbox" /><span
-                            class="checkbox-material"
-                            ><span class="check"></span
-                          ></span>
-                          {{ category }}
-                        </label>
-                      </div>
-                    </a-collapse-panel>
-                  </a-collapse>
-                </div>
-                <!-- <div class="filter-widget experience-w d-none d-lg-block">
+              <div class="filter-widget">
+                <a-collapse
+                  expand-icon-position="right"
+                  :bordered="false"
+                  default-active-key="1"
+                >
+                  <template #expandIcon="props">
+                    <a-icon
+                      type="caret-down"
+                      :rotate="props.isActive ? 180 : 0"
+                    />
+                  </template>
+                  <a-collapse-panel key="1" header="Practice Areas">
+                    <div
+                      v-for="category in practiseAreas"
+                      :key="category"
+                      class="checkbox"
+                      @change="
+                        () => {
+                          setActive(category);
+                        }
+                      "
+                    >
+                      <label>
+                        <input type="checkbox" /><span class="checkbox-material"
+                          ><span class="check"></span
+                        ></span>
+                        {{ category }}
+                      </label>
+                    </div>
+                  </a-collapse-panel>
+                </a-collapse>
+              </div>
+              <!-- <div class="filter-widget experience-w d-none d-lg-block">
                   <h4 class="fw-title">Years of Experience</h4>
                   <div class="filter-range-wrap position-relative">
                     <vue-range-slider
@@ -54,88 +52,80 @@
                   </div>
                 </div> -->
 
-                <div class="filter-widget">
-                  <a-collapse expand-icon-position="right" :bordered="false">
-                    <template #expandIcon="props">
-                      <a-icon
-                        type="caret-down"
-                        :rotate="props.isActive ? 180 : 0"
-                      />
-                    </template>
-                    <a-collapse-panel key="1" header="Counties">
-                      <div class="fw-color-choose">
-                        <div
-                          class="cs-item"
-                          v-for="item in counties"
-                          :key="item"
-                        >
-                          <input
-                            type="radio"
-                            :id="item"
-                            :value="item"
-                            v-model="selectedCounty"
-                          />
-                          <label class="cs-red" :for="item">{{ item }}</label>
-                        </div>
+              <div class="filter-widget">
+                <a-collapse expand-icon-position="right" :bordered="false">
+                  <template #expandIcon="props">
+                    <a-icon
+                      type="caret-down"
+                      :rotate="props.isActive ? 180 : 0"
+                    />
+                  </template>
+                  <a-collapse-panel key="1" header="Counties">
+                    <div class="fw-color-choose">
+                      <div class="cs-item" v-for="item in counties" :key="item">
+                        <input
+                          type="radio"
+                          :id="item"
+                          :value="item"
+                          v-model="selectedCounty"
+                        />
+                        <label class="cs-red" :for="item">{{ item }}</label>
                       </div>
-                    </a-collapse-panel>
-                  </a-collapse>
-                </div>
-              </div>
-              <button class="filter-btn px-5" @click="filterItems">
-                Filter
-              </button>
-              <button class="clear-filter-btn px-5 bg-black" @click="clearFilters" v-if="filterApplied">
-                Clear Filters
-              </button>
-            </div>
-          </a-col>
-          <a-col :span="24" :lg="18">
-            <div class="row">
-              <div class="col-lg-5 col-12 text-right my-2">
-                <p>
-                  Showing
-                  {{ filterApplied ? displayItems.length : advocates.length }}
-                  Advocates
-                </p>
+                    </div>
+                  </a-collapse-panel>
+                </a-collapse>
               </div>
             </div>
-              <div class="col-sm-12">
-               <!-- Loop products  -->
-                  <a-spin v-if="loading"></a-spin>
-                  <a-result
-                    status="500"
-                    title="500"
-                    sub-title="Sorry, the server is wrong."
-                    v-else-if="firebaseEror"
-                  >
-                    <template #extra>
-                      <a-button type="primary"> Back Home </a-button>
-                    </template>
-                  </a-result>
-                  <a-list
-                    v-else
-                    item-layout="vertical"
-                    size="large"
-                    :pagination="pagination"
-                    :data-source="filterApplied ? displayItems : advocates"
-                    style="overflow: hidden !important;"
-                  >
-                    <a-list-item
-                      slot="renderItem"
-                      key="item.title"
-                      slot-scope="item"
-                     
-                    >
-                      <card-info :advocate="item"></card-info>
-                    </a-list-item>
-                  </a-list>
-              </div>
-          
-          </a-col>
-        </a-row>
-  </div>
-</section>
+            <button class="filter-btn px-5" @click="filterItems">Filter</button>
+            <button
+              class="clear-filter-btn px-5 bg-black"
+              @click="clearFilters"
+              v-if="filterApplied"
+            >
+              Clear Filters
+            </button>
+          </div>
+        </a-col>
+        <a-col :span="24" :lg="18">
+          <div class="row">
+            <div class="col-lg-5 col-12 text-right my-2">
+              <p>
+                Showing
+                {{ filterApplied ? displayItems.length : advocates.length }}
+                Advocates
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <!-- Loop products  -->
+            <a-spin v-if="loading"></a-spin>
+            <a-result
+              status="500"
+              title="500"
+              sub-title="Sorry, the server is wrong."
+              v-else-if="firebaseEror"
+            >
+              <template #extra>
+                <a-button type="primary"> Back Home </a-button>
+              </template>
+            </a-result>
+            <a-list
+              v-else
+              item-layout="vertical"
+              size="large"
+              :pagination="pagination"
+              :data-source="filterApplied ? displayItems : advocates"
+              style="overflow: hidden !important"
+            >
+              <a-list-item slot="renderItem" key="item.title" slot-scope="item">
+                <card-info :advocate="item"></card-info>
+              </a-list-item>
+            </a-list>
+          </div>
+        </a-col>
+      </a-row>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -157,67 +147,94 @@ export default {
       county: null,
       category: null,
       counties: [
-        "Nairobi",
-        "Mombasa",
-        "Kwale",
-        "Kilifi",
-        "Tana River",
-        "Lamu",
-        "Taita/Taveta",
-        " Garissa",
-        "Wajir",
-        "Mandera",
-        "Marsabit",
-        "Isiolo",
-        "Meru",
-        "Tharaka-Nithi",
-        "Embu",
-        "Kitui",
-        "Machakos",
-        "Makueni",
-        "Nyandarua",
-        "Nyeri",
-        "Kirinyaga",
-        "Murang'a",
-        " Kiambu",
-        "Turkana",
-        "West Pokot",
-        "Samburu",
-        "Trans Nzoia",
-        "Uasin Gishu",  
-        "Nandi",
-        "Elgeyo/Marakwet",
-        " Baringo",
-        "Laikipia",
-        "Nakuru",
-        "Narok",
-        "Kajiado",
-        "Kericho",
-        "Bomet",
-        "Kakamega",
-        "Vihiga",
-        "Bungoma",
-        "Busia",
-        "Siaya",
-        "Kisumu",
-        "Homa Bay",
-        "Migori",
-        "Kisii",
-        "Nyamira",
+        "Abia State",
+        "Adamawa State",
+        "Akwa Ibom State",
+        "Anambra State",
+        "Bauchi State",
+        "Benue State",
+        " Borno State",
+        " Cross River State",
+        "Delta State",
+        "Ebonyi State",
+        "Edo State",
+        "Ekiti State",
+        "Enugu State",
+        "Gombe State ",
+        "Imo State",
+        "Jigawa State",
+        "Kaduna State",
+        "Kano State",
+        "Katsina State",
+        "Kebbi State",
+        "Kogi State",
+        "Kwara State",
+        " Lagos State",
+        "Nassarawa State",
+        "Niger State",
+        "Ogun State",
+        "Ondo State",
+        "Plateau State",
+        "Rivers State",
+        "Sokoto State",
+        " Taraba State",
+        "Yobe State",
+        "Zamfara State",
+        "Federal Capital Territory",
       ],
       categories: [
-        "Family",
-        "Employment",
-        "Criminal Defense",
-        "Real Estate",
-        "Business",
-        "Immigration",
-        "Personal Injury",
-        "Wills, Trusts & Estates",
-        "Bankruptcy & Finances",
-        "Government",
-        "Products & Services",
+        " Asset Tracing & Recovery",
+
+        "Banking and Finance",
+
+        "Bankruptcy & Insolvency",
+
+        "Capital Markets",
+
+        "Competition & Anti-trust",
+
+        "Construction",
+        "Corporate Advisory and Company Secretarial",
+
+        "Cyber Security",
+
+        "Debt Recovery & Restructuring",
+
+        "Dispute Resolution (Litigation and ADR)",
+
+        "Employment, Labour Relations and Immigration",
+
+        "Energy (Power, Oil and Gas, Mining)",
+
+        "Entertainment",
+
+        "Family Law (Trust, Matrimonial Causes, Succession etc.)",
+
+        "Health and Pharmaceuticals",
+
+        "ICT (Information Technology)",
+
+        "Insurance",
+
         "Intellectual Property",
+
+        " International trade",
+
+        "Mergers & Acquisitions",
+        "Privacy & Data Protection",
+
+        "Private Equity and Venture Capital",
+
+        "Privatization & Public Procurement",
+
+        "Real Estate",
+
+        "Regulatory Compliance",
+        "Sports",
+        "Tax Law",
+        "Telecommunication (Telecommunications & Media)",
+
+        "·Transportation (Aviation, Logistics, Maritime, Shipping etc)",
       ],
       experience: 2,
       data: [],
@@ -254,10 +271,10 @@ export default {
       var itemIndex = this.filtersAppied.indexOf(item);
       this.filtersAppied.splice(itemIndex, 1);
     },
-    clearFilters(){
-      this.filterApplied =false
-      this.selectedCounty=""
-      this.selectedPractiseArea=[]
+    clearFilters() {
+      this.filterApplied = false;
+      this.selectedCounty = "";
+      this.selectedPractiseArea = [];
     },
     clearTags() {
       this.filtersAppied = [];
@@ -391,14 +408,14 @@ export default {
       "loading",
       "firebaseEror",
     ]),
- 
+
     myAdvocates() {
-  return this.advocates.map(obj => {
-    const { specialisation, practise_areas } = obj;
-    const all_areas = specialisation + " " + practise_areas.join(" ");
-    return { ...obj, all_areas };
-  });
-}
+      return this.advocates.map((obj) => {
+        const { specialisation, practise_areas } = obj;
+        const all_areas = specialisation + " " + practise_areas.join(" ");
+        return { ...obj, all_areas };
+      });
+    },
   },
   updated() {},
   mounted() {},
