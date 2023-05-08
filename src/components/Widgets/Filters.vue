@@ -5,7 +5,6 @@
         <a-col :span="24" :lg="6">
           <div>
             <div class="sidebar">
-              <h6>Filter By</h6>
               <span class="line"></span>
 
               <div class="filter-widget">
@@ -20,7 +19,7 @@
                       :rotate="props.isActive ? 180 : 0"
                     />
                   </template>
-                  <a-collapse-panel key="1" header="Practice Areas">
+                  <a-collapse-panel key="1" header="Filter by Practice Areas">
                     <div
                       v-for="category in practiseAreas"
                       :key="category"
@@ -60,7 +59,7 @@
                       :rotate="props.isActive ? 180 : 0"
                     />
                   </template>
-                  <a-collapse-panel key="1" header="Counties">
+                  <a-collapse-panel key="1" header="Filter by State">
                     <div class="fw-color-choose">
                       <div class="cs-item" v-for="item in counties" :key="item">
                         <input

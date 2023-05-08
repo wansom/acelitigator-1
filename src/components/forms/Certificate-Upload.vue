@@ -203,7 +203,7 @@
                 </a-button></a-upload
               >
             </a-form-item>
-            <!-- <a-form-item
+            <a-form-item
               label="Proof of Residence(Utility bill or evidence of payment of branch dues to the Nigerian Bar Association)"
             >
               <a-upload
@@ -228,7 +228,7 @@
                   <a-icon type="upload" block /> Click to Upload
                 </a-button></a-upload
               >
-            </a-form-item> -->
+            </a-form-item>
           </a-col>
         </a-row>
       </a-form>

@@ -15,13 +15,13 @@
       ]"
     >
       <!-- Main Sidebar -->
-      <DashboardSidebar
+      <!-- <DashboardSidebar
         :sidebarCollapsed="sidebarCollapsed"
         :sidebarColor="sidebarColor"
         :sidebarTheme="sidebarTheme"
         @toggleSidebar="toggleSidebar"
 		:user="user"
-      ></DashboardSidebar>
+      ></DashboardSidebar> -->
       <!-- / Main Sidebar -->
 
       <!-- Layout Content -->

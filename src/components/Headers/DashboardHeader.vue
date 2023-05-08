@@ -15,7 +15,7 @@
           </a-breadcrumb>
           <!-- / Header Breadcrumbs -->
           <!-- Header Page Title -->
-          <div class="ant-page-header-heading">
+          <!-- <div class="ant-page-header-heading">
             <a-alert
               message="Account Waiting approval"
               banner
@@ -27,7 +27,7 @@
               type="success"
               v-if="user.status == 'approved'"
             />
-          </div>
+          </div> -->
           <!-- / Header Page Title -->
         </a-col>
         <a-col :span="24" :md="18" class="header-control">
