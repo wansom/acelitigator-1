@@ -6,9 +6,6 @@
   >
     <div>
       <h3>Certificate Upload</h3>
-      <div class="p-4 text-black rounded-lg my-2" style="width: fit-content;background-color:#FFFBE6;">
-        <h5 >The inforamtion submitted will be used for the approval of your account</h5>
-      </div>
       <a-form :form="form" layout="vertical">
         <a-row :gutter="16">
           <a-col :span="24" :md="12">
@@ -231,6 +228,9 @@
             </a-form-item>
           </a-col>
         </a-row>
+        <a-checkbox @change="changeTerms" class="mb-3" :checked="terms">
+          The inforamtion submitted will be used for the approval of your account
+  </a-checkbox>
       </a-form>
       <div>
         <a-button type="dark" class="mx-10" @click="handlePrevious"
@@ -241,7 +241,7 @@
           @click="handleSubmit"
           :loading="loading"
           disabled
-          v-if="user.status === 'pending approval'"
+          v-if="user.status === 'pending approval'||!terms"
           >Save and Continue
         </a-button>
         <a-button type="primary" @click="handleSubmit" :loading="loading" v-else
@@ -276,6 +276,7 @@ export default {
       fileList3: [],
       progress: 0,
       imageUrls: [],
+      terms:true
     };
   },
   watch: {
@@ -358,6 +359,9 @@ export default {
     },
     handlePrevious() {
       this.$store.dispatch("changeStep", 3);
+    },
+    changeTerms(){
+      this.terms =!this.terms
     },
     handleSubmit(e) {
       e.preventDefault();

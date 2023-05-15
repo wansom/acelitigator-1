@@ -6,9 +6,6 @@
   >
     <div>
       <h3>General Information</h3>
-      <div class="p-4 text-black rounded-lg my-2" style="width: fit-content;background-color:#FFC107;">
-        <h5 >The information submitted on this page will be visibile to all potential clients</h5>
-      </div>
       <a-form :form="form" layout="vertical">
         <a-row :gutter="16">
           <a-col :span="24" :md="12">
@@ -322,6 +319,9 @@
             </a-form-item>
           </a-col>
         </a-row>
+        <a-checkbox @change="changeTerms" class="mb-3" :checked="terms">
+          The information submitted on this page will be visibile to all potential clients
+  </a-checkbox>
       </a-form>
       <div>
         <a-button
@@ -329,7 +329,7 @@
           @click="handleSubmit"
           :loading="loading"
           disabled
-          v-if="user.status === 'pending approval'"
+          v-if="user.status === 'pending approval'||!terms" 
           >Save and Continue
         </a-button>
         <a-button type="primary" @click="handleSubmit" :loading="loading" v-else
@@ -352,7 +352,8 @@ export default {
       image: null,
       fileList: [],
       uploading: false,
-      uploadProgress:0
+      uploadProgress:0,
+      terms:true
     };
   },
 
@@ -385,6 +386,9 @@ export default {
           };
         };
       });
+    },
+    changeTerms(){
+      this.terms =!this.terms
     },
     
 		updateFileProgress( progress) {
