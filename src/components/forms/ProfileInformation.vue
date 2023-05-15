@@ -86,7 +86,7 @@
               }
             "
           >
-            <a-icon type="transaction" class="icon-list text-warning" />
+            <a-icon type="credit-card" class="icon-list text-warning" />
             <p class="card-p">Payment</p>
           </a-card>
         </a-col>

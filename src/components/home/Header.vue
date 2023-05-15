@@ -18,7 +18,7 @@
             <li>
               <router-link to="/find-a-lawyer">Find A Lawyer</router-link>
             </li>
-            <li><a href="/#courts">Know Your Courts</a></li>
+            <li><a href="/know-your-courts">Know Your Courts</a></li>
             <li>
               <a href="//acelitigator.com">Resources</a>
             </li>

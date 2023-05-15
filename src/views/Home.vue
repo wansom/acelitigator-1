@@ -250,7 +250,7 @@
               </div> -->
               <div class="research-card">
                 <h3>
-                  Promoting Justice, Empowering Communities: [Organization Name]
+                  Promoting Justice, Empowering Communities
                   - Improving Access to Justice Across Africa."
                 </h3>
                 <p>
@@ -264,10 +264,9 @@
                   courtroom
                 </p>
                 <a
-                  href="//kenyalaw.org"
+                  href="/know-your-courts"
                   class="flex gap-2 items-center"
-                  target="blank"
-                  >Read More
+                  >Learn More
                   <svg
                     width="16"
                     height="16"

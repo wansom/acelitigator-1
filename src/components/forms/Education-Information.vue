@@ -11,7 +11,7 @@
         <h5 class="my-10">Education History</h5>
         <a-row type="flex" :gutter="16">
           <a-col :span="24" :md="14">
-            <a-form-item label="University">
+            <a-form-item label=" Law School Education">
               <a-input
                 v-decorator="[
                   'law_school',
@@ -65,7 +65,7 @@
         </a-row>
         <a-row type="flex" :gutter="16">
           <a-col :span="24" :md="14">
-            <a-form-item label="Postgraduate Diploma">
+            <a-form-item label="Undergraduate Education">
               
               <a-input
                 v-decorator="[
@@ -116,7 +116,7 @@
         </a-row>
         <a-row type="flex" :gutter="16">
           <a-col :span="24" :md="14">
-            <a-form-item label="Any other Institution (Optional)">
+            <a-form-item label="Post Graduate Education.(Optional)">
               <a-input
                 v-decorator="[
                   'school2',

@@ -87,7 +87,7 @@
         </a-row>
         <a-row :gutter="16">
           <a-col :span="24" :md="12">
-            <a-form-item label="Primary practice Location(County)">
+            <a-form-item label="Primary practice Location(State)">
               <a-select
                 v-decorator="[
                   'location',
@@ -110,7 +110,7 @@
             </a-form-item>
           </a-col>
           <a-col :span="24" :md="12">
-            <a-form-item label="Other Counties of practice(Optional)"><a-tooltip
+            <a-form-item label="Other Sates where you practice(Optional)"><a-tooltip
                   slot="suffix"
                   title="Enter Freelance if currently unemployed"
                 >

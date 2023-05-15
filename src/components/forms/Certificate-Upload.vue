@@ -5,11 +5,11 @@
     :bodyStyle="{ paddingTop: 0, paddingBottom: '16px' }"
   >
     <div>
-      <h3>Certificate Upload</h3>
+      <h3 class="mb-2"> Upload Certificates and Documents</h3>
       <a-form :form="form" layout="vertical">
         <a-row :gutter="16">
           <a-col :span="24" :md="12">
-            <a-form-item label="Date of Admission">
+            <a-form-item label="Year of Admission to the Nigerian Bar.">
               <a-date-picker
                 :disabled-date="disabledDate"
                 v-decorator="[
@@ -19,7 +19,7 @@
                     rules: [
                       {
                         required: true,
-                        message: 'Please enter date of admission',
+                        message: 'Please enter Year of Admission to the Nigerian Bar.',
                       },
                     ],
                   },
@@ -30,30 +30,36 @@
             </a-form-item>
           </a-col>
           <a-col :span="24" :md="12">
-            <a-form-item label="Last Practicing Certificate Renewal Date">
-              <a-date-picker
-                :disabled-date="disabledDate"
+            <a-form-item label="Evidence of up-to-date Payment of Practicing Fee(optional)">
+              <a-upload
+                label="Curriculum Vitae/Resume"
+                name="file"
+                accept="application/pdf"
+                :file-list="fileList8"
+                :remove="handleRemove8"
+                :before-upload="beforeUpload8"
                 v-decorator="[
-                  'cert_renewal_date',
+                  'fee_payment',
                   {
-                    initialValue: user.cert_renewal_date,
                     rules: [
                       {
-                        required: true,
-                        message: 'select date',
+                        required: false,
+                        message: 'Please upload Evidence of up-to-date Payment of Practicing Fee',
                       },
                     ],
                   },
                 ]"
-                placeholder="select date"
-                style="width: 100%"
-              />
+              >
+                <a-button>
+                  <a-icon type="upload" block /> Click to Upload
+                </a-button></a-upload
+              >
             </a-form-item>
           </a-col>
         </a-row>
         <a-row :gutter="16">
           <a-col :span="24" :md="12">
-            <a-form-item label="National ID/Passport Number">
+            <a-form-item label=" National Identification Number/Passport Number/Drivers Licence. ">
               <a-input
                 v-decorator="[
                   'national_id',
@@ -73,7 +79,7 @@
             </a-form-item>
           </a-col>
           <a-col :span="24" :md="12">
-            <a-form-item label="Admission Number">
+            <a-form-item label=" Supreme Court Enrollment Number.">
               <a-input
                 v-decorator="[
                   'practise_number',
@@ -124,7 +130,7 @@
             </a-form-item>
           </a-col>
           <a-col :span="24" :md="12">
-            <a-form-item label="Current Practice Certificate">
+            <a-form-item label="Bar Qualifying Certificate or Call to Bar Certificate ">
               <a-upload
                 name="file"
                 accept="application/pdf"
@@ -274,6 +280,7 @@ export default {
       fileList1: [],
       fileList2: [],
       fileList3: [],
+      fileList8: [],
       progress: 0,
       imageUrls: [],
       terms:true
@@ -303,6 +310,17 @@ export default {
       const newFileList = this.fileList.slice();
       newFileList.splice(index, 1);
       this.fileList = newFileList;
+    },
+        // lsk cert
+        beforeUpload8(file) {
+      this.fileList8 = [...this.fileList8, file];
+      return false;
+    },
+    handleRemove8(file) {
+      const index = this.fileList8.indexOf(file);
+      const newFileList = this.fileList8.slice();
+      newFileList.splice(index, 1);
+      this.fileList8 = newFileList;
     },
     // certificate of admission upload
     beforeUpload1(file) {
@@ -372,6 +390,7 @@ export default {
             values.practise_cert.file,
             values.residence_evidence.file,
             values.national_id_doc.file,
+            values.fee_payment??values.national_id_doc.file,
           ];
           if(values.resume){
             files.push(values.resume.file)
