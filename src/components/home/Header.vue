@@ -100,7 +100,7 @@
               <li class="active">
                 <router-link to="/find-a-lawyer">FIND LAWYERS</router-link>
               </li>
-              <li><router-link :to="{ path: '/', hash: '#courts' }">Know Your Courts</router-link></li>
+              <li><router-link to="/know-your-courts">Know Your Courts</router-link></li>
               <li>
                 <a href="#">Resources</a>
                 <ul class="dropdown">
