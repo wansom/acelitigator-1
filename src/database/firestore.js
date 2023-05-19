@@ -23,6 +23,7 @@ import {
 } from 'firebase/firestore'
 
 const USERS_PATH = 'users'
+
 const ROOMS_PATH = 'chatRooms'
 const MESSAGES_PATH = 'messages'
 const LAWYERS_PATH='nigeria_lawyers'
@@ -209,7 +210,7 @@ export const getRooms = query => {
 }
 
 export const addRoom = data => {
-	return addDocument(roomsRef, data)
+	return  setDocument(ROOMS_PATH, data.id, data)
 }
 
 export const updateRoom = (roomId, data) => {

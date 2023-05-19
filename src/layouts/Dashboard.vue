@@ -2,7 +2,7 @@
 	This is the dashboard layout, used in dashboard, tables, billing and profile pages.
  -->
 
-<template>
+ <template>
   <div>
     <!-- Dashboard Layout -->
     <a-layout
@@ -14,14 +14,15 @@
         layoutClass,
       ]"
     >
-      <!-- Main Sidebar -->
-      <!-- <DashboardSidebar
+          <!-- Main Sidebar -->
+      <DashboardSidebar
         :sidebarCollapsed="sidebarCollapsed"
         :sidebarColor="sidebarColor"
         :sidebarTheme="sidebarTheme"
         @toggleSidebar="toggleSidebar"
+        v-if="user.status==='admin' ||user.status==='active'"
 		:user="user"
-      ></DashboardSidebar> -->
+      ></DashboardSidebar>
       <!-- / Main Sidebar -->
 
       <!-- Layout Content -->
@@ -44,11 +45,6 @@
 
         <!-- Layout Footer -->
         <DashboardFooter></DashboardFooter>
-        <!-- / Layout Footer -->
-
-        <!-- / Floating Action Button For Toggling Settings Drawer -->
-
-        <!-- Sidebar Overlay -->
         <div
           class="sidebar-overlay"
           @click="sidebarCollapsed = true"

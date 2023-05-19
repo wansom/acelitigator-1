@@ -77,8 +77,8 @@
       </template>
     </a-modal>
    
-
-    <form v-if="removeRoomId" @submit.prevent="deleteRoomUser">
+<a-modal v-model="removeRoomId"  title="Type or search to remove advocate to group chat">
+  <form @submit.prevent="deleteRoomUser">
       <a-row type="flex" justify="space-around" align="middle">
         <a-col span="16">
           <a-select v-model="removeUserId">
@@ -92,18 +92,18 @@
             </a-select-option>
           </a-select>
         </a-col>
-        <a-col span="4">
-          <a-button type="submit" :disabled="disableForm || !removeUserId">
-            Remove User
-          </a-button>
-        </a-col>
-        <a-col span="4">
-          <a-button class="button-cancel" @click="removeRoomId = null"
-            >Cancel</a-button
-          >
-        </a-col>
       </a-row>
     </form>
+    <template slot="footer">
+      <a-button class="button-cancel" @click="removeRoomId = null"
+            >Cancel</a-button
+          >
+        <a-button type="submit" :disabled="disableForm || !removeUserId" @click="deleteRoomUser">
+            Remove User
+          </a-button>
+      </template>
+</a-modal>
+
 
     <vue-advanced-chat
       ref="chatWindow"
@@ -900,7 +900,6 @@ export default {
 
     async createRoom() {
       this.disableForm = true;
-      console.log(this.addRoomUsername, "no data");
       let advocate = this.advocates.find((a) => a.id === this.addRoomUsername);
       let user = {
         _id: advocate.id,
@@ -910,6 +909,7 @@ export default {
       await firestoreService.addIdentifiedUser(advocate.id, user);
 
       await firestoreService.addRoom({
+        id:advocate.id,
         users: [advocate.id, this.currentUserId],
         lastUpdated: new Date(),
       });
