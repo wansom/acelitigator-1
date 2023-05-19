@@ -1,8 +1,8 @@
 <template>
   <div class="register-login-section spad">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 offset-lg-3">
+    <div class="container mx-auto">
+      <div class="flex items-center justify-center">
+        <div class="w-1/2">
           <div class="register-form">
             <h2>CREATE ACCOUNT</h2>
             <a-form
