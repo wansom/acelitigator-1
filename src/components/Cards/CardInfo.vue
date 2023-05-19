@@ -1,8 +1,8 @@
 <template>
   <div>
-    <a-card :bordered="false" class="card-info d-none d-md-block mb-3"  style="min-height:300px; height: fit-content;">
+    <a-card :bordered="false" class="card-info hidden md:block mb-3"  style="min-height:300px; height: fit-content;">
     <a-row type="flex">
-      <a-col class="col-img d-block d-md-none" :span="24" :md="12">
+      <a-col class="col-img block md:hidden" :span="24" :md="12">
         <div>
           <img :src="advocate.profile_photo" alt=""  style="object-fit:contain; width: 100%; max-height: 300px;" loading="lazy">
         </div>
@@ -70,7 +70,7 @@
       </a-col>
     </a-row>
   </a-card>
-  <div class="small-card block d-md-none">
+  <div class="small-card block md:hidden">
     <a-row class="align-items-center mb-2">
       <a-col class="col-img " :span="12">
         <div>

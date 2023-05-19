@@ -1,10 +1,10 @@
 <template>
   <section>
-    <div class="d-block d-md-none">
+    <div class="block md:hidden">
       <div class="mobile-sm-menu">
         <router-link to="/">
           <img
-            src="images/dial-logo.png"
+            src="/images/dial-logo.png"
             alt=""
             style="height: 50px; object-fit: contain"
           />
@@ -18,7 +18,7 @@
             <li>
               <router-link to="/find-a-lawyer">Find A Lawyer</router-link>
             </li>
-            <li><a href="/know-your-courts">Know Your Courts</a></li>
+            <li><a href="//kenyalaw.org">Know Your Courts</a></li>
             <li>
               <a href="//acelitigator.com">Resources</a>
             </li>
@@ -30,12 +30,12 @@
     </div>
     <header class="header-section">
       <div class="header-top">
-        <div class="container">
+        <div class="container mx-auto">
           <div class="ht-left">
             <div class="logo">
               <router-link to="/">
                 <img
-                  src="images/dial-logo.png"
+                  src="/images/dial-logo.png"
                   alt=""
                   style="height: 80px; object-fit: contain"
                 />
@@ -47,7 +47,7 @@
             </div>
             <div class="phone-service">
               <i class="fa fa-phone"></i>
-              +254 704 927 969
+              +231 794 342 159
             </div>
           </div>
 
@@ -86,7 +86,7 @@
         </div>
       </div>
       <div class="nav-item">
-        <div class="container">
+        <div class="container mx-auto">
           <div class="nav-depart">
             <router-link to="/">
               <div class="depart-btn">
@@ -100,7 +100,7 @@
               <li class="active">
                 <router-link to="/find-a-lawyer">FIND LAWYERS</router-link>
               </li>
-              <li><router-link to="/know-your-courts">Know Your Courts</router-link></li>
+              <li><a href="//kenyalaw.org" target="blank">Know Your Courts</a></li>
               <li>
                 <a href="#">Resources</a>
                 <ul class="dropdown">

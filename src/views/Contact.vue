@@ -1,11 +1,13 @@
 <template>
-  <div>
+  <div class="">
     <Header></Header>
     <Breadcrum></Breadcrum>
-    <Map></Map>
+
     <section class="contact-section spad">
-      <div class="container">
-        <div class="row">
+
+      <div class="container mx-auto space-y-4">
+        <Map></Map>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div class="col-lg-5">
             <div class="contact-title">
               <h4>Contacts Us</h4>
@@ -41,7 +43,7 @@
                 </div>
                 <div class="ci-text">
                   <span>Email:</span>
-                  <p>info@acelitigator.com
+                  <p>info@dailalawyerfrica.com
 </p>
                 </div>
               </div>

@@ -23,6 +23,7 @@ import '../public/home/css/elegant-icons.css'
 import store from './store'
 import { auth } from "./database/index";
 import VueFormulate from '@braid/vue-formulate'
+import './assets/tailwind.css'
 
 
 Vue.use(Antd);

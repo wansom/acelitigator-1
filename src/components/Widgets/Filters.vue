@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container py-4">
+    <div class="container mx-auto py-4">
       <a-row :gutter="16">
         <a-col :span="24" :lg="6">
           <div>
