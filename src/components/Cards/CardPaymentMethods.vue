@@ -49,7 +49,7 @@
           <p>Make payment to complete your profile</p>
           <a-alert message="Your early adopter's promo code is: dialalawyer9c97a@"
           description="enter the promo code to start 2 months free trial"
-           type="warning" show-icon />
+           type="warning" show-icon close-text="Copy Code"  @close="onClose" />
         </a-col>
         <a-col
           :span="24"
@@ -90,6 +90,16 @@ export default {
     };
   },
   methods: {
+    onClose() {
+      const textarea = document.createElement('textarea');
+  textarea.textContent = "dialalawyer9c97a@";
+  textarea.style.position = 'fixed';
+  textarea.style.top = '-9999px';
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+    },
     showModal() {
       if (!this.user.biography) {
             this.$message.error(

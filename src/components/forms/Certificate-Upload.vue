@@ -1,11 +1,11 @@
 <template>
   <a-card
     :bordered="false"
-    class="header-solid h-full"
+    class="header-solid h-full py-4"
     :bodyStyle="{ paddingTop: 0, paddingBottom: '16px' }"
   >
     <div>
-      <h3 class="mb-2"> Upload Certificates and Documents</h3>
+      <h3 class="mb-2 text-lg"> Upload Certificates and Documents</h3>
       <a-form :form="form" layout="vertical">
         <a-row :gutter="16">
           <a-col :span="24" :md="12">
@@ -32,7 +32,6 @@
           <a-col :span="24" :md="12">
             <a-form-item label="Evidence of up-to-date Payment of Practicing Fee(optional)">
               <a-upload
-                label="Curriculum Vitae/Resume"
                 name="file"
                 accept="application/pdf"
                 :file-list="fileList8"
@@ -103,9 +102,8 @@
 
         <a-row :gutter="16">
           <a-col :span="24" :md="12">
-            <a-form-item label="Curriculum Vitae/Resume" style="width: 100%">
+            <a-form-item label="Curriculum Vitae/Resume (optional)" style="width: 100%">
               <a-upload
-                label="Curriculum Vitae/Resume"
                 name="file"
                 accept="application/pdf"
                 :file-list="fileList"
@@ -182,7 +180,7 @@
             </a-form-item>
           </a-col>
           <a-col :span="24" :md="12">
-            <a-form-item label="Admission Certificate">
+            <!-- <a-form-item label="Admission Certificate">
               <a-upload
                 name="file"
                 accept="application/pdf"
@@ -205,7 +203,7 @@
                   <a-icon type="upload" block /> Click to Upload
                 </a-button></a-upload
               >
-            </a-form-item>
+            </a-form-item> -->
             <a-form-item
               label="Proof of Residence(Utility bill or evidence of payment of branch dues to the Nigerian Bar Association)"
             >
@@ -414,9 +412,6 @@ export default {
               practise_start: this.user.practise_start
                 ? this.user.practise_start
                 : values.practise_start.format(),
-              cert_renewal_date: this.user.cert_renewal_date
-                ? this.user.cert_renewal_date
-                : values.cert_renewal_date.format() ?? "",
               national_id: values.national_id ?? "",
               practise_number: values.practise_number ?? "",
               practise_certificate: downloadURLs[0],
