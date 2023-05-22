@@ -82,12 +82,12 @@
           </div>
           <div class="overview-images">
             <div class="col one">
-              <img src="images/stella.png" alt="" />
-              <img src="images/Susan-Mwango.jpg" alt="" />
+              <img src="/images/stella.png" alt="" />
+              <img src="/images/Susan-Mwango.jpg" alt="" />
             </div>
             <div class="col two">
-              <img src="images/brian.png" alt="" />
-              <img src="images/Mahmoud-Shalima.jpg" alt="" />
+              <img src="/images/brian.png" alt="" />
+              <img src="/images/Mahmoud-Shalima.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -539,7 +539,7 @@ html {
 /* == BANNER == */
 section.banner {
   height: 100vh;
-  background-image: url("https://acelitigator.com/wp-content/uploads/2022/10/Analysis-of-Supreme-Court-30-of-2019.png");
+  background-image: url("../../public/images/banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1426,7 +1426,7 @@ form textarea {
 }
 
 .research-information.one {
-  background-image: url("https://acelitigator.com/wp-content/uploads/2022/10/Analysis-of-Supreme-Court-30-of-2019.png");
+  background-image: url("../../public/images/courts.jpg");
 }
 
 .research-card {
