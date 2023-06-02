@@ -28,9 +28,9 @@
         </nav>
       </div>
     </div>
-    <header class="header-section">
+    <header class="">
       <div class="header-top">
-        <div class="container mx-auto">
+        <div class="container mx-auto px-6 lg:px-16">
           <div class="ht-left">
             <div class="logo">
               <router-link to="/">
@@ -78,15 +78,12 @@
               <a href="//https://www.linkedin.com/company/ace-litigator/"
                 ><i class="fa fa-linkedin"></i
               ></a>
-              <a href="//https://www.linkedin.com/company/ace-litigator/"
-                ><i class="fa fa-pinterest"></i
-              ></a>
             </div>
           </div>
         </div>
       </div>
       <div class="nav-item">
-        <div class="container mx-auto">
+        <div class=" container mx-auto px-6 lg:px-16">
           <div class="nav-depart">
             <router-link to="/">
               <div class="depart-btn">
