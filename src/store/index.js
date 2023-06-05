@@ -189,6 +189,7 @@ export default new Vuex.Store({
               date: new Date(),
             }),
           }).then(() => {
+            router.push("/dashboard");
             dispatch("sendMail", {
               name: data.first_name,
               email: data.email,
@@ -196,8 +197,9 @@ export default new Vuex.Store({
               content:
                 "Your Account has been created successfully. You can now log into your account and complete your profile befor your account is activated",
             });
+           
             dispatch("changeLoading", false);
-            router.push("/dashboard");
+           
           });
         })
         .catch((err) => { 

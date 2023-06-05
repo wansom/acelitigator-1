@@ -22,7 +22,7 @@ const auth = getAuth(app);
 const storage = getStorage(app);
 
 // collection references
-const usersCollection = collection(db,"nigeria_lawyers");
+const usersCollection = collection(db,"nigeria_advocates");
 const businessCollection = collection(db,"clients");
 const adminCollections =collection(db,"admins");
 const mpesaCollection =collection(db,"mpesa_responses");
