@@ -1,0 +1,41 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "master","nigeria" ]
+  pull_request:
+    branches: [ "master","nigeria" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+    - name: Generate sitemap
+      run: npm run sitemap
+
+    # Only deploy if we're on the 'nigeria' branch
+    - name: Deploy to server
+      if: github.ref == 'refs/heads/nigeria'
+      env:
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+      run: |
+        eval "$(ssh-agent -s)"
+        echo "$DEPLOY_KEY" | ssh-add -
+        scp -r dist/* user@yourserver:/path/to/your/website/root
+
+    - run: npm test
+
+
