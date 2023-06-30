@@ -196,23 +196,23 @@ padding: 0px 0px 16px;
 }
 
 .contact-details .title h1 {
-font-family: "Montserrat";
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 49px;
-color: #1c1b1f;
-margin: 5px 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 49px;
+  color: #1c1b1f;
+  margin: 5px 0px;
 }
 
 .contact-details .title p {
-font-family: "Montserrat";
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 36px;
-color: #e6353b;
-margin: 5px 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 36px;
+  color: #e6353b;
+  margin: 5px 0px;
 }
 
 .contact-details .details {

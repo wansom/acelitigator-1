@@ -1,7 +1,6 @@
 <template>
 <div>
     <Header></Header>
-    <Breadcrum/>
     <forgot-password-form></forgot-password-form>
     <Footer></Footer>
 </div>

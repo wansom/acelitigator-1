@@ -250,7 +250,7 @@ export default new Vuex.Store({
       });
     },
 
-    restPassword({ commit }, values) {
+    restPassword({ dispatch }, values) {
       dispatch("changeLoading", true);
       passwordReset(values.email)
         .then(() => {
