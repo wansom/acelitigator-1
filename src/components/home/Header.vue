@@ -60,10 +60,10 @@
               </a>
               <a-menu slot="overlay">
                 <a-menu-item key="1">
-                  <a href="/sign-up">Create Account</a>
+                  <a href="/sign-up" class="dropdown-menu">Create Account</a>
                 </a-menu-item>
                 <a-menu-item key="2">
-                  <a href="/sign-in">Login</a>
+                  <a href="/sign-in" class="dropdown-menu">Login</a>
                 </a-menu-item>
               </a-menu>
             </a-dropdown>
@@ -180,5 +180,8 @@ export default {
   font-size: 20px;
   color: #e6353b;
   margin-bottom: 10px;
+}
+.dropdown-menu:hover{
+  color: #e6353b;
 }
 </style>
