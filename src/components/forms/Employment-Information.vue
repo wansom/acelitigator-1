@@ -5,7 +5,7 @@
     :bodyStyle="{ paddingTop: 0, paddingBottom: '16px' }"
   >
     <div>
-      <h3>Employment Information</h3>
+      <h3 class="text-lg my-10">Employment Information</h3>
       <p>
         Please provide us with the information of your current and past
         employemnt

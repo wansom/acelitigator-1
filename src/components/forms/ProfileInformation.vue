@@ -35,7 +35,7 @@
             <p class="card-p">General Information</p>
           </a-card>
         </a-col>
-        <a-col :span="12" :md="4">
+        <a-col :span="12" :md="5">
           <a-card
             :class="current === 2 ? 'icon-card-active text-white' : 'icon-card'"
             @click="
@@ -48,7 +48,7 @@
             <p class="card-p">Employment Information</p>
           </a-card>
         </a-col>
-        <a-col :span="12" :md="4">
+        <a-col :span="12" :md="5">
           <a-card
             :class="current === 3 ? 'icon-card-active text-white' : 'icon-card'"
             @click="
@@ -63,7 +63,7 @@
         </a-col>
         <a-col
           :span="12"
-          :md="4"
+          :md="5"
           @click="
             () => {
               next(4);
@@ -77,7 +77,7 @@
             <p class="card-p">Documents Upload</p>
           </a-card>
         </a-col>
-        <a-col :span="24" :md="4">
+        <a-col :span="24" :md="5">
           <a-card
             :class="current === 5 ? 'icon-card-active text-white' : 'icon-card'"
             @click="
@@ -203,27 +203,38 @@ export default {
 }
 @media only screen and (max-width: 640px) {
   .icon-list {
-    font-size: 28px;
-    margin-bottom: 5px;
-  }
-  .icon-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    height: 100px;
-    margin-bottom: 10px;
-  }
-  .icon-card:hover {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    height: 100px;
-    background-color: #db1c22;
-    margin-bottom: 10px;
-  }
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+	.icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100px;
+  margin-bottom: 10px;
+}
+.icon-card:hover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100px;
+  background-color: #db1c22;
+  margin-bottom: 10px;
+}
+.icon-card-active{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100px;
+  background-color: #db1c22;
+  margin-bottom: 10px;
+  color:#ffffff
+}
 }
 </style>

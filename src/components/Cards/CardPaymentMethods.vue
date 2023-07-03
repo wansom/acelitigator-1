@@ -46,10 +46,38 @@
       <a-row type="flex" align="middle" class="d-flex align-items-center">
         <a-col :span="24" :md="12" class="my-5">
           <h6 class="font-semibold mb-5">Account Subscription</h6>
-          <p>Make payment to complete your profile</p>
-          <a-alert message="Your early adopter's promo code is: dialalawyer9c97a@"
-          description="enter the promo code to start 2 months free trial"
-           type="warning" show-icon close-text="Copy Code"  @close="onClose" />
+          <!-- <p>Make payment to complete your profile</p> -->
+          <div class="w-full flex gap-2 "  @click="onClose">
+            <p>Your early adopter's promo code is:<span class="text-lg text-black">dialalawyer9c97a@</span></p>
+            <span style="color: red" class="flex cursor-pointer ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.057 1.123-.08M15.75 18H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08M15.75 18.75v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5A3.375 3.375 0 006.375 7.5H5.25m11.9-3.664A2.251 2.251 0 0015 2.25h-1.5a2.251 2.251 0 00-2.15 1.586m5.8 0c.065.21.1.433.1.664v.75h-6V4.5c0-.231.035-.454.1-.664M6.75 7.5H4.875c-.621 0-1.125.504-1.125 1.125v12c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V16.5a9 9 0 00-9-9z"
+                  />
+                </svg>
+
+                Copy</span
+              >
+          </div>
+          <!-- <a-alert
+            message=" dialalawyer9c97a@"
+            type="warning"
+            show-icon
+          >
+            <p slot="description" class="flex cursor-pointer"  @click="onClose">
+              enter the promo code to start 2 months free trial
+            
+            </p>
+          </a-alert> -->
         </a-col>
         <a-col
           :span="24"
@@ -62,15 +90,10 @@
         </a-col>
       </a-row>
     </template>
-    <a-row :gutter="[24, 24]">
-      <a-col :span="24" :md="16">
-        
-        <a-card class="payment-method-card p-2">
-          
-          <a-input class="mr-2" v-model.trim="coupon"/>
+ <div class="flex flex-col md:flex-row  gap-4 md:gap-10">
+  <a-input class="mr-2" v-model.trim="coupon" />
           <a-button type="primary" @click="payWithCard"> Enter Code</a-button>
-        </a-card>
-      </a-col>
+ </div>
     </a-row>
   </a-card>
   <!-- Payment Methods Card -->
