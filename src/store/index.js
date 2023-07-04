@@ -289,7 +289,7 @@ export default new Vuex.Store({
           }
           updateAdvocate(user.uid, {
             notifications: arrayUnion({
-              notification: `your ${data.step} have been updated successfully`,
+              notification: `your details have been updated successfully`,
               date: new Date(),
             }),
           });
