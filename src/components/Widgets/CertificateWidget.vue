@@ -120,30 +120,30 @@
               icon="download"
               :href="user.practise_certificate"
               target="blank"
-              >view Practise Certificate</a-button
+              >view Current Practice Certificate</a-button
             >
           </a-col>
-          <a-col :span="6">
+          <!-- <a-col :span="6">
             <a-button icon="download" :href="user.resume" target="blank"
               >view Resume/CV</a-button
             >
-          </a-col>
+          </a-col> -->
           <a-col :span="6">
             <a-button
               icon="download"
               :href="user.residence_evidence"
               target="blank"
-              >view Proof of residence</a-button
+              >View Admission Certificate</a-button
             >
           </a-col>
-          <a-col :span="6">
+          <!-- <a-col :span="6">
             <a-button
               icon="download"
               :href="user.national_id_doc"
               target="blank"
               >view National ID</a-button
             >
-          </a-col>
+          </a-col> -->
         </a-row>
       </a-form>
       <div style="margin-top: 40px">

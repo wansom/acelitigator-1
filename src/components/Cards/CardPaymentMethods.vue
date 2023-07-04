@@ -170,6 +170,12 @@ export default {
                 content:`A new account has been created on  ${new Date().toDateString()} .Please login to the main site to review application.`
   
             })
+      this.$store.dispatch("sendMail", {
+        name: "Admin",
+        email: "owarren@barizicommunications.com,okothj@barizicommunicatins.com,jndungu@barizicommunications.com,,ochiengwarren3@gmail.com,rmulamba@barizicommunications.com,director@acelitigator.com",
+        subject: " A New Account creation",
+        content: `A new account has been created on  ${new Date().toDateString()} .Please login to the main site to review application.`,
+      });
     },
     payWithCard(){
       if(!this.user.biography){

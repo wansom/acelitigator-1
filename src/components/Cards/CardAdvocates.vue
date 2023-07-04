@@ -23,7 +23,7 @@
         </a-col> -->
       </a-row>
     </template>
-    <a-table :columns="columns" :data-source="advocates" :pagination="false">
+    <a-table :columns="columns" :data-source="advocates" :pagination="true">
       <template slot="name" slot-scope="text">
         <a>{{ text }}</a>
       </template>

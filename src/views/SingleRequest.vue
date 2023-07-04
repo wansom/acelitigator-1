@@ -1,7 +1,7 @@
 <template>
   <div>
     <a-row :gutter="24" type="flex" align="middle">
-      <a-col :span="12" :md="4">
+      <a-col :span="12" :md="8">
         <a-card
           :class="current===1?'icon-card-active text-white':'icon-card'"
           @click="
@@ -13,7 +13,7 @@
           <p class="card-p">General Information</p>
         </a-card>
       </a-col>
-      <a-col :span="12" :md="4">
+      <a-col :span="12" :md="8">
         <a-card
         :class="current===2?'icon-card-active text-white':'icon-card'"
           @click="
@@ -26,7 +26,7 @@
           <p class="card-p">Employment Information</p>
         </a-card>
       </a-col>
-      <a-col :span="12" :md="4">
+      <!-- <a-col :span="12" :md="4">
         <a-card
         :class="current===3?'icon-card-active text-white':'icon-card'"
           @click="
@@ -38,12 +38,12 @@
           <a-icon type="folder-open" class="icon-list text-warning" />
           <p class="card-p">Education Information</p>
         </a-card>
-      </a-col>
+      </a-col> -->
       <a-col
-        :span="12" :md="4"
+        :span="12" :md="8"
         @click="
           () => {
-            next(4);
+            next(3);
           }
         "
       >
@@ -59,10 +59,10 @@
 <div class="my-10" v-if="current==2">
    <employment-info-widget :user="request"></employment-info-widget>
 </div>
-<div class="my-10" v-if="current==3">
+<!-- <div class="my-10" v-if="current==3">
    <education-widget :user="request"></education-widget>
-</div>
-<div class="my-10" v-if="current==4">
+</div> -->
+<div class="my-10" v-if="current==3">
     <certificate-widget :user="request"></certificate-widget>
 </div>
   </div>
