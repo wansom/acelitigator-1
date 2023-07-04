@@ -94,7 +94,6 @@
   <a-input class="mr-2" v-model.trim="coupon" />
           <a-button type="primary" @click="payWithCard"> Enter Code</a-button>
  </div>
-    </a-row>
   </a-card>
   <!-- Payment Methods Card -->
 </template>

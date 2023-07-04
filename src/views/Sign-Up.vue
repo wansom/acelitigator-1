@@ -17,10 +17,10 @@ import TestForm from '../components/forms/TestForm.vue';
 export default {
   data(){
     return{
-      title: 'Reigster Account',
+      title: 'Reigister New Account',
       description: 'Our mission is to aid access to justice across Africa by linking verified legal professionals in the justice sector to the market',
       url: 'https://dialalawyer.africa',
-      image: 'https://dialalawyer.africa/img/banner.251176c6.jpg',
+      image: 'https://dialalawyer.africa/images/banner.jpg',
     }
   },
   metaInfo() {

@@ -351,26 +351,6 @@ export default {
       ],
     };
   },
-  metaInfo() {
-    return {
-      title: this.title,
-      meta: [
-        // Open Graph (for Facebook, LinkedIn, etc.)
-        { property: "og:title", content: this.title },
-        { property: "og:description", content: this.description },
-        { property: "og:image", content: this.image },
-        { property: "og:url", content: this.url },
-
-        // Twitter
-        { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:title", content: this.title },
-        { name: "twitter:description", content: this.description },
-        { name: "twitter:image", content: this.image },
-        { name: "twitter:url", content: this.url },
-        // Add more tags as needed
-      ],
-    };
-  },
   created() {},
   computed: {
     ...mapState(["allAdvocates", "courtData"]),
