@@ -13,7 +13,7 @@
             >
             <a-row type="flex" justify="space-between" :gutter="16">
               <a-col :span="24" :sm="{ span: 24 }" :lg="{ span: 12 }">
-                <a-form-item class="group-input">
+                <a-form-item class="group-input"  label="First Name">
                 <a-input
                   type="text"
                   id="username"
@@ -33,7 +33,7 @@
                 />
               </a-form-item></a-col>
               <a-col :span="24" :sm="{ span: 24 }" :lg="{ span: 12 }">
-                <a-form-item class="group-input">
+                <a-form-item class="group-input" label="last Name">
                 <a-input
                   type="text"
                   id="username"
@@ -55,7 +55,7 @@
             </a-row>
 
            
-              <a-form-item class="group-input">
+              <a-form-item class="group-input"  label="Email">
                 <a-input
                   type="text"
                   v-decorator="[
@@ -76,7 +76,7 @@
                   placeholder='Your Email(required)'
                 />
               </a-form-item>
-              <a-form-item class="group-input">
+              <a-form-item class="group-input"  label="Password">
                 <a-input-password
                   v-decorator="[
                     'password',
@@ -107,7 +107,7 @@
                   />
                 </a-input-password>
               </a-form-item>
-              <a-form-item class="group-input">
+              <a-form-item class="group-input"  label="Confirm Password">
                 <a-input
                   id="con-pass"
                   v-decorator="[
