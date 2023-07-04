@@ -27,15 +27,15 @@
             <div class="p-4 border-2 border-gray-100 rounded-lg flex items-center" @click="openMailClient">
               <span > <i class="fa fa-envelope mr-2"></i>{{ advocate.email}}</span>
             </div>
-            <div class="p-4 border-2 border-gray-100 rounded-lg flex items-center">
-              <span for="lg-size"> <a :href="'//' +advocate.linkedIn"  target="_blank"><i class="ti-linkedin"></i></a></span>
+            <div class="p-4 border-2 border-gray-100 rounded-lg flex items-center hover:bg-red">
+              <span for="lg-size"> <a :href="'//' +advocate.linkedIn"  target="_blank"><i class="fa fa-linkedin hover:text-red-600"></i></a></span>
             </div>
             <div class="p-4 border-2 border-gray-100 rounded-lg flex items-center">
-              <span for="xl-size">  <a :href="'//' + advocate.twitter"  target="_blank"><i class="ti-twitter-alt"></i></a></span>
+              <span for="xl-size">  <a :href="'//' + advocate.twitter"  target="_blank"><i class="ti-twitter-alt hover:text-red-600"></i></a></span>
             </div>
             <div class="p-4 border-2 border-gray-100 rounded-lg flex items-center">
               
-              <span for="xl-size">  <a  :href="'//' + advocate.website" target="_blank"><i class="fa fa-globe"></i></a></span>
+              <span for="xl-size">  <a  :href="'//' + advocate.website" target="_blank"><i class="fa fa-globe hover:text-red-600"></i></a></span>
             </div>
           </div>
           <h3>EXPERIENCE</h3>

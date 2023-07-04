@@ -5,7 +5,7 @@
     :bodyStyle="{ paddingTop: 0, paddingBottom: '16px' }"
   >
     <div>
-      <h3>General Information</h3>
+      <h3 class="text-lg mb-5">General Information</h3>
       <a-form :form="form" layout="vertical">
         <a-row :gutter="16">
           <a-col :span="24" :md="12">
@@ -327,8 +327,9 @@
           </a-col>
         </a-row>
         <a-checkbox @change="changeTerms" class="mb-3" :checked="terms">
-          The information submitted on this page will be visibile to all potential clients
-  </a-checkbox>
+          I understand that the information submitted on this page will be visibile to all
+          potential clients
+        </a-checkbox>
       </a-form>
       <div>
         <a-button
