@@ -1,6 +1,6 @@
 <template>
   <div class="register-login-section spad">
-    <div class="container">
+    <div class="container mx-auto">
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <div class="login-form">
@@ -35,7 +35,7 @@
                   'login-btn',
                 ]"
               >
-                SEND PASSWORD RESET EMAIL <a-spin v-if="loading" />
+                SEND EMAIL   <a-spin v-if="loading" /> 
               </button>
             </a-form>
             <div class="switch-login">
@@ -51,17 +51,21 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   data() {
     return {
       // Binded model property for "Sign In Form" switch button for "Remember Me" .
       rememberMe: true,
-      loading: this.$store.state.loading,
+      email:""
     };
   },
   beforeCreate() {
     // Creates the form and adds to it component's "form" property.
     this.form = this.$form.createForm(this, { name: "normal_login" });
+  },
+  computed:{
+...mapState(["loading"])
   },
   methods: {
     // Handles input validation after submission.
@@ -69,7 +73,7 @@ export default {
       e.preventDefault();
       this.form.validateFields((err, values) => {
         if (!err) {
-          this.$store.dispatch("restPassword", values);
+          this.$store.dispatch("restPassword", values)
         }
       });
     },

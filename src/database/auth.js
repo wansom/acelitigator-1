@@ -12,8 +12,8 @@ return signInWithEmailAndPassword(auth,values.email.trim(),values.password.trim(
 export const logout=()=>{
     return signOut(auth)
 }
-export const passwordReset=(email)=>{
-    sendPasswordResetEmail(auth,email)
+export const passwordReset=async(email)=>{
+    return await sendPasswordResetEmail(auth,email)
 }
 
 

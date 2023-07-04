@@ -53,15 +53,8 @@
                   />
                 </a-input-password>
               </a-form-item>
-              <div class="group-input gi-check">
-                <div class="gi-more">
-                  <label for="save-pass">
-                    Remember Me
-                    <input type="checkbox" id="save-pass" checked />
-                    <span class="checkmark"></span>
-                  </label>
-                  <router-link to="forgot-password" class="forget-pass">Forget your Password</router-link>
-                </div>
+              <div >
+                <router-link to="forgot-password" class="forget-pass hover:text-black hover:text-lg">Forget your Password</router-link>
               </div>
 
             

@@ -255,6 +255,11 @@ export default new Vuex.Store({
       passwordReset(values.email)
         .then(() => {
           dispatch("changeLoading", false);
+          swal({
+            title: "Passowerd Reset",
+            text: `We have send a message to your email with password reset information`,
+            icon: "info",
+          });
         })
         .catch((err) => {
           dispatch("changeLoading", false);
