@@ -69,16 +69,16 @@
             </a-dropdown>
 
             <div class="top-social">
-              <a href="//https://www.facebook.com/DialaLawyerAfrica/"
+              <a href="//facebook.com/DialaLawyerAfrica/" target="blank"
                 ><i class="fa fa-facebook"></i
               ></a>
-              <a href="//https://www.linkedin.com/company/dial-a-lawyer-africa-by-ace-litigator/"
-                ><i class="fa fa-linkedin"></i
+              <a href="//linkedin.com/company/dial-a-lawyer-africa-by-ace-litigator" target="blank"
+                ><i class="fa fa-linkedin" ></i
               ></a>
-              <a href="//https://https://www.instagram.com/dialalawyerafrica/"
+              <a href="//instagram.com/dialalawyerafrica/" target="blank"
                 ><i class="fa fa-instagram"></i
               ></a>
-              <a href="//https://https://twitter.com/dialalawyer_"
+              <a href="//twitter.com/dialalawyer_" target="blank"
                 ><i class="fa fa-twitter"></i
               ></a>
             </div>
