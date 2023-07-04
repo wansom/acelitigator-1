@@ -1,3 +1,46 @@
+
+const SitemapPlugin = require('sitemap-webpack-plugin').default
+// You can write the paths as an array of strings or an array of objects
+const paths = [
+  {
+      path: '/',
+      lastmod: '2021-11-22',
+      priority: 1.0,
+      changefreq: 'yearly'
+  },
+  {
+      path: '/contact-us/',
+      lastmod: '2021-11-22',
+      priority: 0.9,
+      changefreq: 'yearly'
+  },
+  {
+	path: '/find-a-lawyer/',
+	lastmod: '2021-11-22',
+	priority: 0.9,
+	changefreq: 'daily'
+},
+{
+	path: '/contact-us/',
+	lastmod: '2021-11-22',
+	priority: 0.9,
+	changefreq: 'yearly'
+},
+{
+	path: '/sign-up/',
+	lastmod: '2021-11-22',
+	priority: 0.9,
+	changefreq: 'yearly'
+},
+{
+	path: '/sign-in/',
+	lastmod: '2021-11-22',
+	priority: 0.9,
+	changefreq: 'yearly'
+},
+
+]
+
 module.exports = {
 	runtimeCompiler: true,
 
@@ -9,5 +52,21 @@ module.exports = {
 				
 				return args
 			})
-	}
+			    // Add the SitemapPlugin configuration
+				config
+				.plugin('sitemap')
+				.use(SitemapPlugin, [
+				  {
+					base: 'https://dialalawyer.africa',
+					paths: paths,
+					options: {
+					  filename: 'sitemap.xml',
+					  lastmod: true,
+					  skipgzip: true,
+					  changefreq: 'weekly',
+					},
+				  },
+				]);
+	},
+	
 }
