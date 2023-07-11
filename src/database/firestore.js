@@ -26,7 +26,7 @@ const USERS_PATH = 'users'
 
 const ROOMS_PATH = 'chatRooms'
 const MESSAGES_PATH = 'messages'
-const LAWYERS_PATH='nigeria_lawyers'
+const LAWYERS_PATH='all_advocates'
 const MPESA_PATH='mpesa_responses'
 const TRANSACTIONS_PATH = 'transactions';
 const COURTS_PATH= 'courts'
