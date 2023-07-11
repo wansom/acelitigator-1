@@ -24,6 +24,9 @@ import store from './store'
 import { auth } from "./database/index";
 import VueFormulate from '@braid/vue-formulate'
 import './assets/tailwind.css'
+import VueMeta from 'vue-meta'
+
+Vue.use(VueMeta)
 
 
 Vue.use(Antd);
