@@ -1925,26 +1925,11 @@ ol {
 	content: "";
 } */
 
-.filter-widget .fw-size-choose .sc-item {
-  display: inline-block;
-  margin-right: 5px;
-}
-
-.filter-widget .fw-size-choose .sc-item:last-child {
-  margin-right: 0;
-}
-
-.filter-widget .fw-size-choose .sc-item input {
-  position: absolute;
-  visibility: hidden;
-}
 
 .filter-widget .fw-size-choose .sc-item label {
   font-size: 16px;
   color: #252525;
   font-weight: 700;
-  height: 40px;
-  width: 47px;
   border: 1px solid #ebebeb;
   text-align: center;
   line-height: 40px;
@@ -2256,93 +2241,6 @@ ol {
   background: #8230e3;
 }
 
-.product-details .pd-size-choose {
-  margin-bottom: 30px;
-}
-
-.product-details .pd-size-choose .sc-item {
-  display: inline-block;
-  margin-right: 5px;
-}
-
-.product-details .pd-size-choose .sc-item:last-child {
-  margin-right: 0;
-}
-
-.product-details .pd-size-choose .sc-item input {
-  position: absolute;
-  visibility: hidden;
-}
-
-.product-details .pd-size-choose .sc-item label {
-  font-size: 16px;
-  color: #252525;
-  font-weight: 700;
-  height: 40px;
-  padding: 0 20px;
-  border: 1px solid #ebebeb;
-  text-align: center;
-  line-height: 40px;
-  text-transform: none;
-  cursor: pointer;
-}
-.product-details .pd-size-choose .sc-item i {
-  margin-right: 10px;
-}
-
-.product-details .pd-size-choose .sc-item label.active {
-  background: #252525;
-  color: #ffffff;
-}
-
-.product-details .quantity {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 33px;
-}
-
-.product-details .quantity .pro-qty {
-  width: 123px;
-  height: 46px;
-  border: 2px solid #ebebeb;
-  padding: 0 15px;
-  float: left;
-  margin-right: 14px;
-}
-
-.product-details .quantity .pro-qty .qtybtn {
-  font-size: 24px;
-  color: #b2b2b2;
-  float: left;
-  line-height: 38px;
-  cursor: pointer;
-  width: 18px;
-}
-
-.product-details .quantity .pro-qty .qtybtn.dec {
-  font-size: 30px;
-}
-
-.product-details .quantity .pro-qty input {
-  text-align: center;
-  width: 52px;
-  font-size: 14px;
-  font-weight: 700;
-  border: none;
-  color: #4c4c4c;
-  line-height: 40px;
-  float: left;
-}
-
-.product-details .quantity .primary-btn.pd-cart {
-  padding: 14px 70px 10px;
-}
-
-.product-details .pd-tags {
-  margin-bottom: 27px;
-}
-
 .product-details .pd-tags li {
   list-style: none;
   font-size: 16px;
@@ -2444,7 +2342,7 @@ ol {
 }
 
 .specification-table {
-  padding-top: 52px;
+  padding-top: 2px;
 }
 
 .specification-table table {
@@ -3448,19 +3346,27 @@ ol {
   top: -2px;
   width: 13px;
   height: 6px;
-  border: solid #ffffff;
+  border: solid #e6353b;
+  color: #e6353b;
   border-width: 2px 2px 0px 0px;
   -webkit-transform: rotate(127deg);
   -ms-transform: rotate(127deg);
   transform: rotate(127deg);
 }
 
-.login-form .group-input .gi-more .forget-pass {
+.login-form .group-input .gi-check .forget-pass {
   float: right;
   line-height: 20px;
   margin-top: -2px;
   font-size: 14px;
   color: #6b6b6b;
+}
+.login-form .group-input .gi-check .forget-pass:hover {
+  float: right;
+  line-height: 20px;
+  margin-top: -2px;
+  font-size: 14px;
+  color: #e6353b;
 }
 
 /* == TEACHING AND TRAINING == */

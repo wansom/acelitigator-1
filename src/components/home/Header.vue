@@ -14,7 +14,7 @@
         </div>
         <nav class="mobile-nav" v-if="isNavOpen">
           <ul>
-            <li class="active"><router-link to="/">Home</router-link></li>
+            <li><router-link to="/">Home</router-link></li>
             <li>
               <router-link to="/find-a-lawyer">Find A Lawyer</router-link>
             </li>
@@ -94,7 +94,7 @@
 
           <nav class="nav-menu mobile-menu">
             <ul>
-              <li class="active">
+              <li>
                 <router-link to="/find-a-lawyer">FIND LAWYERS</router-link>
               </li>
               <li><a href="/know-your-courts">Know Your Courts</a></li>
