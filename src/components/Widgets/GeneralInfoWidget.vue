@@ -200,6 +200,30 @@
             </a-col>
           </a-row>
           <a-row :gutter="16">
+          <a-col :span="24" :md="12">
+            <a-form-item label=" Supreme Court Enrollment Number.">
+              <a-input
+                v-decorator="[
+                  'practise_number',
+                  {
+                    initialValue: user.practise_number,
+                    rules: [
+                      {
+                        required: true,
+                        message: 'enter number',
+                      },
+                    ],
+                  },
+                ]"
+                placeholder=""
+                style="width: 100%"
+                addon-before="P105./"
+                disabled
+              />
+            </a-form-item>
+          </a-col>
+        </a-row>
+          <a-row :gutter="16">
             <a-col :span="24">
               <a-form-item label="Profile Picture">
             <img :src="user.profile_photo" alt="" style="height:120px;">
@@ -207,11 +231,28 @@
             </a-col>
           </a-row>
         </a-form>
-        <!-- <div>
-          <a-button type="primary" @click="handleSubmit"
-            >Next
-          </a-button>
-        </div> -->
+        <div style="margin-top: 40px">
+        <a-button
+          class="mx-10"
+          @click="
+            () => {
+              handleSubmit('declined');
+            }
+          "
+          :loading="loading"
+          >Decline Request
+        </a-button>
+        <a-button
+          type="primary"
+          @click="
+            () => {
+              handleSubmit('approved');
+            }
+          "
+          :loading="loading"
+          >Approve Request
+        </a-button>
+      </div>
       </div>
     </a-card>
   </template>
@@ -219,6 +260,9 @@
   <script>
   import { mapState } from "vuex";
   import {auth} from "../../database/index"
+  import router from "../../router/index";
+import { arrayUnion } from "@firebase/firestore";
+import { updateRequest } from "../../database/firestore";
   export default {
     props:['user'],
     data() {
@@ -261,33 +305,44 @@
           };
         });
       },
-      async handleSubmit(e) {
-        e.preventDefault();
-        this.form.validateFields(async(err, values) => {
-          if (!err) {
-            console.log("Received values of form: ", values);
-            const ref = fb.storage.ref();
-        const url = await ref
-          .child(values.photo.file.name)
-          .put(values.photo.file, values.photo.file.type)
-          .then((snapshot) => snapshot.ref.getDownloadURL());
-            const payload = {
-              first_name:values.first_name?? "",
-              last_name: values.last_name?? "",
-              phone: values.phone??"",
-              job_title:values.job_title?? "",
-              biography: values.biography?? "",
-              email: values.email??"",
-              location:values.location?? "",
-              webiste: values.webiste??"",
-              specialisation: values.specialisation?? "",
-              step:"generalInfo",
-              profile_photo:url
-            };
-            this.$store.dispatch("updateUser", payload);
-          }
-        });
-      },
+      handleSubmit(status) {
+      this.loading = true;
+      const payload = {
+        status: status == "approved" ? "active" : "declined",
+        date_joined:new Date(),
+        subscription_date: new Date(
+          new Date().setMonth(new Date().getMonth() + 1)
+        ).toDateString(),
+        notifications: arrayUnion({
+          notification: `your account has been activated successfully`,
+          date: new Date(),
+        }),
+      };
+      
+      updateRequest(this.user.uid, payload).then(() => {
+        router.push("/dashboard");
+        if (status == "declined") {
+          this.$store.dispatch("sendMail", {
+            name: this.user.first_name,
+            email: this.user.email,
+            subject: "Acelitigator Account",
+            content:
+              "Your account request has been declined please contact admin for more information",
+          });
+        } else {
+          this.$store.dispatch("sendMail", {
+            name: this.user.first_name,
+            email: this.user.email,
+            subject: "Acelitigator Account",
+            content: `Your account request has been activated successfully. You have an active subscription valid till ${new Date(
+              new Date().setMonth(new Date().getMonth() + 1)
+            )}`,
+          });
+        }
+
+        this.loading = false;
+      });
+    },
       handleChange(value) {
         console.log(value);
         this.form.setFieldsValue({
