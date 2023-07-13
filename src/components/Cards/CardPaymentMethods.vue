@@ -127,10 +127,6 @@ export default {
             this.$message.error(
               "please complete the general information section"
             );
-          } else if (!this.user.law_school) {
-            this.$message.error("please complete the education section");
-          } else if (!this.user.law_school) {
-            this.$message.error("please complete the employment section");
           } else {
             this.visible = true;
             this.loading=false
@@ -179,14 +175,6 @@ export default {
     payWithCard(){
       if(!this.user.biography){
         this.$message.error("please fill out the general information section")
-      }else if(!this.user.current_employer){
-        this.$message.error("please fill out the employment information section")
-      }
-      else if(!this.user.law_school){
-        this.$message.error("please fill out the education information section")
-      }
-      else if(!this.user.practise_number){
-        this.$message.error("some documents are not uploaded. upload them to complete registration")
       }else{
         if(this.coupon=="dialalawyer9c97a@"){
         this.paymentConfirmed = true;

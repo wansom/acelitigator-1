@@ -10,7 +10,7 @@ import {
 } from "../database/firestore";
 import swal from "sweetalert";
 import { createUser, signIn, logout, passwordReset } from "../database/auth";
-import { arrayUnion, onSnapshot, collection } from "firebase/firestore";
+import { arrayUnion, onSnapshot, collection,query, where, } from "firebase/firestore";
 import { auth, firestoreDb } from "../database/index";
 const axios = require("axios").default;
 
@@ -27,6 +27,8 @@ export default new Vuex.Store({
     loading: false,
     current: 1,
     practiseAreas:[
+      "Business",
+      "Real Estate",
       " Asset Tracing & Recovery",
 
       "Banking and Finance",
@@ -81,40 +83,53 @@ export default new Vuex.Store({
       "·Transportation (Aviation, Logistics, Maritime, Shipping etc)",
     ],
     counties: [
-      "Abia State (17 LGAs)",
-      "Adamawa State (22 LGAs)",
-      "Akwa Ibom State (31 LGAs)",
-      "Anambra State (21 LGAs)",
-      "Bauchi State (20 LGAs)",
-      "Benue State (22 LGAs)",
-      " Borno State (27 LGAs)",
-      " Cross River State",
-      "Delta State",
-      "Ebonyi State",
-      "Edo State",
-      "Ekiti State",
-      "Enugu State",
-      "Gombe State ",
-      "Imo State",
-      "Jigawa State",
-      "Kaduna State",
-      "Kano State",
-      "Katsina State",
-      "Kebbi State",
-      "Kogi State",
-      "Kwara State",
-      " Lagos State",
-      "Nassarawa State",
-      "Niger State",
-      "Ogun State",
-      "Ondo State",
-      "Plateau State",
-      "Rivers State",
-      "Sokoto State",
-      " Taraba State",
-      "Yobe State",
-      "Zamfara State",
-      "Federal Capital Territory",
+      "Nairobi",
+      "Mombasa",
+      "Kwale",
+      "Kilifi",
+      "Tana River",
+      "Lamu",
+      "Taita/Taveta",
+      " Garissa",
+      "Wajir",
+      "Mandera",
+      "Marsabit",
+      "Isiolo",
+      "Meru",
+      "Tharaka-Nithi",
+      "Embu",
+      "Kitui",
+      "Machakos",
+      "Makueni",
+      "Nyandarua",
+      "Nyeri",
+      "Kirinyaga",
+      "Murang'a",
+      " Kiambu",
+      "Turkana",
+      "West Pokot",
+      "Samburu",
+      "Trans Nzoia",
+      "Uasin Gishu",
+      "Nandi",
+      "Elgeyo/Marakwet",
+      " Baringo",
+      "Laikipia",
+      "Nakuru",
+      "Narok",
+      "Kajiado",
+      "Kericho",
+      "Bomet",
+      "Kakamega",
+      "Vihiga",
+      "Bungoma",
+      "Busia",
+      "Siaya",
+      "Kisumu",
+      "Homa Bay",
+      "Migori",
+      "Kisii",
+      "Nyamira"
     ],
     courts: [
       "Supreme Court",
@@ -378,7 +393,7 @@ export default new Vuex.Store({
       return unsubscribe;
     },
     async fetAllAdvocates({ dispatch, commit }) {
-      const LAWYERS_PATH = "nigeria_lawyers";
+      const LAWYERS_PATH = "all_advocates";
       const myCollection = collection(firestoreDb, LAWYERS_PATH);
       const unsubscribe = onSnapshot(
         myCollection,
@@ -399,6 +414,34 @@ export default new Vuex.Store({
       // Return a function to detach the listener when the action is no longer needed
       return unsubscribe;
     },
+    async fetchActiveAdvocates({ dispatch, commit }) {
+      const LAWYERS_PATH = "all_advocates";
+      const myCollection = collection(firestoreDb, LAWYERS_PATH);
+    
+      // Create a query against the collection
+      const queryToExecute = query(myCollection, where("status", "==", "active"));
+    
+      const unsubscribe = onSnapshot(
+        queryToExecute,
+        (snapshot) => {
+          const data = snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }));
+          commit("setAdvocates", data);
+        },
+        (error) => {
+          dispatch("changeLoading", false);
+          commit("setFirebaseError", error.message);
+          console.log(error.message);
+        }
+      );
+    
+      // Return a function to detach the listener when the action is no longer needed
+      return unsubscribe;
+    },
+    
+    
     changeStep({ commit }, value) {
       commit("setStep", value);
     },

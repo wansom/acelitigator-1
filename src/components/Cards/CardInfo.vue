@@ -33,7 +33,7 @@
               </div>
               <div>
                 <a-icon type="clock-circle" class="mx-5" />Member since
-                {{ advocate.date_joined.toDate().toDateString()}}
+                <!-- {{ advocate.date_joined.toDate().toDateString()}} -->
               </div>
             </a-col>
           </a-row>
@@ -109,7 +109,7 @@
               </div>
               <div>
                 <a-icon type="clock-circle" class="mx-5" />Member since
-                {{ advocate.date_joined.toDate().toDateString()}}
+                <!-- {{ advocate.date_joined.toDate().toDateString()}} -->
               </div>
             </a-col>
           </a-row>
