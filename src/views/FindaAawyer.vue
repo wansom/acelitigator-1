@@ -15,7 +15,7 @@
             }"
             @click="setMenu(menu, active)"
           >
-            {{ menu }}
+            {{ menuLabels[menu] }}
           </li>
 
           <li class="nav__label nav__label--clear" @click="clearAllFilters">
@@ -147,7 +147,7 @@ export default {
         otherPractiseLocations: false,
       },
       menuLabels: {
-        counties: "By County",
+        counties: "By State",
         practiseAreas: "By Practice area",
         experience: "By Experience",
         otherPractiseAreas: "By Other Practice areas",
