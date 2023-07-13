@@ -13,7 +13,7 @@
           <p class="card-p">General Information</p>
         </a-card>
       </a-col>
-      <a-col :span="12" :md="8">
+      <!-- <a-col :span="12" :md="8">
         <a-card
         :class="current===2?'icon-card-active text-white':'icon-card'"
           @click="
@@ -25,7 +25,7 @@
           <a-icon type="bank" class="icon-list text-warning" />
           <p class="card-p">Employment Information</p>
         </a-card>
-      </a-col>
+      </a-col> -->
       <!-- <a-col :span="12" :md="4">
         <a-card
         :class="current===3?'icon-card-active text-white':'icon-card'"
@@ -39,7 +39,7 @@
           <p class="card-p">Education Information</p>
         </a-card>
       </a-col> -->
-      <a-col
+      <!-- <a-col
         :span="12" :md="8"
         @click="
           () => {
@@ -51,7 +51,7 @@
           <a-icon type="file-protect" class="icon-list text-warning" />
           <p class="card-p">Verify Documents</p>
         </a-card>
-      </a-col>
+      </a-col> -->
     </a-row>
     <div class="my-10" v-if="current==1" >
     <general-info-widget :user="request"></general-info-widget>

@@ -22,7 +22,7 @@
     </div>
     <div v-else>
       <a-row :gutter="24" type="flex" align="middle">
-        <a-col :span="12" :md="4">
+        <a-col :span="12" :md="12">
           <a-card
             :class="current === 1 ? 'icon-card-active text-white' : 'icon-card'"
             @click="
@@ -35,54 +35,12 @@
             <p class="card-p">General Information</p>
           </a-card>
         </a-col>
-        <a-col :span="12" :md="5">
-          <a-card
-            :class="current === 2 ? 'icon-card-active text-white' : 'icon-card'"
-            @click="
-              () => {
-                next(2);
-              }
-            "
-          >
-            <a-icon type="bank" class="icon-list text-warning" />
-            <p class="card-p">Employment Information</p>
-          </a-card>
-        </a-col>
-        <a-col :span="12" :md="5">
-          <a-card
-            :class="current === 3 ? 'icon-card-active text-white' : 'icon-card'"
-            @click="
-              () => {
-                next(3);
-              }
-            "
-          >
-            <a-icon type="folder-open" class="icon-list text-warning" />
-            <p class="card-p">Education Information</p>
-          </a-card>
-        </a-col>
-        <a-col
-          :span="12"
-          :md="5"
-          @click="
-            () => {
-              next(4);
-            }
-          "
-        >
-          <a-card
-            :class="current === 4 ? 'icon-card-active text-white' : 'icon-card'"
-          >
-            <a-icon type="file-protect" class="icon-list text-warning" />
-            <p class="card-p">Documents Upload</p>
-          </a-card>
-        </a-col>
-        <a-col :span="24" :md="5">
+        <a-col :span="24" :md="12">
           <a-card
             :class="current === 5 ? 'icon-card-active text-white' : 'icon-card'"
             @click="
               () => {
-                next(5);
+                next(2);
               }
             "
           >
@@ -91,19 +49,10 @@
           </a-card>
         </a-col>
       </a-row>
-      <div class="my-10" v-if="current == 1">
+      <div class="my-10"  v-if="current===1">
         <GeneralInformation :user="user" />
       </div>
-      <div class="my-10" v-if="current == 2">
-        <EmploymentInformation :user="user" />
-      </div>
-      <div class="my-10" v-if="current == 3">
-        <EducationInformation :user="user"></EducationInformation>
-      </div>
-      <div class="my-10" v-if="current == 4">
-        <CertificateUpload :user="user"></CertificateUpload>
-      </div>
-      <div class="my-10" v-if="current == 5">
+      <div class="my-10" v-else>
         <SubscriptionPayment :user="user"></SubscriptionPayment>
       </div>
     </div>

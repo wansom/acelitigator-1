@@ -10,7 +10,7 @@ import {
 } from "../database/firestore";
 import swal from "sweetalert";
 import { createUser, signIn, logout, passwordReset } from "../database/auth";
-import { arrayUnion, onSnapshot, collection } from "firebase/firestore";
+import { arrayUnion, onSnapshot, collection,query, where, } from "firebase/firestore";
 import { auth, firestoreDb } from "../database/index";
 const axios = require("axios").default;
 
@@ -378,7 +378,7 @@ export default new Vuex.Store({
       return unsubscribe;
     },
     async fetAllAdvocates({ dispatch, commit }) {
-      const LAWYERS_PATH = "nigeria_lawyers";
+      const LAWYERS_PATH = "all_advocates";
       const myCollection = collection(firestoreDb, LAWYERS_PATH);
       const unsubscribe = onSnapshot(
         myCollection,
@@ -399,6 +399,34 @@ export default new Vuex.Store({
       // Return a function to detach the listener when the action is no longer needed
       return unsubscribe;
     },
+    async fetchActiveAdvocates({ dispatch, commit }) {
+      const LAWYERS_PATH = "all_advocates";
+      const myCollection = collection(firestoreDb, LAWYERS_PATH);
+    
+      // Create a query against the collection
+      const queryToExecute = query(myCollection, where("status", "==", "active"));
+    
+      const unsubscribe = onSnapshot(
+        queryToExecute,
+        (snapshot) => {
+          const data = snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }));
+          commit("setAdvocates", data);
+        },
+        (error) => {
+          dispatch("changeLoading", false);
+          commit("setFirebaseError", error.message);
+          console.log(error.message);
+        }
+      );
+    
+      // Return a function to detach the listener when the action is no longer needed
+      return unsubscribe;
+    },
+    
+    
     changeStep({ commit }, value) {
       commit("setStep", value);
     },
