@@ -22,7 +22,7 @@
                 >
                 <router-link to="/sign-in">
                   <button class="btn-secondary">
-                    Advocate Account
+                    Lawyer’s Account
                   </button></router-link
                 >
               </div>
