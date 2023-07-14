@@ -288,6 +288,13 @@
           <a-col :span="24"  :md="12">
             <a-form-item label="Profile Picture">
               <a-upload-dragger
+              v-decorator="[
+                  'photo',
+                  {
+                    initialValue: user.profile_photo,
+                    rules: [{ required: true, message: 'profile photo is required' }],
+                  },
+                ]"
                 accept="image/png, image/jpeg"
                 :multiple="false"
                 list-type="picture"
@@ -429,6 +436,7 @@ import { mapState } from "vuex";
 import { storage } from "../../database";
 import { updateAdvocate } from "../../database/firestore";
 import moment from "moment";
+import swal from "sweetalert";
 import {
   ref,
   uploadBytesResumable,
@@ -502,7 +510,7 @@ export default {
     async handleSubmit(e) {
       e.preventDefault();
       this.form.validateFields(async (err, values) => {
-        if (!err) {
+        if (!err &&this.user.profile_photo) {
             const payload = {
             first_name: values.first_name ?? "",
             last_name: values.last_name ?? "",
@@ -521,34 +529,16 @@ export default {
             twitter: values.twitter ?? "",
             linkedIn: values.linkedIn ?? "",
             current_employer: values.current_employer ?? "",
-            current_starting: values.current_starting.format() ?? "",
+            current_starting: typeof values.current_starting==='string'?values.current_starting: values.current_starting.format() ,
             practise_number: values.practise_number ?? "",
           };
-           this.$store.dispatch("updateUser", payload);
-          // this.$store.dispatch("changeLoading",true)
-          // return new Promise(resolve => {
-          //   listenDocumentUploadProgress(
-          //   this.user.id,
-          //   values.photo.file,
-          //   values.photo.file.type,
-          //   (progress) => {
-          //     this.updateFileProgress( progress);
-          //   },
-          //   (_error) => {
-          //     resolve(false);
-          //   },
-          //   async (url) => {
-            
-          //     console.log(url)
- 
-        
-
-          //     resolve(true);
-          //   }
-          // );
-          
-          // })
-         
+           this.$store.dispatch("updateUser", payload);     
+        }else{
+          swal({
+            title: "`Some Fields are missing!",
+            text: `please enter all the required fields  and try again`,
+            icon: "error",
+          });   
         }
       });
     },
