@@ -7,7 +7,7 @@
 
 				<!-- Footer Copyright Notice -->
 				<p class="copyright">
-					© 2021
+					© {{ new Date().getFullYear() }}
 					 <a href="https://acelitigator.com/">Acelitigator</a>
 				</p>
 				<!-- / Footer Copyright Notice -->
