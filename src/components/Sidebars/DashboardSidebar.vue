@@ -48,7 +48,6 @@
 						<span class="label">My Profile</span>
 					</router-link>
 				</a-menu-item>
-				
 				<a-menu-item v-if="user.status=='admin'">
 					<router-link to="/requests" >
 						<span class="icon">

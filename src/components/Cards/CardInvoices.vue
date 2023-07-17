@@ -8,8 +8,8 @@
     <template #title>
       <h6 class="font-semibold m-0">Receipts</h6>
     </template>
-    <template slot="extra" class="mb-0">
-      <a-button type="primary"> Next Payment:{{ date }} </a-button>
+    <template slot="extra" >
+      <span class="text-red-600 font-bold"> Next Payment:{{ date }} </span>
     </template>
     <a-list
       class="invoice-list"
@@ -18,7 +18,7 @@
       :data-source="data"
     >
       <a-list-item slot="renderItem" slot-scope="item">
-        <a-button slot="actions" type="link" @click="generateReport">
+        <a-button slot="actions" type="primary" @click="generateReport" class="flex items-center text-white">
           <svg
             width="15"
             height="15"
@@ -33,7 +33,7 @@
               fill="#111827"
             />
           </svg>
-          PDF
+         Download  PDF
         </a-button>
         <a-list-item-meta
           :description="item.number.slice(0, 20) + '...'"
