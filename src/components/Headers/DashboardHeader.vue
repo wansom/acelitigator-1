@@ -37,7 +37,16 @@
             overlayClassName="header-notifications-dropdown"
             :getPopupContainer="() => wrapper"
           >
-            <a-badge :count="user.notifications.length" class="text-white">
+          <!-- <a-badge
+      count="4"
+      :number-style="{
+        backgroundColor: '#fff',
+        color: '#999',
+        boxShadow: '0 0 0 1px #d9d9d9 inset',
+        marginBottom:'10px'
+      }"
+    /> -->
+            <!-- <a-badge :count="user.notifications.length" class="text-white text-center flex items-center justify-center">
               <a class="ant-dropdown-link" @click="(e) => e.preventDefault()">
                 <svg
                   width="20"
@@ -56,7 +65,24 @@
                   />
                 </svg>
               </a>
-            </a-badge>
+            </a-badge> -->
+            <a class="ant-dropdown-link" @click="(e) => e.preventDefault()">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 2C6.68632 2 4.00003 4.68629 4.00003 8V11.5858L3.29292 12.2929C3.00692 12.5789 2.92137 13.009 3.07615 13.3827C3.23093 13.7564 3.59557 14 4.00003 14H16C16.4045 14 16.7691 13.7564 16.9239 13.3827C17.0787 13.009 16.9931 12.5789 16.7071 12.2929L16 11.5858V8C16 4.68629 13.3137 2 10 2Z"
+                    fill="#111827"
+                  />
+                  <path
+                    d="M10 18C8.34315 18 7 16.6569 7 15H13C13 16.6569 11.6569 18 10 18Z"
+                    fill="#111827"
+                  />
+                </svg></a>
 
             <a-list
               item-layout="horizontal"
@@ -119,7 +145,7 @@
                 size="small"
                 @click="clearAll"
                 v-if="user.notifications.length"
-                class="flex align-items-center justify-content-center"
+                class="flex items-center justify-center"
               >
                 <svg
                   width="16"
@@ -167,7 +193,7 @@
               />
             </svg>
           </a-button>
-          <a-button @click="logout" class="flex align-items-center py-4">
+          <a-button @click="logout" class="flex items-center py-4">
             <svg
               width="20"
               height="20"
