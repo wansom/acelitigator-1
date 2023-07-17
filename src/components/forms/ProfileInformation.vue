@@ -35,7 +35,7 @@
             <p class="card-p">General Information</p>
           </a-card>
         </a-col>
-        <a-col :span="24" :md="12">
+        <a-col :span="12" :md="12">
           <a-card
             :class="current === 5 ? 'icon-card-active text-white' : 'icon-card'"
             @click="
