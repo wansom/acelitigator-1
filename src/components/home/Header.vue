@@ -60,10 +60,10 @@
               </a>
               <a-menu slot="overlay">
                 <a-menu-item key="1">
-                  <a href="/sign-up" class="dropdown-menu">Create Account</a>
+                  <router-link to="/sign-up" class="dropdown-menu">Create Account</router-link>
                 </a-menu-item>
                 <a-menu-item key="2">
-                  <a href="/sign-in" class="dropdown-menu">Login</a>
+                  <router-link to="/sign-in" class="dropdown-menu">Login</router-link>
                 </a-menu-item>
               </a-menu>
             </a-dropdown>
