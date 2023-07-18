@@ -185,7 +185,7 @@ export default new Vuex.Store({
             username: `${data.first_name}${data.last_name}`,
             _id: result.user.uid,
             notifications: arrayUnion({
-              notification: `Your account was created successfully. Proceed to https://advocatelisting.acelitigator.com/sign-in to complete your profile`,
+              notification: `Your account was created successfully. Proceed to complete your profile`,
               date: new Date(),
             }),
           }).then(() => {

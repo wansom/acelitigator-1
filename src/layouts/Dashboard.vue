@@ -72,8 +72,9 @@
                 </svg>
               </button>
               <a-menu slot="overlay">
-                <a-menu-item v-for="(item,index) in user.notifications" :key="index">
-                 <div class="flex items-center gap-4">
+                <div v-if="user.notifications.length">
+                  <a-menu-item v-for="(item,index) in user.notifications" :key="index" >
+                 <div class="flex items-center gap-4" >
 
                   <p>  <span class="mr-3 text-red-600">{{ item.date.toDate().toDateString() }}</span>{{ item.notification }}</p>
                   <a-icon
@@ -85,8 +86,12 @@
                     "
                 />
                  </div>
+
                  
                 </a-menu-item>
+                </div>
+
+                <a-empty v-else/>
                 <a-button
                 type="primary"
                 block
@@ -148,13 +153,13 @@
               </button>
               <a-menu slot="overlay">
                 <a-menu-item>
-                  <a href="javascript:;">Sign Out</a>
+                  <router-link to="/profile"> Profile</router-link>
                 </a-menu-item>
                 <a-menu-item>
-                  <a href="javascript:;">Change Password</a>
+                  <router-link to="/update-password">Change Password</router-link>
                 </a-menu-item>
                 <a-menu-item>
-                  <a href="javascript:;">My Profile</a>
+                  <span @click="logout">Sign Out</span>
                 </a-menu-item>
               </a-menu>
             </a-dropdown>
@@ -272,13 +277,13 @@
               </button>
               <a-menu slot="overlay">
                 <a-menu-item>
-                  <a href="javascript:;">Sign Out</a>
+                  <router-link to="/profile"> Profile</router-link>
                 </a-menu-item>
                 <a-menu-item>
-                  <a href="javascript:;">Change Password</a>
+                  <router-link to="/update-password">Change Password</router-link>
                 </a-menu-item>
                 <a-menu-item>
-                  <a href="javascript:;">My Profile</a>
+                  <span @click="logout">Sign Out</span>
                 </a-menu-item>
               </a-menu>
             </a-dropdown>
@@ -304,6 +309,7 @@
                 </svg>
               </button>
               <a-menu slot="overlay">
+               <div v-if="user.notifications.length">
                 <a-menu-item v-for="(item,index) in user.notifications" :key="index">
                  <div class="flex items-center gap-4">
 
@@ -319,6 +325,8 @@
                  </div>
                  
                 </a-menu-item>
+               </div>
+               <a-empty v-else/>
                 <a-button
                 type="primary"
                 block
