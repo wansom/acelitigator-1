@@ -9,6 +9,7 @@ import DashboardRTLLayout from './layouts/DashboardRTL.vue'
 import router from './router'
 import VueSocialSharing from 'vue-social-sharing'
 import VueCarousel from 'vue-carousel';
+import { Cropper } from 'vue-advanced-cropper';
 
 
 // import './plugins/click-away'
@@ -19,6 +20,7 @@ import './scss/app.scss'
 import '../public/home/css/nice-select.css'
 import '../public/home/css/themify-icons.css'
 import '../public/home/css/elegant-icons.css'
+import 'vue-advanced-cropper/dist/style.css';
 
 import store from './store'
 import { auth } from "./database/index";
@@ -33,6 +35,7 @@ Vue.use(Antd);
 Vue.use(VueSocialSharing);
 Vue.use(VueCarousel);
 Vue.use(VueFormulate);
+Vue.use(Cropper);
 
 Vue.config.productionTip = false
 
