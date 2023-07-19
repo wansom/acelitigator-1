@@ -2,14 +2,14 @@
   <div>
     <!-- Charts -->
 		<a-row :gutter="24" type="flex" align="stretch"  v-if="user.status == 'active'">
-			<a-col :span="24" :lg="16" class="mb-24">
+			<a-col :span="24"  class="mb-4">
 
 				<!-- Active Users Card -->
 				<CardBarChart :visitors="user.profile_visits"></CardBarChart>
 				<!-- Active Users Card -->
 
 			</a-col>
-			<a-col :span="24" :lg="8" class="mb-24">
+			<a-col :span="24"  class="mb-24">
         <CardInvoices
 				:first_name="user.first_name"
 				:last_name="user.last_name"

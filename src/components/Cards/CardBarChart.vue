@@ -1,13 +1,15 @@
 <template>
   <!-- Active Users Card -->
   <a-card :bordered="false" class="dashboard-bar-chart">
-   <div>
+    <a-row>
+      <a-col :span="24" :md="18">
+        <div>
 		<canvas ref="chart" :style="{'height': height + 'px'}"></canvas>
 	</div>
-    <div class="card-title"></div>
-    <a-row class="card-footer" type="flex" justify="start" align="middle">
+      </a-col>
       <a-col :span="24" :md="6">
-        <a-card :bordered="false" class="widget-1">
+        <div>
+          <a-card :bordered="false" class="widget-1 m-2">
           <a-statistic
             title="Total Profile Views"
             :value="visitors.length"
@@ -17,18 +19,17 @@
           </a-statistic>
           <div class="icon" v-html="icon"></div>
         </a-card>
-      </a-col>
-      <a-col :span="24" :md="12">
-        <div class="mx-4 mt-sm-2">
-    <a-button-group>
+        <a-button-group class="mx-2">
       <a-button @click="()=>{updateChartLabels( 'thisWeek')}">This Week</a-button>
       <a-button @click="()=>{updateChartLabels( 'thisMonth')}">This Month</a-button>
       <a-button @click="()=>{updateChartLabels( 'thisYear')}">This Year</a-button>
     </a-button-group>
+        </div>
 
-  </div>
-      </a-col>
+</a-col>
     </a-row>
+
+
   </a-card>
   <!-- Active Users Card -->
 </template>
@@ -49,7 +50,7 @@ export default {
   },
   data() {
     return {
-      height:450,
+      height:400,
       chart: null,
       profileViewsData: [],
       icon: `<svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

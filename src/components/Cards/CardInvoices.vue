@@ -36,7 +36,7 @@
          Download  PDF
         </a-button>
         <a-list-item-meta
-          :description="item.number.slice(0, 20) + '...'"
+          :description="item.number"
           :title="item.date.toDate().toDateString()"
         ></a-list-item-meta>
         <div class="amount"><span class="mx-4">KSH</span>{{ item.amount }}</div>
