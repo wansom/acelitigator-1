@@ -9,8 +9,10 @@
       </a-col>
       <a-col class="col-content" :span="24" :xl="12">
         <div class="card-content">
-          <h5>{{ advocate.first_name }} {{ advocate.last_name }}</h5>
-          <h6>{{ advocate.job_title }}</h6>
+         <a-row type="flex">
+          <a-col :span="12"><p class="flex items-center"><a-icon type="user" class="mx-5" />{{ advocate.first_name }} {{ advocate.last_name }}</p></a-col>
+          <a-col :span="12"><p class="flex items-center  whitespace-nowrap"><a-icon type="solution" class="mx-5" />{{ advocate.job_title }}</p></a-col>
+         </a-row>
           <a-row type="flex" class="my-5">
             <a-col :span="12">
               <div>
@@ -37,7 +39,7 @@
               </div>
             </a-col>
           </a-row>
-          <p>
+          <p class=" lowercase h-16">
             {{ advocate.biography.slice(0,150) }}
           </p>
             <h6>Practise Areas</h6>
@@ -63,9 +65,10 @@
           </router-link>
         </div>
       </a-col>
-      <a-col class="col-img d-none d-md-block" :span="24" :md="12">
+      <a-col class="col-img hidden md:block" :span="24" :md="12">
         <div>
-          <a-avatar :src="advocate.profile_photo" :size="124" style="object-fit:contain" loading="lazy"/>
+          <!-- <a-avatar :src="advocate.profile_photo" :size="124"  loading="lazy" class=" object-contain"/> -->
+          <img  :src="advocate.profile_photo" alt="profile photo" class="h-36 w-36 object-cover rounded-lg bg-center">
         </div>
       </a-col>
     </a-row>

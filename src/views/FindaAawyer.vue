@@ -3,7 +3,8 @@
     <Header></Header>
     <div>
       <main  class="content container-fluid mx-auto px-5 lg:px-10">
-      <nav class="nav">
+   <div>
+    <nav class="nav">
         <menu class="nav__controls">
           <a-icon type="filter" />
           <li
