@@ -85,17 +85,17 @@
           </div>
           <div class="overview-images">
             <div class="col one">
-              <img src="images/stella.png" alt="" />
-              <img src="images/Susan-Mwango.jpg" alt="" />
+              <img src="images/stella.jpg" alt="" loading="lazy"/>
+              <img src="images/Susan-Mwango.jpg" alt="" loading="lazy"/>
             </div>
             <div class="col two">
-              <img src="images/brian.png" alt="" />
-              <img src="images/Mahmoud-Shalima.jpg" alt="" />
+              <img src="images/brian.jpg" alt="" />
+              <img src="images/Mahmoud-Shalima.jpg" alt="" loading="lazy" />
             </div>
           </div>
         </div>
       </section>
-      <section class="offers">
+      <!-- <section class="offers">
         <div class="offers-container container">
           <div class="offer-head">
             <h1>Advocate Signup Process</h1>
@@ -221,7 +221,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <section class="research-content" id="courts">
         <div class="research-container container">
           <div class="research-item">
@@ -478,7 +478,7 @@ section.banner {
   background: #e6353b;
   border-radius: 5px;
   margin: auto;
-  font-size: 24px;
+  font-size: 18px;
   color: #ffffff;
 }
 .banner-text .btn-secondary {
@@ -490,7 +490,7 @@ section.banner {
   background: #000000;
   border-radius: 5px;
   margin: auto;
-  font-size: 24px;
+  font-size: 18px;
   color: #ffffff;
 }
 
@@ -898,7 +898,7 @@ section.sponsors {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 36px;
   text-align: center;
   color: #1c1b1f;
@@ -910,7 +910,7 @@ section.sponsors {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 18px;
   text-align: center;
   color: #1c1b1f;
   margin: 10px auto;
@@ -988,7 +988,7 @@ section.sponsors {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 36px;
   color: #1c1b1f;
   margin: 10px 0px;
@@ -999,7 +999,7 @@ section.sponsors {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 18px;
   color: #1c1b1f;
   margin: 10px 0px;
 }
@@ -1067,7 +1067,7 @@ section.sponsors {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 36px;
   color: #1c1b1f;
   margin: 10px 0px;
@@ -1150,7 +1150,7 @@ section.sponsors {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 150%;
   color: #000000;
 }
@@ -1252,7 +1252,7 @@ section.single-research {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 36px;
   color: #fcfcfc;
 }
@@ -1457,7 +1457,7 @@ section.filter {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 29px;
   color: #1c1b1f;
 }
@@ -1552,7 +1552,7 @@ section.filter {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 36px;
   color: #25518c;
 }
@@ -1753,7 +1753,7 @@ section.filter {
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 36px;
     color: #1c1b1f;
     margin: 10px 0px;
@@ -1798,7 +1798,7 @@ section.filter {
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 28px;
     color: #00000a;
     margin-top: 40px;
@@ -1913,7 +1913,7 @@ section.filter {
   }
 
   .banner-text p {
-    font-size: 24px;
+    font-size: 18px;
     line-height: 36px;
   }
 
