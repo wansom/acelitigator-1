@@ -156,7 +156,7 @@
                   <router-link to="/profile"> Profile</router-link>
                 </a-menu-item>
                 <a-menu-item>
-                  <router-link to="/update-password">Change Password</router-link>
+                  <router-link to="/forgot-password">Change Password</router-link>
                 </a-menu-item>
                 <a-menu-item>
                   <span @click="logout">Sign Out</span>
@@ -280,7 +280,7 @@
                   <router-link to="/profile"> Profile</router-link>
                 </a-menu-item>
                 <a-menu-item>
-                  <router-link to="/update-password">Change Password</router-link>
+                  <router-link to="/forgot-password">Change Password</router-link>
                 </a-menu-item>
                 <a-menu-item>
                   <span @click="logout">Sign Out</span>
