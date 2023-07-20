@@ -339,7 +339,7 @@
                   'current_employer',
                   {
                     initialValue: user.current_employer,
-                    rules: [{ required: true, message: 'Field is required' }],
+                    rules: [{ required: false, message: 'Field is required' }],
                   },
                 ]"
                 placeholder="current company"
@@ -362,7 +362,7 @@
                   'current_position',
                   {
                     initialValue: user.current_position,
-                    rules: [{ required: true, message: 'Field is required' }],
+                    rules: [{ required: false, message: 'Field is required' }],
                   },
                 ]"
                 placeholder=""
@@ -380,7 +380,7 @@
                     initialValue: user.current_starting,
                     rules: [
                       {
-                        required: true,
+                        required: false,
                         message: 'Field is required',
                       },
                     ],
@@ -728,8 +728,9 @@ export default {
             twitter: values.twitter ?? "",
             linkedIn: values.linkedIn ?? "",
             current_employer: values.current_employer ?? "",
-            current_starting: typeof values.current_starting==='string'?values.current_starting: values.current_starting.format() ,
+            current_starting: typeof values.current_starting==='string'?values.current_starting: values.current_starting.format()??'' ,
             practise_number: values.practise_number ?? "",
+            practise_start:typeof values.practise_start==='string'?values.practise_start:values.practise_start.format()??''
           };
            this.$store.dispatch("updateUser", payload);     
         }else{

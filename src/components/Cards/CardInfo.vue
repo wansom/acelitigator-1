@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <a-card :bordered="false" class="card-info hidden md:block mb-3"  style="min-height:300px; height: fit-content;">
+ <div>
+    <a-card :bordered="false" class="card-info hidden md:block mb-3"  style="height:300px; height: fit-content;">
     <a-row type="flex">
       <a-col class="col-img block md:hidden" :span="24" :md="12">
         <div>
@@ -15,44 +15,43 @@
          </a-row>
           <a-row type="flex" class="my-5">
             <a-col :span="12">
-              <div>
+              <p class="flex items-center">
                 <a-icon type="environment" class="mx-5" />{{
                   advocate.location
                 }}
-              </div>
-              <div>
+              </p>
+              <p class="flex items-center">
                 <a-icon type="calendar" class="mx-5" />{{
                   new Date().getFullYear() -
                   new Date(advocate.practise_start).getFullYear()
-                }}Years Experience
-              </div>
+                }}Year(s) Experience
+              </p>
             </a-col>
             <a-col :span="12">
-              <div>
+              <p class="lowercase flex items-center" v-if=" advocate.current_employer">
                 <a-icon type="bank" class="mx-5" />{{
                   advocate.current_employer
                 }}
-              </div>
-              <div>
+              </p>
+              <p class="flex items-center">
                 <a-icon type="clock-circle" class="mx-5" />Member since
-                <!-- {{ advocate.date_joined.toDate().toDateString()}} -->
-              </div>
+                {{ advocate.date_joined ? advocate.date_joined.toDate().toDateString() : '2023' }}
+              </p>
             </a-col>
           </a-row>
           <p class=" lowercase h-16">
             {{ advocate.biography.slice(0,150) }}
           </p>
-            <h6>Practise Areas</h6>
+        <div class="flex items-center gap-4">  <span class="text-red-600">Primary Practise Area</span>
+          <p>{{ advocate.specialisation }}</p></div>
+            <span class="text-red-600">Other Practise Areas</span>
           <div style="display: flex; flex-wrap: wrap">
-            <div class="my-5 mx-5">
-              <a-button><a-icon type="up-circle" style="color:#DB1C22;" />{{ advocate.specialisation}}</a-button>
-            </div>
             <div
-              class="my-5 mx-5"
+              class="my-5"
               v-for="i of advocate.practise_areas"
               :key="i"
             >
-              <a-button>{{ i }}</a-button>
+              <span class=" mx-2">{{ i }}</span>
             </div>
           </div>
         </div>
@@ -112,7 +111,7 @@
               </div>
               <div>
                 <a-icon type="clock-circle" class="mx-5" />Member since
-                <!-- {{ advocate.date_joined.toDate().toDateString()}} -->
+                {{ advocate.date_joined ? advocate.date_joined.toDate().toDateString() : '0' }}
               </div>
             </a-col>
           </a-row>
@@ -145,6 +144,7 @@
     </a-row>
   </div>
 </div>
+
 
 </template>
 
