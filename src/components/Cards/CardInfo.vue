@@ -121,8 +121,7 @@
           <p>
             {{ advocate.biography.slice(0,150) }}
           </p>
-            <h6>Practise Areas</h6>
-            <div class="flex items-center gap-4">  <span class="text-red-600">Primary Practise Area</span>
+          <div class="flex items-center gap-4">  <span class="text-red-600">Primary Practise Area</span>
           <p>{{ advocate.specialisation }}</p></div>
             <span class="text-red-600">Other Practise Areas</span>
           <div style="display: flex; flex-wrap: wrap">

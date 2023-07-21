@@ -38,19 +38,6 @@
           :key="filter"
         >
           <li v-if="filter === 'experience'" class="filters__experience">
-            <output>
-              <label>Minimum experience:&nbsp;</label>
-              {{ parseFloat(filters.experience) }}
-            </output>
-
-            <input
-              v-model="filters.experience"
-              class="filters__range"
-              type="range"
-              :min="experience.min"
-              :max="experience.max"
-              step="1"
-            />
           </li>
 
           <template v-else>
@@ -65,7 +52,7 @@
           </template>
         </menu>
       </transition-group>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 bg-gray-200 px-20 py-10">
+      <div class="grid  grid-cols-1 lg:grid-cols-2 gap-4 bg-gray-200 px-20 py-10">
         
     <div v-for="advocate in list" :key="advocate.id" class="">
       <card-info :advocate="advocate"></card-info>
@@ -93,18 +80,16 @@
         </section>
       </transition>
     </main>
-
-    </div>
- <footer></footer>
-  </div>
+    <Footer></Footer>
+  </div></div>
 </template>
 
 <script>
 import Header from "../components/home/Header.vue";
 import Filters from "../components/Widgets/Filters.vue";
 import { mapState } from "vuex";
-import Footer from "../components/home/Footer.vue";
 import CardInfo from "../components/Cards/CardInfo.vue";
+import Footer from '../components/home/Footer.vue';
 // inject svg spritesheet
 fetch("https://s3-us-west-2.amazonaws.com/s.cdpn.io/450744/mock-logos.svg")
   .then((response) => response.text())
@@ -119,9 +104,10 @@ export default {
     Header,
     Filters,
     CardInfo,
+    Footer,
     icon: { template: '<svg><use :xlink:href="use"/></svg>' },
   },
-  props: ["use"],
+props: ["use"],
   data() {
     return {
       title: "Find A Lawyer",
