@@ -942,7 +942,7 @@ section.sponsors {
 .projects {
   padding: 60px 0px;
   border-radius: 5px;
-  background-image: url(../../public/images/home/about-banner.png);
+  background-image: url(../../public/images/home/about-banner.jpg);
 }
 
 .projects-head {
@@ -1722,7 +1722,7 @@ section.filter {
   .projects {
     padding: 10px 0px;
     border-radius: 5px;
-    background-image: url(../../public/images/home/about-banner.png);
+    background-image: url(../../public/images/home/about-banner.jpg);
   }
 
   .projects-head {
