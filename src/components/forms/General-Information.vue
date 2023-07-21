@@ -409,7 +409,7 @@
                 ]"
                 placeholder=""
                 style="width: 100%"
-                addon-before="P105./"
+                addon-before="SCN./"
               />
             </a-form-item>
           </a-col>
