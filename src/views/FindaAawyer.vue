@@ -65,7 +65,7 @@
           </template>
         </menu>
       </transition-group>
-      <div class="grid grid-cols-2 gap-4 bg-gray-200 px-20 py-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 bg-gray-200 px-20 py-10">
         
     <div v-for="advocate in list" :key="advocate.id" class="">
       <card-info :advocate="advocate"></card-info>
@@ -95,6 +95,7 @@
     </main>
 
     </div>
+ <footer></footer>
   </div>
 </template>
 
@@ -117,7 +118,6 @@ export default {
   components: {
     Header,
     Filters,
-    Footer,
     CardInfo,
     icon: { template: '<svg><use :xlink:href="use"/></svg>' },
   },

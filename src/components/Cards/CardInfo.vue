@@ -122,16 +122,16 @@
             {{ advocate.biography.slice(0,150) }}
           </p>
             <h6>Practise Areas</h6>
+            <div class="flex items-center gap-4">  <span class="text-red-600">Primary Practise Area</span>
+          <p>{{ advocate.specialisation }}</p></div>
+            <span class="text-red-600">Other Practise Areas</span>
           <div style="display: flex; flex-wrap: wrap">
-            <div class="my-5 mx-5">
-              <a-button><a-icon type="up-circle" style="color:#DB1C22;" />{{ advocate.specialisation}}</a-button>
-            </div>
             <div
-              class="my-5 mx-5"
+              class="my-5"
               v-for="i of advocate.practise_areas"
               :key="i"
             >
-              <a-button>{{ i }}</a-button>
+              <span class=" mx-2">{{ i }}</span>
             </div>
           </div>
         </div>
