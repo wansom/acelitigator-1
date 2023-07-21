@@ -69,7 +69,8 @@
       <a-col class="col-img hidden md:block" :span="24" :md="12">
         <div>
           <!-- <a-avatar :src="advocate.profile_photo" :size="124"  loading="lazy" class=" object-contain"/> -->
-          <img  :src="advocate.profile_photo" alt="profile photo" class="h-36 w-36 object-cover rounded-lg bg-center">
+          <img  :src="advocate.profile_photo" alt="profile photo" class="h-36 w-36 object-cover rounded-lg bg-center" v-if="advocate.profile_photo">
+          <img  src="/images/user-avatar.png" alt="profile photo" class="h-36 w-36 object-cover rounded-lg bg-center" v-else>
         </div>
       </a-col>
     </a-row>
