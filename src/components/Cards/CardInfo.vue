@@ -4,7 +4,9 @@
     <a-row type="flex">
       <a-col class="col-img block md:hidden" :span="24" :md="12">
         <div>
-          <img :src="advocate.profile_photo" alt=""  style="object-fit:contain; width: 100%; max-height: 300px;" loading="lazy">
+          <img :src="advocate.profile_photo" alt=""  style="object-fit:contain; width: 100%; max-height: 300px;" loading="lazy" v-if="advocate.profile_photo">
+          <img src="/images/user-avatar.png" alt=""  style="object-fit:contain; width: 100%; max-height: 300px;" loading="lazy" v-else>
+
         </div>
       </a-col>
       <a-col class="col-content" :span="24" :xl="12">
