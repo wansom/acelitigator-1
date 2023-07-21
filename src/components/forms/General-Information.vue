@@ -728,9 +728,9 @@ export default {
             twitter: values.twitter ?? "",
             linkedIn: values.linkedIn ?? "",
             current_employer: values.current_employer ?? "",
-            current_starting: typeof values.current_starting==='string'?values.current_starting: values.current_starting.format()??'' ,
+            current_starting: typeof values.current_starting==='string'?values.current_starting: values.current_starting?.format()??'' ,
             practise_number: values.practise_number ?? "",
-            practise_start:typeof values.practise_start==='string'?values.practise_start:values.practise_start.format()??''
+            practise_start:typeof values.practise_start==='string'?values.practise_start:values.practise_start?.format()??''
           };
            this.$store.dispatch("updateUser", payload);     
         }else{

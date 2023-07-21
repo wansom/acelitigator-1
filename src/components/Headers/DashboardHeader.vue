@@ -13,22 +13,6 @@
             >
             <a-breadcrumb-item>{{ this.$route.name }}</a-breadcrumb-item>
           </a-breadcrumb>
-          <!-- / Header Breadcrumbs -->
-          <!-- Header Page Title -->
-          <!-- <div class="ant-page-header-heading">
-            <a-alert
-              message="Account Waiting approval"
-              banner
-              v-if="user.status == 'pending approval'"
-            />
-            <a-alert
-              message="Your account has been approved.Proceed to Payment"
-              banner
-              type="success"
-              v-if="user.status == 'approved'"
-            />
-          </div> -->
-          <!-- / Header Page Title -->
         </a-col>
         <a-col :span="24" :md="18" class="header-control">
           <!-- Header Control Buttons -->
