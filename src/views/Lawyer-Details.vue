@@ -24,12 +24,12 @@
                  
                     <ul
                         class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
-                        <li class="flex items-center py-3">
+                        <li class="flex items-center py-3"  @click="openMailClient">
                             <span>Send Email</span>
                             <span class="ml-auto"><span
                                     class="bg-red-500 py-1 px-2 rounded text-white text-sm flex items-center"><a-icon type="mail" /></span></span>
                         </li>
-                        <li class="flex items-center py-3">
+                        <li class="flex items-center py-3" @click="openPhoneDialer">
                             <span>Call Advocate</span>
                             <span class="ml-auto"><span
                                     class="bg-red-500 py-1 px-2 rounded text-white text-sm flex items-center"><a-icon type="phone" /></span></span>
@@ -154,25 +154,23 @@
                                 <span class="tracking-wide">Experience</span>
                             </div>
                             <ul class="list-inside space-y-2">
-                                <li>
-                                    <div class="text-teal-600">Owner at Her Company Inc.</div>
-                                    <div class="text-gray-500 text-xs">March 2020 - Now</div>
+                              <li>
+                                    <div class="text-teal-600">{{ advocate.current_employer }}</div>
+                                    <div class="text-gray-500 text-xs">{{new Date( advocate.current_starting).toDateString() }} - Present</div>
                                 </li>
-                                <li>
-                                    <div class="text-teal-600">Owner at Her Company Inc.</div>
-                                    <div class="text-gray-500 text-xs">March 2020 - Now</div>
+                                <li v-if="advocate.prev1">
+                                    <div class="text-teal-600" >{{ advocate.prev1 }}</div>
+                                    <div class="text-gray-500 text-xs">{{new Date( advocate.prev1starting).toDateString() }} - {{new Date( advocate.prev1ending).toDateString() }}</div>
                                 </li>
-                                <li>
-                                    <div class="text-teal-600">Owner at Her Company Inc.</div>
-                                    <div class="text-gray-500 text-xs">March 2020 - Now</div>
+                             
+                                <li v-if="advocate.prev2">
+                                    <div class="text-teal-600">{{ advocate.prev2 }}</div>
+                                    <div class="text-gray-500 text-xs">{{new Date( advocate.prev2ending).toDateString() }}- {{new Date( advocate.prev2ending).toDateString() }}</div>
                                 </li>
-                                <li>
-                                    <div class="text-teal-600">Owner at Her Company Inc.</div>
-                                    <div class="text-gray-500 text-xs">March 2020 - Now</div>
-                                </li>
+                                
                             </ul>
                         </div>
-                        <div>
+                        <!-- <div>
                             <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8 mb-3">
                                 <span clas="text-green-500">
                                     <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -196,7 +194,7 @@
                                     <div class="text-gray-500 text-xs">March 2020 - Now</div>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- End of Experience and education grid -->
                 </div>
@@ -228,6 +226,14 @@ export default {
     
   },
   methods: {
+    openPhoneDialer() {
+      const url = `tel:${this.advocate.phone}`;
+      window.open(url);
+    },
+    openMailClient() {
+      const url = `mailto:${this.advocate.email}`;
+      window.open(url);
+    },
     moveToHome(){
       router.push('/')
 
