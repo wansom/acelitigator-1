@@ -37,23 +37,23 @@
               </p>
               <p class="flex items-center">
                 <a-icon type="clock-circle" class="mx-5" />Member since
-                {{ advocate.date_joined ? advocate.date_joined.toDate().toDateString() : '2023' }}
+                {{ advocate.date_joined ? advocate.date_joined.toDate().getFullYear() : '2023' }}
               </p>
             </a-col>
           </a-row>
-          <p class=" lowercase h-16">
+          <p class=" lowercase h-16 mb-6">
             {{ advocate.biography.slice(0,150) }}
           </p>
-        <div class="flex items-center gap-4">  <span class="text-red-600">Primary Practise Area</span>
-          <p>{{ advocate.specialisation }}</p></div>
-            <span class="text-red-600">Other Practise Areas</span>
-          <div style="display: flex; flex-wrap: wrap">
+        <div class="flex items-center gap-4">  <span class="text-red-600 whitespace-nowrap">Primary Practise Area</span>
+          <p class=" whitespace-nowrap">{{ advocate.specialisation }}</p></div>
+            <span class="text-red-600 whitespace-nowrap">Other Practise Areas</span>
+          <div style="display: flex; flex-wrap: nowrap">
             <div
               class="my-5"
               v-for="i of advocate.practise_areas"
               :key="i"
             >
-              <span class=" mx-2">{{ i }}</span>
+              <span class=" mx-2 whitespace-nowrap">{{ i }}</span>
             </div>
           </div>
         </div>
