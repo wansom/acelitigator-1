@@ -12,8 +12,8 @@
       <a-col class="col-content" :span="24" :xl="12">
         <div class="card-content">
          <a-row type="flex">
-          <a-col :span="12"><p class="flex items-center"><a-icon type="user" class="mx-5" />{{ advocate.first_name }} {{ advocate.last_name }}</p></a-col>
-          <a-col :span="12"><p class="flex items-center  whitespace-nowrap"><a-icon type="solution" class="mx-5" />{{ advocate.job_title }}</p></a-col>
+          <a-col :span="12"><p class="flex items-center "><a-icon type="user" class="mx-5" />{{ advocate.first_name }} {{ advocate.last_name }}</p></a-col>
+          <a-col :span="12"><p class="flex items-start overflow-hidden overflow-ellipsis whitespace-nowrap"><a-icon type="solution" class="mx-5" />{{ advocate.job_title }}</p></a-col>
          </a-row>
           <a-row type="flex" class="my-5">
             <a-col :span="12">

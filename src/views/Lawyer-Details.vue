@@ -112,7 +112,7 @@
                                 <div class="px-4 py-2">{{ advocate.specialisation }}</div>
                             </div>
                             <div class="grid grid-cols-2">
-                                <div class="p-2 font-semibold">Oher Practise Areas.</div>
+                                <div class="p-2 font-semibold">Other Practise Areas.</div>
                                 <div class="flex items-center">
                                   <div class="px-4 py-2 " v-for="(area,index) of advocate.practise_areas" :key="index">
                                     {{ area }}
@@ -127,7 +127,7 @@
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Other Practise Locations</div>
                                 <div class="flex items-center">
-                                  <div class="p-2" v-for="(location,index) of advocate.other_counties" :key="index">{{location}}</div>
+                                  <div class="px-4 py-2" v-for="(location,index) of advocate.other_counties" :key="index">{{location}}</div>
                                 </div>
                                 
                             </div>
