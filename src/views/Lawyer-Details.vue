@@ -26,12 +26,12 @@
                         class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
                         <li class="flex items-center py-3"  @click="openMailClient">
                             <span>Send Email</span>
-                            <span class="ml-auto"><span
+                            <span class="ml-auto cursor-pointer"><span
                                     class="bg-red-500 py-1 px-2 rounded text-white text-sm flex items-center"><a-icon type="mail" /></span></span>
                         </li>
                         <li class="flex items-center py-3" @click="openPhoneDialer">
                             <span>Call Advocate</span>
-                            <span class="ml-auto"><span
+                            <span class="ml-auto cursor-pointer"><span
                                     class="bg-red-500 py-1 px-2 rounded text-white text-sm flex items-center"><a-icon type="phone" /></span></span>
                         </li>
                         <li class="flex items-center py-3 justify-between">
@@ -112,10 +112,13 @@
                                 <div class="px-4 py-2">{{ advocate.specialisation }}</div>
                             </div>
                             <div class="grid grid-cols-2">
-                                <div class="px-4 py-2 font-semibold">Oher Practise Areas.</div>
-                                <div class="px-4 py-2 flex items center" v-for="(area,index) of advocate.practise_areas" :key="index">
+                                <div class="p-2 font-semibold">Oher Practise Areas.</div>
+                                <div class="flex items-center">
+                                  <div class="px-4 py-2 " v-for="(area,index) of advocate.practise_areas" :key="index">
                                     {{ area }}
                                 </div>
+                                </div>
+                                
                             </div>
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Primary Practise Location</div>
@@ -123,7 +126,10 @@
                             </div>
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Other Practise Locations</div>
-                                <div class="px-4 py-2" v-for="(location,index) of advocate.other_counties" :key="index">{{location}}</div>
+                                <div class="flex items-center">
+                                  <div class="p-2" v-for="(location,index) of advocate.other_counties" :key="index">{{location}}</div>
+                                </div>
+                                
                             </div>
                             <div class="grid grid-cols-1">
                                 <div class="px-4 py-2 font-semibold">Biography</div>
