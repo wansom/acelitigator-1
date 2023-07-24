@@ -134,6 +134,11 @@ let routes = [
         name: 'not-authorized',
         component: () => import(/* webpackChunkName: "notauthorized" */ '../views/NotAuthorized.vue'),
     },
+    {
+        path: '/testPage',
+        name: 'TestPage',
+        component: () => import(/* webpackChunkName: "notauthorized" */ '../views/TestPage.vue'),
+    },
 ]
 
 function addLayoutToRoute( route, parentLayout = "default" )

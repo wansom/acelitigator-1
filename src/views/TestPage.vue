@@ -1,52 +1,33 @@
 <template>
-  <div>
-    <Header></Header>
-    <!-- <section class="product-shop spad page-details">
-      <div class="container">
-        <div class="row">
-          <detail-card  :advocate="advocate"></detail-card>
-        </div>
-      </div>
-    </section> -->
-    <div class="container mx-auto my-5 px-5 lg:px-10 py-5 overflow-x-hidden">
+<div>
+    <Header></Header> 
+  <div class="container mx-auto my-5 p-5 overflow-x-hidden">
         <div class="md:flex no-wrap md:-mx-2 ">
             <!-- Left Side -->
             <div class="w-full md:w-3/12 md:mx-2">
                 <!-- Profile Card -->
-                <div class="bg-white p-3 border-t-4 border-red-600">
+                <div class="bg-white p-3 border-t-4 border-green-400">
                     <div class="image overflow-hidden">
                         <img class="h-auto w-full mx-auto"
-                            :src="advocate.profile_photo"
+                            src="https://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg"
                             alt="">
                     </div>
-                    <h1 class="text-gray-900 font-bold text-xl leading-8 my-1">{{ advocate.first_name }}<span class="mx-1"></span>{{ advocate.last_name }}</h1>
-                    <h3 class="text-gray-600 font-lg text-semibold leading-6">{{ advocate.job_title }}</h3>
-                 
+                    <h1 class="text-gray-900 font-bold text-xl leading-8 my-1">Jane Doe</h1>
+                    <h3 class="text-gray-600 font-lg text-semibold leading-6">Owner at Her Company Inc.</h3>
+                    <p class="text-sm text-gray-500 hover:text-gray-600 leading-6">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit.
+                        Reprehenderit, eligendi dolorum sequi illum qui unde aspernatur non deserunt</p>
                     <ul
                         class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
                         <li class="flex items-center py-3">
-                            <span>Send Email</span>
+                            <span>Status</span>
                             <span class="ml-auto"><span
-                                    class="bg-red-500 py-1 px-2 rounded text-white text-sm flex items-center"><a-icon type="mail" /></span></span>
+                                    class="bg-green-500 py-1 px-2 rounded text-white text-sm">Active</span></span>
                         </li>
                         <li class="flex items-center py-3">
-                            <span>Call Advocate</span>
-                            <span class="ml-auto"><span
-                                    class="bg-red-500 py-1 px-2 rounded text-white text-sm flex items-center"><a-icon type="phone" /></span></span>
+                            <span>Member since</span>
+                            <span class="ml-auto">Nov 07, 2016</span>
                         </li>
-                        <li class="flex items-center py-3 justify-between">
-                            <span>View Social Profile </span>
-                            <div class="flex items-center gap-6 ml-6">
-                              <span class="ml-auto"><span
-                                    class="bg-red-500 py-1 px-2 rounded text-white text-sm flex items-center"> <a :href="'//' + advocate.twitter"  target="_blank"><i class="ti-twitter-alt hover:text-red-600"></i></a></span></span>
-                                    <span class="ml-auto"><span
-                                    class="bg-red-500 py-1 px-2 rounded text-white text-sm flex items-center"><a  :href="'//' + advocate.website" target="_blank"><i class="fa fa-globe hover:text-red-600"></i></a></span></span>
-                                    <span class="ml-auto"><span
-                                    class="bg-red-500 py-1 px-2 rounded text-white text-sm flex items-center"><a :href="'//' +advocate.linkedIn"  target="_blank"><i class="fa fa-linkedin hover:text-red-600"></i></a></span></span>
-                            </div>
-                           
-                        </li>
-                       
                     </ul>
                 </div>
                 <!-- End of profile card -->
@@ -54,7 +35,7 @@
                 <!-- Friends card -->
                 <div class="bg-white p-3 hover:shadow">
                     <div class="flex items-center space-x-3 font-semibold text-gray-900 text-xl leading-8">
-                        <span class="text-red-600">
+                        <span class="text-green-500">
                             <svg class="h-5 fill-current" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -63,12 +44,30 @@
                         </span>
                         <span>Similar Profiles</span>
                     </div>
-                    <div class="grid grid-cols-3" >
-                        <div class="text-center my-2" v-for="advocate of advocates.slice(0,3)" :key="advocate.id">
-                            <img class="h-16 w-16 rounded-full mx-auto object-cover"
-                            :src="advocate.profile_photo"
+                    <div class="grid grid-cols-3">
+                        <div class="text-center my-2">
+                            <img class="h-16 w-16 rounded-full mx-auto"
+                                src="https://cdn.australianageingagenda.com.au/wp-content/uploads/2015/06/28085920/Phil-Beckett-2-e1435107243361.jpg"
                                 alt="">
-                            <a href="#" class="text-main-color">{{ advocate.first_name }}<sapn class="mx-1"></sapn>{{ advocate.last_name }}</a>
+                            <a href="#" class="text-main-color">Kojstantin</a>
+                        </div>
+                        <div class="text-center my-2">
+                            <img class="h-16 w-16 rounded-full mx-auto"
+                                src="https://avatars2.githubusercontent.com/u/24622175?s=60&amp;v=4"
+                                alt="">
+                            <a href="#" class="text-main-color">James</a>
+                        </div>
+                        <div class="text-center my-2">
+                            <img class="h-16 w-16 rounded-full mx-auto"
+                                src="https://lavinephotography.com.au/wp-content/uploads/2017/01/PROFILE-Photography-112.jpg"
+                                alt="">
+                            <a href="#" class="text-main-color">Natie</a>
+                        </div>
+                        <div class="text-center my-2">
+                            <img class="h-16 w-16 rounded-full mx-auto"
+                                src="https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/f04b52da-12f2-449f-b90c-5e4d5e2b1469_361x361.png"
+                                alt="">
+                            <a href="#" class="text-main-color">Casey</a>
                         </div>
                     </div>
                 </div>
@@ -90,49 +89,46 @@
                         <span class="tracking-wide">About</span>
                     </div>
                     <div class="text-gray-700">
-                        <div class="grid grid-cols-1 text-sm">
+                        <div class="grid md:grid-cols-2 text-sm">
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">First Name</div>
-                                <div class="px-4 py-2">{{ advocate.first_name }}</div>
+                                <div class="px-4 py-2">Jane</div>
                             </div>
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Last Name</div>
-                                <div class="px-4 py-2">{{ advocate.last_name }}</div>
+                                <div class="px-4 py-2">Doe</div>
+                            </div>
+                            <div class="grid grid-cols-2">
+                                <div class="px-4 py-2 font-semibold">Gender</div>
+                                <div class="px-4 py-2">Female</div>
                             </div>
                             <div class="grid grid-cols-2">
                                 <div class="px-4 py-2 font-semibold">Contact No.</div>
-                                <div class="px-4 py-2">{{ advocate.phone }}</div>
+                                <div class="px-4 py-2">+11 998001001</div>
                             </div>
                             <div class="grid grid-cols-2">
-                                <div class="px-4 py-2 font-semibold">Contact Email</div>
-                                <div class="px-4 py-2">{{ advocate.email }}</div>
+                                <div class="px-4 py-2 font-semibold">Current Address</div>
+                                <div class="px-4 py-2">Beech Creek, PA, Pennsylvania</div>
                             </div>
                             <div class="grid grid-cols-2">
-                                <div class="px-4 py-2 font-semibold">Primary Practise Area</div>
-                                <div class="px-4 py-2">{{ advocate.specialisation }}</div>
+                                <div class="px-4 py-2 font-semibold">Permanant Address</div>
+                                <div class="px-4 py-2">Arlington Heights, IL, Illinois</div>
                             </div>
                             <div class="grid grid-cols-2">
-                                <div class="px-4 py-2 font-semibold">Oher Practise Areas.</div>
-                                <div class="px-4 py-2 flex items center" v-for="(area,index) of advocate.practise_areas" :key="index">
-                                    {{ area }}
+                                <div class="px-4 py-2 font-semibold">Email.</div>
+                                <div class="px-4 py-2">
+                                    <a class="text-blue-800" href="mailto:jane@example.com">jane@example.com</a>
                                 </div>
                             </div>
                             <div class="grid grid-cols-2">
-                                <div class="px-4 py-2 font-semibold">Primary Practise Location</div>
-                                <div class="px-4 py-2">{{advocate.location }}</div>
-                            </div>
-                            <div class="grid grid-cols-2">
-                                <div class="px-4 py-2 font-semibold">Other Practise Locations</div>
-                                <div class="px-4 py-2" v-for="(location,index) of advocate.other_counties" :key="index">{{location}}</div>
-                            </div>
-                            <div class="grid grid-cols-1">
-                                <div class="px-4 py-2 font-semibold">Biography</div>
-                                <p class="text-sm text-gray-500 hover:text-gray-600 leading-6 px-4">
-                       {{ advocate.biography }}</p>
+                                <div class="px-4 py-2 font-semibold">Birthday</div>
+                                <div class="px-4 py-2">Feb 06, 1998</div>
                             </div>
                         </div>
                     </div>
-                 
+                    <button
+                        class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Show
+                        Full Information</button>
                 </div>
                 <!-- End of about section -->
 
@@ -204,51 +200,17 @@
             </div>
         </div>
     </div>
-    <Footer></Footer>
-  </div>
+</div>
 </template>
 
 <script>
-import Header from "../components/home/Header.vue";
-import Footer from "../components/home/Footer.vue";
-import Breadcrum from "../components/Widgets/Breadcrum.vue";
-import DetailCard from '../components/Detail/Detail-card.vue';
-import RelatedAdvocates from '../components/Detail/Related-Advocates.vue';
-import {getAdvocate} from '../database/firestore'
-import {increment} from "firebase/firestore"
-import { updateAdvocate } from "../database/firestore";
-import { arrayUnion} from "firebase/firestore";
-import { mapState } from 'vuex';
+import Header from '../components/home/Header.vue'
 export default {
-  components: { Header, Footer, Breadcrum,DetailCard, RelatedAdvocates },
-  data(){
-    return{
-      advocate:{}
-    }
-    
-  },
-  methods: {
-    moveToHome(){
-      router.push('/')
+  components: { Header },
 
-    },
-    fetchDetails() {
-      getAdvocate(this.$route.params.id).then((data)=>{
-       this.advocate=data
-       updateAdvocate(this.$route.params.id,{
-          profile_visits:arrayUnion(new Date()),
-        })
-      })
-    },
-  },
-  computed: {
-...mapState([ "advocates",])
-  },
-  mounted() {
-    this.fetchDetails();
-    this.$store.dispatch('fetchActiveAdvocates')
-  },
-};
-</script> 
+}
+</script>
 
-<style></style>
+<style>
+
+</style>
