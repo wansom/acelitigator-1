@@ -125,6 +125,11 @@ let routes = [
         component: () => import(/* webpackChunkName: "forgotpassword" */ '../views/Forgot-Password.vue'),
     },
     {
+        path: '/reset-password',
+        name: 'Reset-Password',
+        component: () => import(/* webpackChunkName: "forgotpassword" */ '../views/ResetPassword.vue'),
+    },
+    {
         path: '/advocate-listing',
         name: 'Advocate-Listing',
         component: () => import(/* webpackChunkName: "advocatelist" */ '../views/Advocate-List.vue'),
