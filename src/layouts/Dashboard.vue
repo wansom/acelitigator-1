@@ -72,7 +72,7 @@
                 </svg>
               </button>
               <a-menu slot="overlay">
-                <div v-if="user.notifications.length">
+                <!-- <div v-if="user.notifications.length">
                   <a-menu-item v-for="(item,index) in user.notifications" :key="index" >
                  <div class="flex items-center gap-4" >
 
@@ -89,15 +89,33 @@
 
                  
                 </a-menu-item>
-                </div>
+                </div> -->
+              <a-menu-item>
+                <div v-if="user.notifications.length">
+                  <div v-for="item of user.notifications" :key="item">
+                    <div class="flex items-center gap-4" >
 
+<p>  <span class="mr-3 text-red-600">{{ item.date.toDate().toDateString() }}</span>{{ item.notification }}</p>
+<a-icon
+  type="close"
+  @click="
+    () => {
+      removeNotification(item);
+    }
+  "
+/>
+</div>
+              </div>
+                </div>
                 <a-empty v-else/>
+              </a-menu-item>
+                
                 <a-button
                 type="primary"
                 block
                 size="small"
                 @click="clearAll"
-                v-if="user.notifications.length"
+                v-if="user.notifications.length>0"
                 class="flex items-center justify-center"
               >
                 <svg
@@ -129,6 +147,7 @@
 
               </a-menu>
             </a-dropdown>
+            
             <a-dropdown class="ml-4 flex items-center md:ml-6">
               <button
                 type="button"

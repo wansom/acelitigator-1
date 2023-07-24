@@ -48,7 +48,7 @@
           <h6 class="font-semibold mb-5">Account Subscription</h6>
           <!-- <p>Make payment to complete your profile</p> -->
           <div class="w-full flex gap-2 "  @click="onClose">
-            <p>Your early adopter's promo code is:<span class="text-lg text-black">dialalawyer9c97a@</span></p>
+            <p class=" whitespace-normal">Your early adopter's promo code is:<span class="text-lg text-black">dialalawyer9c97a@</span></p>
             <span style="color: red" class="flex cursor-pointer ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -113,14 +113,15 @@ export default {
   },
   methods: {
     onClose() {
-      const textarea = document.createElement('textarea');
-  textarea.textContent = "dialalawyer9c97a@";
-  textarea.style.position = 'fixed';
-  textarea.style.top = '-9999px';
-  document.body.appendChild(textarea);
-  textarea.select();
-  document.execCommand('copy');
-  document.body.removeChild(textarea);
+      const textarea = document.createElement("textarea");
+      textarea.textContent = "dialalawyer9c97a@";
+      textarea.style.position = "fixed";
+      textarea.style.top = "-9999px";
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+      this.$message.success('code copied successfully')
     },
     showModal() {
       if (!this.user.biography) {
