@@ -120,7 +120,7 @@
                   />
                 </a-tooltip>
               <a-select
-                mode="tags"
+                mode="multiple"
                 style="width: 100%"
                 placeholder="Type or search"
                 v-decorator="[

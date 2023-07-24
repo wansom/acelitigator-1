@@ -2,86 +2,90 @@
   <div class="bg-white container-fluid">
     <Header></Header>
     <div>
-      <main  class="content container-fluid mx-auto px-5 lg:px-10">
-    <nav class="nav">
-        <menu class="nav__controls">
-          <a-icon type="filter" />
-          <li
-            v-for="(active, menu) in menus" :key="menu"
-            class="nav__label"
-            :class="{
-              'nav__label--active': active,
-              'nav__label--filter': activeFilters[menu].length,
-            }"
-            @click="setMenu(menu, active)"
-          >
-            {{ menuLabels[menu] }}
-          </li>
-
-          <li class="nav__label nav__label--clear" @click="clearAllFilters">
-            Clear all
-          </li>
-        </menu>
-      </nav>
-
-      <transition-group
-        name="dropdown"
-        tag="section"
-        class="dropdown"
-        :style="dropdown"
-      >
-        <menu
-          v-for="(options, filter) in filters"
-          class="filters"
-          v-show="menus[filter]"
-          ref="menu"
-          :key="filter"
-        >
-          <li v-if="filter === 'experience'" class="filters__experience">
-          </li>
-
-          <template v-else>
-            <li
-              v-for="(active, option) in options" :key="option"
-              class="filters__item"
-              :class="{ 'filters__item--active': active }"
-              @click="setFilter(filter, option)"
-            >
-              {{ option }}
-            </li>
-          </template>
-        </menu>
-      </transition-group>
-      <div class="grid  grid-cols-1 lg:grid-cols-2 gap-4 bg-gray-200 px-20 py-10">
-        
-    <div v-for="advocate in list" :key="advocate.id" class="">
-      <card-info :advocate="advocate"></card-info>
-    </div>
-  </div>
-
-
-      <transition name="modal">
-        <section v-if="modal" class="modal" @click="modal = false">
-          <article class="modal__content" @click.stop>
-            <h4 class="modal__title">For the full tutorial</h4>
-            <h4 class="modal__title">that goes with this pen</h4>
-
-            <h5 class="modal__link" @click="modal = false">
-              <a
-                href="https://snipcart.com/blog/vuejs-transitions-animations"
-                target="_blank"
+      <main class="content container-fluid mx-auto px-5 lg:px-10">
+        <div>
+          <nav class="nav">
+            <menu class="nav__controls">
+              <a-icon type="filter" />
+              <li
+                v-for="(active, menu) in menus"
+                :key="menu"
+                class="nav__label"
+                :class="{
+                  'nav__label--active': active,
+                  'nav__label--filter': activeFilters[menu].length,
+                }"
+                @click="setMenu(menu, active)"
               >
-                Creating Vue.js Transitions &amp; Animations
-              </a>
-            </h5>
+                {{ menuLabels[menu] }}
+              </li>
 
-            <button class="modal__close" @click="modal = false">&times;</button>
-          </article>
-        </section>
-      </transition>
-    </main>
+              <li class="nav__label nav__label--clear">
+                <a-button type="primary" @click="clearAllFilters">
+                  Clear all</a-button
+                >
+              </li>
+            </menu>
+          </nav>
+
+          <transition-group
+            name="dropdown"
+            tag="section"
+            class="dropdown"
+            :style="dropdown"
+          >
+            <menu
+              v-for="(options, filter) in filters"
+              class="filters"
+              v-show="menus[filter]"
+              ref="menu"
+              :key="filter"
+            >
+              <li
+                v-if="filter === 'experience'"
+                class="filters__experience"
+              ></li>
+
+              <template v-else>
+                <li
+                  v-for="(active, option) in options"
+                  :key="option"
+                  class="filters__item"
+                  :class="{ 'filters__item--active': active }"
+                  @click="setFilter(filter, option)"
+                >
+                  {{ option }}
+                </li>
+              </template>
+            </menu>
+          </transition-group>
+        </div>
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-4 bg-gray-200 px-20 py-10"
+          v-if="list.length > 0"
+        >
+          <div v-for="advocate in list" :key="advocate.id" class="">
+            <card-info :advocate="advocate"></card-info>
+          </div>
+        </div>
+        <div v-else class="flex items-center justify-center py-20">
+          <a-empty
+          class="flex flex-col items-center justify-center"
+            image="https://gw.alipayobjects.com/mdn/miniapp_social/afts/img/A*pevERLJC9v0AAAAAAAAAAABjAQAAAQ/original"
+            :image-style="{
+              height: '60px',
+            }"
+          >
+            <span slot="description">
+            No Advocates fit your description
+            </span>
+         
+          </a-empty>
+        </div>
+      </main>
+    </div>
     <Footer></Footer>
-  </div></div>
+  </div>
 </template>
 
 <script>
@@ -89,7 +93,7 @@ import Header from "../components/home/Header.vue";
 import Filters from "../components/Widgets/Filters.vue";
 import { mapState } from "vuex";
 import CardInfo from "../components/Cards/CardInfo.vue";
-import Footer from '../components/home/Footer.vue';
+import Footer from "../components/home/Footer.vue";
 // inject svg spritesheet
 fetch("https://s3-us-west-2.amazonaws.com/s.cdpn.io/450744/mock-logos.svg")
   .then((response) => response.text())
@@ -107,7 +111,7 @@ export default {
     Footer,
     icon: { template: '<svg><use :xlink:href="use"/></svg>' },
   },
-props: ["use"],
+  props: ["use"],
   data() {
     return {
       title: "Find A Lawyer",
