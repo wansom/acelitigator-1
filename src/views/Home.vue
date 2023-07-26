@@ -1,7 +1,6 @@
 <template>
   <div>
     <Header></Header>
-
     <main>
       <section class="banner">
         <div class="banner-mask">
@@ -964,7 +963,6 @@ section.sponsors {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  flex-wrap: wrap;
 }
 
 .project {
