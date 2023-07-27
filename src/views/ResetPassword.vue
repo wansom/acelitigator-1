@@ -17,17 +17,24 @@
             >
               <a-form-item class="group-input">
                 <label for="username">New Password *</label>
-                <a-input
-                
+                <a-input-password
                   v-decorator="[
-                    'email',
+                    'password',
                     {
                       rules: [
-                        { required: true, message: 'Please input your email!' },
+                        {
+                          required: true,
+                          message: 'Please input your password!',
+                        },
+                        {
+                          min: 8,
+                          message: 'Password must be 8 characters or more',
+                        },
                       ],
                     },
                   ]"
-                />
+                  autocomplete="off"
+                ></a-input-password>
               </a-form-item>        
               <button
                 type="submit"
@@ -57,6 +64,11 @@
     import Footer from "../components/home/Footer.vue";
     import Breadcrum from "../components/Widgets/Breadcrum.vue";
     import ForgotPasswordForm from '../components/forms/ForgotPasswordForm.vue';
+    import {mapState} from "vuex"
+import { auth } from "../database";
+import { confirmPasswordReset } from "firebase/auth";
+import router from "../router";
+  
     export default {
         components:{Header,Footer,Breadcrum, ForgotPasswordForm},
         data() {
@@ -79,7 +91,14 @@
       e.preventDefault();
       this.form.validateFields((err, values) => {
         if (!err) {
-          this.$store.dispatch("restPassword", values)
+          this.$store.dispatch("resetPassword", values)
+          const oobCode = this.$route.query.oobCode;
+          confirmPasswordReset(auth,oobCode,values.password).then(()=>{
+            router.push('/sign-in')
+          }).catch((err)=>{
+            console.log(err)
+          })
+          
         }
       });
     },

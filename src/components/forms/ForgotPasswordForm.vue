@@ -53,7 +53,6 @@ export default {
     return {
       // Binded model property for "Sign In Form" switch button for "Remember Me" .
       rememberMe: true,
-      loading: this.$store.state.loading,
       email:""
     };
   },
@@ -70,8 +69,7 @@ export default {
       e.preventDefault();
       this.form.validateFields((err, values) => {
         if (!err) {
-          console.log(values)
-          this.$store.dispatch("restPassword", values);
+          this.$store.dispatch("resetPassword", values);
         }
       });
     },
