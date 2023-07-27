@@ -3,11 +3,7 @@
     <div class="block md:hidden">
       <div class="mobile-sm-menu">
         <router-link to="/">
-          <img
-            src="/images/dial-logo.png"
-            alt=""
-            style="height: 50px; object-fit: contain"
-          />
+          <img src="/images/dial-logo.png" alt="" style="height: 50px; object-fit: contain" />
         </router-link>
         <div>
           <a-icon type="bars" style="font-size: 40px" @click="togleNav" />
@@ -34,11 +30,7 @@
           <div class="ht-left">
             <div class="logo">
               <router-link to="/">
-                <img
-                  src="/images/dial-logo.png"
-                  alt=""
-                  style="height: 80px; object-fit: contain"
-                />
+                <img src="/images/dial-logo.png" alt="" style="height: 80px; object-fit: contain" />
               </router-link>
             </div>
             <div class="mail-service">
@@ -52,35 +44,45 @@
           </div>
 
           <div class="ht-right d-none d-md-block">
+
             <!-- <a href="#" class="login-panel"><i class="fa fa-user"></i>ACCOUNT</a> -->
             <a-dropdown>
-              <a class="login-panel" @click="(e) => e.preventDefault()"
-                ><i class="fa fa-user"></i>
-                ACCOUNT
+              <a class="login-panel" @click="(e) => e.preventDefault()" v-if="!account"><i class="fa fa-user"></i>
+                ADVOCATE ACCOUNT
               </a>
-              <a-menu slot="overlay">
+              <a class="login-panel" @click="(e) => e.preventDefault()" v-else> <a-avatar :src="account.profile_photo"
+                  v-if="account.profile_photo" />
+                <a-avatar icon="user" v-else />
+
+
+              </a>
+              <a-menu slot="overlay" v-if="!account">
                 <a-menu-item key="1">
                   <router-link to="/sign-up" class="dropdown-menu">Create Account</router-link>
                 </a-menu-item>
                 <a-menu-item key="2">
                   <router-link to="/sign-in" class="dropdown-menu">Login</router-link>
                 </a-menu-item>
+
+              </a-menu>
+              <a-menu slot="overlay" v-else>
+                <a-menu-item key="1">
+                  <router-link to="/dashboard" class="dropdown-menu">Dashboard</router-link>
+                </a-menu-item>
+                <a-menu-item key="2">
+                  <div class="dropdown-menu" @click="logout">Logout</div>
+                </a-menu-item>
+
               </a-menu>
             </a-dropdown>
 
+
             <div class="top-social">
-              <a href="//facebook.com/DialaLawyerAfrica/" target="blank"
-                ><i class="fa fa-facebook"></i
-              ></a>
-              <a href="//linkedin.com/company/dial-a-lawyer-africa-by-ace-litigator" target="blank"
-                ><i class="fa fa-linkedin" ></i
-              ></a>
-              <a href="//instagram.com/dialalawyerafrica/" target="blank"
-                ><i class="fa fa-instagram"></i
-              ></a>
-              <a href="//twitter.com/dialalawyer_" target="blank"
-                ><i class="fa fa-twitter"></i
-              ></a>
+              <a href="//facebook.com/DialaLawyerAfrica/" target="blank"><i class="fa fa-facebook"></i></a>
+              <a href="//linkedin.com/company/dial-a-lawyer-africa-by-ace-litigator" target="blank"><i
+                  class="fa fa-linkedin"></i></a>
+              <a href="//instagram.com/dialalawyerafrica/" target="blank"><i class="fa fa-instagram"></i></a>
+              <a href="//twitter.com/dialalawyer_" target="blank"><i class="fa fa-twitter"></i></a>
             </div>
           </div>
         </div>
@@ -105,9 +107,7 @@
                 <a href="#">Resources</a>
                 <ul class="dropdown">
                   <li>
-                    <a href="//acelitigator.com" target="blank"
-                      >Legal Documents</a
-                    >
+                    <a href="//acelitigator.com/litigation-documents" target="blank">Legal Documents</a>
                   </li>
                   <li>
                     <a href="//acelitigator.com" target="blank">Articles</a>
@@ -129,14 +129,21 @@
 
 <script>
 import { mapState } from "vuex";
+import { currentUser } from "../../database/auth";
+import { auth } from "../../database";
 export default {
   data() {
     return {
       myText: "hello world",
       isNavOpen: false,
+      user: auth.currentUser
+
     };
   },
   methods: {
+    logout() {
+      this.$store.dispatch('logout')
+    },
     togleNav() {
       this.isNavOpen = !this.isNavOpen;
     },
@@ -147,8 +154,14 @@ export default {
     }
   },
   computed: {
-    ...mapState(["practiseAreas", "counties"]),
+    ...mapState(["practiseAreas", "counties", "allAdvocates",]),
+    account() {
+      return this.allAdvocates.filter((i) => i.id == auth.currentUser?.uid)[0];
+    }
   },
+  mounted() {
+    this.$store.dispatch('fetAllAdvocates')
+  }
 };
 </script>
 
@@ -161,6 +174,7 @@ export default {
   margin-top: -30px;
   position: relative;
 }
+
 .mobile-nav {
   background: #ffffff;
   position: absolute;
@@ -174,17 +188,20 @@ export default {
   display: flex;
   align-items: flex-start;
 }
+
 .mobile-nav a {
   font-size: 20px;
   color: #000000;
   margin-bottom: 10px;
 }
+
 .mobile-nav a:active {
   font-size: 20px;
   color: #e6353b;
   margin-bottom: 10px;
 }
-.dropdown-menu:hover{
+
+.dropdown-menu:hover {
   color: #e6353b;
 }
 </style>

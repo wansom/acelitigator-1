@@ -15,7 +15,11 @@ export const logout=()=>{
 export const passwordReset=async(email)=>{
     return await sendPasswordResetEmail(auth,email)
 }
-
+export const currentUser= ()=>{
+    if(auth.currentUser){return true}else{
+        return false
+    }
+}
 
 
 
