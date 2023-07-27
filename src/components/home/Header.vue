@@ -117,7 +117,7 @@
                   </li>
                 </ul>
               </li>
-              <li><router-link to="contact-us">Contact</router-link></li>
+              <li><router-link to="/contact-us">Contact</router-link></li>
             </ul>
           </nav>
           <div id="mobile-menu-wrap"></div>

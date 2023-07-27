@@ -26,59 +26,34 @@
             </svg>
             <span>+254 704 927 969</span>
           </div>
-          <div class="detail">
-            <svg
-              width="19"
-              height="15"
-              viewBox="0 0 19 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M16.09 14.21H3.5C2.4 14.21 1.5 13.31 1.5 12.21V2.5C1.5 1.95 1.95 1.5 2.5 1.5H17.09C17.64 1.5 18.09 1.95 18.09 2.5V12.21C18.09 13.31 17.19 14.21 16.09 14.21Z"
-                stroke="#25518C"
-                stroke-width="1.5"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M1.8501 2.13L9.2401 7.27C9.5701 7.5 10.0201 7.5 10.3501 7.27L17.7401 2.13"
-                stroke="#25518C"
-                stroke-width="1.5"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <span>info@dialalwayerafrica.com</span>
-          </div>
-          <div class="detail">
-            <svg
-              width="16"
-              height="21"
-              viewBox="0 0 16 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M14.39 7.98998C14.39 12.14 10.34 17.13 8.68999 18.99C8.31999 19.4 7.67999 19.4 7.30999 18.99C5.65999 17.13 1.60999 12.14 1.60999 7.98998C1.60999 4.45998 4.46999 1.59998 7.99999 1.59998C11.53 1.59998 14.39 4.45998 14.39 7.98998Z"
-                stroke="#000000"
-                stroke-width="1.5"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M7.98993 10.5499C9.40378 10.5499 10.5499 9.40378 10.5499 7.98993C10.5499 6.57608 9.40378 5.42993 7.98993 5.42993C6.57608 5.42993 5.42993 6.57608 5.42993 7.98993C5.42993 9.40378 6.57608 10.5499 7.98993 10.5499Z"
-                stroke="#000000"
-                stroke-width="1.5"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <span>I&M Bank House, 2nd Ngong Avenue, Upper Hill,</span>
+          <div class="contact-form">
+            <a-form :form="form"  class="login-form" @submit="handleSubmit">
+    <a-form-item label="Your Name">
+      <a-input
+        v-decorator="['name', { rules: [{ required: true, message: 'Please input your name!' }] }]"
+      />
+    </a-form-item>
+    <a-form-item label="Email">
+      <a-input
+        v-decorator="['email', { rules: [{ required: true, message: 'Please input your Email!' }] }]"
+      />
+    </a-form-item>
+    <a-form-item label="How Did You Hear About Us?">
+      <a-input
+        v-decorator="['platform', { rules: [{ required: true, message: 'Field is required!' }] }]"
+      />
+    </a-form-item>
+    <a-form-item label="Leave a Message?">
+      <a-textarea
+        v-decorator="['message', { rules: [{ required: true, message: 'Field is required!' }] }]"
+      ></a-textarea>
+    </a-form-item>
+    <a-form-item >
+      <a-button type="primary" html-type="submit" class="w-full">
+        Submit
+      </a-button>
+    </a-form-item>
+  </a-form>
           </div>
         </div>
         <iframe
@@ -140,31 +115,31 @@
 
 <script>
 export default {
-data(){
-return{
-  name:"",
-  email:"",
-  platform:"",
-  message:""
-}
-},
-methods:{
-handleSubmit(){
- 
-  console.log(this.name,this.email,this.platform,this.message)
-  this.$store.dispatch("sendMail", {
-    name: "ADMIN",
-    email: "director@acelitigator.com",
-    subject: "CONTACT FORM SUBMISSION",
-    content: `full name:${this.name},email:${this.email},where did you hear about us:${this.platform},message:${this.message}`,
-  }).then(()=>{
-    this.$message.success("form has been submitted successfully")
-    this.name="",
-    this.email="",
-    this.message=""
-  })
-}
-}
+  data(){
+    return{
+      name:"",
+      email:"",
+      platform:"",
+      message:"",
+      
+      form: this.$form.createForm(this, { name: 'coordinated' }),
+    }
+  },
+  methods:{
+    handleSubmit(e) {
+      e.preventDefault();
+      this.form.validateFields((err, values) => {
+        if (!err) {
+          this.$store.dispatch("sendMail", {
+        name: "ADMIN",
+        email: "director@acelitigator.com",
+        subject: "CONTACT FORM SUBMISSION",
+        content: `full name:${values.name},email:${values.email},where did you hear about us:${values.platform},message:${values.message}`,
+      })
+        }
+      });
+    },
+  }
 
 }
 </script>
