@@ -135,6 +135,8 @@ export default {
         email: "director@acelitigator.com",
         subject: "CONTACT FORM SUBMISSION",
         content: `full name:${values.name},email:${values.email},where did you hear about us:${values.platform},message:${values.message}`,
+      }).then(()=>{
+        this.$message.success('message sent successfully')
       })
         }
       });
