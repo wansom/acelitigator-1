@@ -159,6 +159,7 @@ export default new Vuex.Store({
             uid: result.user.uid,
             status: "incomplete",
             profile_visits: [],
+            country:data.country,
             username: `${data.first_name}${data.last_name}`,
             _id: result.user.uid,
             notifications: arrayUnion({

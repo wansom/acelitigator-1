@@ -18,27 +18,9 @@
 				></CardInvoices> 
 			</a-col>
 		</a-row>
-		<!-- / Charts -->
-
-		<!-- Table & Timeline -->
-		<!-- <a-row :gutter="24" type="flex" align="stretch">
-
-			<a-col :span="24" :lg="16" class="mb-24">
-				<TopLawyers
-					:data="tableData"
-					:columns="tableColumns"
-				></TopLawyers>			
-			</a-col>
-			
-			<a-col :span="24" :lg="8" class="mb-24">
-				<CardOrderHistory :notifications="user.notifications"></CardOrderHistory>
-			</a-col>
-		
-		</a-row> -->
     <admin-dashboard v-if="user.status=='admin'"></admin-dashboard>
-    <!-- / Table & Timeline -->
-    <!-- / Charts -->
-    <profile-information v-if="user.status!='admin'&&user.status !='active'"></profile-information>
+    <profile-information v-if="user.status!='admin'&&user.status !='active'&&user.country =='Kenya'"></profile-information>
+	<NgProfileInformation v-if="user.status!='admin'&&user.status !='active'&&user.country =='Nigeria'"></NgProfileInformation>
   </div>
 </template>
 
@@ -68,6 +50,7 @@ import CardInvoices from "../components/Cards/CardInvoices"
 import { mapState } from "vuex";
 import * as fb from "../firebase";
 import AdminDashboard from './AdminDashboard.vue';
+import NgProfileInformation from "../components/nigeria-forms/NgProfileInformation.vue";
 	// "Projects" table list of columns and their properties.
 	const tableColumns = [
 		{
@@ -151,8 +134,9 @@ export default {
     CardInfo2,
     ProfileInformation,
     CardInvoices,
-    AdminDashboard
-  },
+    AdminDashboard,
+    NgProfileInformation
+},
   data() {
     return {
       tableColumns,

@@ -41,7 +41,7 @@
                 
                 :class="[loading ? 'site-btn-active disabled' : 'site-btn', 'login-btn']"
               >
-                Reset Password   <a-spin v-if="loading" /> 
+                Reset Password<a-spin v-if="loading" /> 
               </button>
             </a-form>
             <div class="switch-login">
