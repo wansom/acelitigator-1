@@ -14,12 +14,12 @@
               <div
                 class="flex flex-col md:flex-row items-center justify-center gap-4"
               >
-                <router-link to="find-a-lawyer">
+                <router-link to="find-a-lawyer" aria-label="learn more">
                   <button class="btn-primary">
                     Find A lawyer
                   </button></router-link
                 >
-                <router-link to="/sign-in">
+                <router-link to="/sign-in" aria-label="learn more">
                   <button class="btn-secondary">
                     Lawyer’s Account
                   </button></router-link
@@ -50,7 +50,7 @@
                   services they require. Join us today and experience the
                   benefits of our streamlined, user-friendly platform.
                 </p>
-                <router-link to="find-a-lawyer"
+                <router-link to="find-a-lawyer" aria-label="learn more"
                   ><button>Find A Lawyer</button></router-link
                 >
               </div>
@@ -64,11 +64,11 @@
       <section class="overview" id="overview">
         <div class="overview-container container">
           <div class="overview-text">
-            <h3>Join Millions of lawyers online</h3>
-            <h1>
+            <h1>Join Millions of lawyers online</h1>
+            <h2>
               Unlocking Africa's Potential: Redefining access to justice in a
               Rapidly Changing World
-            </h1>
+            </h2>
             <p>
               Looking to expand your legal practice and connect with potential
               clients? Look no further than Dial a Lawyer. Our user-friendly
@@ -80,7 +80,7 @@
               Lawyer is the ultimate platform for connecting with clients and
               growing your legal career.
             </p>
-            <router-link to="sign-up"><button>Sign Up</button></router-link>
+            <router-link to="sign-up" aria-label="learn more"><button>Sign Up</button></router-link>
           </div>
           <div class="overview-images">
             <div class="col one">
@@ -102,10 +102,10 @@
             </div>
             <div class="research-information one">
               <div class="research-card">
-                <h3>
+                <h2>
                   Promoting Justice, Empowering Communities - Improving Access
                   to Justice Across Africa."
-                </h3>
+                </h2>
                 <p>
                   Empowering You with Legal Knowledge: Dial a Lawyer Africa -
                   Your Trusted Partner for Legal Advice. Our mission is to
@@ -116,8 +116,8 @@
                   have the legal knowledge you need to succeed in and out of the
                   courtroom
                 </p>
-                <a href="/know-your-courts" class="flex gap-2 items-center"
-                  >Learn More
+                <a href="/know-your-courts" class="flex gap-2 items-center" aria-label="learn more"
+                  >Get to Know Your Courts
                   <svg
                     width="16"
                     height="16"
@@ -380,7 +380,7 @@ section.sponsors {
   min-width: 280px;
 }
 
-.overview-text h3 {
+.overview-text h1 {
   width: fit-content;
   height: 30px;
   border-left: 8px solid #e6353b !important;
@@ -394,7 +394,7 @@ section.sponsors {
   margin: 0px 0px 20px;
 }
 
-.overview-text h1 {
+.overview-text h2{
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -1006,7 +1006,7 @@ section.sponsors {
   padding: 40px;
 }
 
-.research-card h3 {
+.research-card h2 {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;

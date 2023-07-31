@@ -3,7 +3,7 @@
     <div class="block md:hidden">
       <div class="mobile-sm-menu">
         <router-link to="/">
-          <img src="/images/dial-logo.png" alt="" style="height: 50px; object-fit: contain" />
+          <img src="/images/dial-logo.png" alt="logo" style="height: 50px; object-fit: contain" />
         </router-link>
         <div>
           <a-icon type="bars" style="font-size: 40px" @click="togleNav" />
@@ -12,14 +12,14 @@
           <ul>
             <li><router-link to="/">Home</router-link></li>
             <li>
-              <router-link to="/find-a-lawyer">Find A Lawyer</router-link>
+              <router-link to="/find-a-lawyer" aria-label="read more">Find A Lawyer</router-link>
             </li>
-            <li><a href="//kenyalaw.org">Know Your Courts</a></li>
+            <li><a href="//kenyalaw.org" aria-label="read more">Know Your Courts</a></li>
             <li>
-              <a href="//acelitigator.com">Resources</a>
+              <a href="//acelitigator.com/litigation-documents" aria-label="read more">Resources</a>
             </li>
-            <li><router-link to="contact-us">Contact</router-link></li>
-            <li><router-link to="sign-in">Login </router-link></li>
+            <li><router-link to="contact-us" aria-label="read more">Contact</router-link></li>
+            <li><router-link to="sign-in" aria-label="read more">Login </router-link></li>
           </ul>
         </nav>
       </div>
@@ -47,10 +47,10 @@
 
             <!-- <a href="#" class="login-panel"><i class="fa fa-user"></i>ACCOUNT</a> -->
             <a-dropdown>
-              <a class="login-panel" @click="(e) => e.preventDefault()" v-if="!account"><i class="fa fa-user"></i>
+              <a class="login-panel" @click="(e) => e.preventDefault()" v-if="!account" href="#"><i class="fa fa-user"></i>
                 ADVOCATE ACCOUNT
               </a>
-              <a class="login-panel" @click="(e) => e.preventDefault()" v-else> <a-avatar :src="account.profile_photo"
+              <a class="login-panel" @click="(e) => e.preventDefault()" v-else  href="#"> <a-avatar :src="account.profile_photo"
                   v-if="account.profile_photo" />
                 <a-avatar icon="user" v-else />
 
@@ -78,11 +78,11 @@
 
 
             <div class="top-social">
-              <a href="//facebook.com/DialaLawyerAfrica/" target="blank"><i class="fa fa-facebook"></i></a>
-              <a href="//linkedin.com/company/dial-a-lawyer-africa-by-ace-litigator" target="blank"><i
+              <a href="//facebook.com/DialaLawyerAfrica/" target="blank" aria-label="learn more"><i class="fa fa-facebook"></i></a>
+              <a href="//linkedin.com/company/dial-a-lawyer-africa-by-ace-litigator" target="blank" aria-label="learn more"><i
                   class="fa fa-linkedin"></i></a>
-              <a href="//instagram.com/dialalawyerafrica/" target="blank"><i class="fa fa-instagram"></i></a>
-              <a href="//twitter.com/dialalawyer_" target="blank"><i class="fa fa-twitter"></i></a>
+              <a href="//instagram.com/dialalawyerafrica/" target="blank"><i class="fa fa-instagram" aria-label="learn more"></i></a>
+              <a href="//twitter.com/dialalawyer_" target="blank"><i class="fa fa-twitter" aria-label="learn more"></i></a>
             </div>
           </div>
         </div>
@@ -90,7 +90,7 @@
       <div class="nav-item">
         <div class=" container mx-auto px-6 lg:px-16">
           <div class="nav-depart">
-            <router-link to="/">
+            <router-link to="/" aria-label="learn more">
               <div class="depart-btn">
                 <span>Home</span>
               </div>
@@ -100,24 +100,24 @@
           <nav class="nav-menu mobile-menu">
             <ul>
               <li>
-                <router-link to="/find-a-lawyer">FIND LAWYERS</router-link>
+                <router-link to="/find-a-lawyer" aria-label="learn more">FIND LAWYERS</router-link>
               </li>
-              <li><router-link to="/know-your-courts">Know Your Courts</router-link></li>
+              <li><router-link to="/know-your-courts" aria-label="learn more">Know Your Courts</router-link></li>
               <li>
-                <a href="#">Resources</a>
+                <a href="#" aria-label="learn more">Resources</a>
                 <ul class="dropdown">
                   <li>
-                    <a href="//acelitigator.com/litigation-documents" target="blank">Legal Documents</a>
+                    <a href="//acelitigator.com/litigation-documents" target="blank" aria-label="learn more">Legal Documents</a>
                   </li>
                   <li>
-                    <a href="//acelitigator.com" target="blank">Articles</a>
+                    <a href="//acelitigator.com/articles" target="blank" aria-label="learn more">Articles</a>
                   </li>
                   <li>
-                    <a href="//acelitigator.com" target="blank">Webiners</a>
+                    <a href="//acelitigator.com/newsletters" target="blank" aria-label="learn more">Knowledge Hub</a>
                   </li>
                 </ul>
               </li>
-              <li><router-link to="/contact-us">Contact</router-link></li>
+              <li><router-link to="/contact-us" aria-label="learn more">Contact</router-link></li>
             </ul>
           </nav>
           <div id="mobile-menu-wrap"></div>
