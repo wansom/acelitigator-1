@@ -6,7 +6,6 @@
 
 <script>
 import { mapState } from "vuex";
-import Table from "../components/Tables/DataTable.vue";
 import CardRequestTable from "../components/Cards/CardRequestTable.vue";
 const columns = [
 	
@@ -34,7 +33,7 @@ const columns = [
   },
 ];
 export default {
-  components: { Table, CardRequestTable },
+  components: { CardRequestTable },
   data() {
     return {
       columns,

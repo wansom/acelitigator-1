@@ -9,16 +9,6 @@
 		<a-layout class="layout-dashboard layout-dashboard-rtl" id="layout-dashboard" :class="[navbarFixed ? 'navbar-fixed' : '', ! sidebarCollapsed ? 'has-sidebar' : '', layoutClass]">
 			
 			<!-- Settings Drawer -->
-			<DashboardSettingsDrawer
-				:showSettingsDrawer="showSettingsDrawer"
-				:navbarFixed="navbarFixed"
-				:sidebarTheme="sidebarTheme"
-				:rtl="true"
-				@toggleSettingsDrawer="toggleSettingsDrawer"
-				@toggleNavbarPosition="toggleNavbarPosition"
-				@updateSidebarTheme="updateSidebarTheme"
-				@updateSidebarColor="updateSidebarColor"
-			></DashboardSettingsDrawer>
 			<!-- / Settings Drawer -->
 			
 			<!-- Main Sidebar -->
@@ -78,14 +68,12 @@
 	import DashboardSidebar from '../components/Sidebars/DashboardSidebar' ;
 	import DashboardHeader from '../components/Headers/DashboardHeader' ;
 	import DashboardFooter from '../components/Footers/DashboardFooter' ;
-	import DashboardSettingsDrawer from '../components/Sidebars/DashboardSettingsDrawer' ;
 
 	export default ({
 		components: {
 			DashboardSidebar,
 			DashboardHeader,
 			DashboardFooter,
-			DashboardSettingsDrawer,
 		},
 		data() {
 			return {

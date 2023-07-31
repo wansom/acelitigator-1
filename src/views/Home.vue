@@ -291,13 +291,10 @@ import Hero from "../components/home/Hero.vue";
 import Header from "../components/home/Header.vue";
 import Footer from "../components/home/Footer.vue";
 import TopLawyers from "../components/home/Top-Lawyers.vue";
-import KnowYourCourts from "../components/home/Know-Your-Courts.vue";
-import AllLawyers from "../components/home/All-Lawyers.vue";
 import SignupBanner from "../components/home/Signup-Banner.vue";
 import CardInfo from "../components/Cards/CardInfo.vue";
 import { mapState } from "vuex";
 import Services from "../components/home/Services.vue";
-import Slick from "vue-slick";
 import ContactComponent from "../components/home/ContactComponent.vue";
 export default {
   components: {
@@ -306,12 +303,9 @@ export default {
     Header,
     Footer,
     TopLawyers,
-    KnowYourCourts,
-    AllLawyers,
     SignupBanner,
     Services,
     CardInfo,
-    Slick,
     ContactComponent
   },
   data() {

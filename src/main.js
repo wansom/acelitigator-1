@@ -8,7 +8,6 @@ import DashboardLayout from './layouts/Dashboard.vue'
 import DashboardRTLLayout from './layouts/DashboardRTL.vue'
 import router from './router'
 import VueSocialSharing from 'vue-social-sharing'
-import VueCarousel from 'vue-carousel';
 import { Cropper } from 'vue-advanced-cropper';
 
 
@@ -33,8 +32,6 @@ Vue.use(VueMeta)
 Vue.use(VueMeta)
 Vue.use(Antd);
 Vue.use(VueSocialSharing);
-Vue.use(VueCarousel);
-Vue.use(VueFormulate);
 Vue.use(Cropper);
 
 Vue.config.productionTip = false

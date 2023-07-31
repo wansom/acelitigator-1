@@ -69,13 +69,6 @@ let routes = [
         component: () => import(/* webpackChunkName: "dashboard" */ '../views/Requests.vue'),
     },
     {
-        path: '/courts',
-        name: 'Courts',
-        layout: "dashboard",
-        meta: { requiresAuth: true, requiresAdmin: true },
-        component: () => import(/* webpackChunkName: "dashboard" */ '../views/Courts.vue'),
-    },
-    {
         path: '/chat',
         name: 'Chat',
         layout: "dashboard",

@@ -399,7 +399,6 @@
 import DashboardSidebar from "../components/Sidebars/DashboardSidebar";
 import DashboardHeader from "../components/Headers/DashboardHeader";
 import DashboardFooter from "../components/Footers/DashboardFooter";
-import DashboardSettingsDrawer from "../components/Sidebars/DashboardSettingsDrawer";
 import { mapState } from "vuex";
 import { auth } from "../database/index";
 import { arrayRemove } from "@firebase/firestore";
@@ -410,7 +409,6 @@ export default {
     DashboardSidebar,
     DashboardHeader,
     DashboardFooter,
-    DashboardSettingsDrawer,
   },
   data() {
     return {

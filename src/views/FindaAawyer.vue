@@ -90,7 +90,6 @@
 
 <script>
 import Header from "../components/home/Header.vue";
-import Filters from "../components/Widgets/Filters.vue";
 import { mapState } from "vuex";
 import CardInfo from "../components/Cards/CardInfo.vue";
 import Footer from "../components/home/Footer.vue";
@@ -106,7 +105,6 @@ fetch("https://s3-us-west-2.amazonaws.com/s.cdpn.io/450744/mock-logos.svg")
 export default {
   components: {
     Header,
-    Filters,
     CardInfo,
     Footer,
     icon: { template: '<svg><use :xlink:href="use"/></svg>' },
