@@ -30,7 +30,7 @@
           <div class="ht-left">
             <div class="logo">
               <router-link to="/">
-                <img src="/images/dial-logo.png" alt="" style="height: 80px; object-fit: contain" />
+                <img src="/images/dial-logo.png" alt="logo" style="object-fit: contain" height="80px"  width="80px"/>
               </router-link>
             </div>
             <div class="mail-service">
