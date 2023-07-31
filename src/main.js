@@ -8,12 +8,7 @@ import DashboardLayout from './layouts/Dashboard.vue'
 import DashboardRTLLayout from './layouts/DashboardRTL.vue'
 import router from './router'
 import VueSocialSharing from 'vue-social-sharing'
-import { Cropper } from 'vue-advanced-cropper';
-
-
-// import './plugins/click-away'
-
-
+import { Cropper } from 'vue-advanced-cropper'
 import '../public/home/css/style.css'
 import './scss/app.scss'
 import '../public/home/css/nice-select.css'
@@ -23,7 +18,6 @@ import 'vue-advanced-cropper/dist/style.css';
 
 import store from './store'
 import { auth } from "./database/index";
-import VueFormulate from '@braid/vue-formulate'
 import './assets/tailwind.css'
 import VueMeta from 'vue-meta'
 

@@ -94,133 +94,6 @@
           </div>
         </div>
       </section>
-      <!-- <section class="offers">
-        <div class="offers-container container">
-          <div class="offer-head">
-            <h1>Advocate Signup Process</h1>
-          </div>
-          <div class="offer-content">
-            <div class="offer-card">
-              <div class="offer-info">
-                <div class="process"><span>01</span></div>
-
-                <h3>Create A free Account</h3>
-                <p>
-                  a simple account creation process to kickstart your advocate
-                  signup journey
-                </p>
-                <a href="sign-up">
-                  <button>
-                    Get Started
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <mask
-                        id="mask0_69_173"
-                        style="mask-type: alpha"
-                        maskUnits="userSpaceOnUse"
-                        x="0"
-                        y="0"
-                        width="24"
-                        height="24"
-                      >
-                        <rect width="24" height="24" fill="#000000" />
-                      </mask>
-                      <g mask="url(#mask0_69_173)">
-                        <path
-                          d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
-                          fill="#FCFCFC"
-                        />
-                      </g>
-                    </svg>
-                  </button>
-                </a>
-              </div>
-            </div>
-            <div class="offer-card">
-              <div class="offer-info">
-                <div class="process"><span>02</span></div>
-                <h3>Complete and submit Profile</h3>
-                <p>Upload legal documents help us complete the KYC process</p>
-                <a href="sign-up">
-                  <button>
-                    Get Started
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <mask
-                        id="mask0_69_173"
-                        style="mask-type: alpha"
-                        maskUnits="userSpaceOnUse"
-                        x="0"
-                        y="0"
-                        width="24"
-                        height="24"
-                      >
-                        <rect width="24" height="24" fill="#D9D9D9" />
-                      </mask>
-                      <g mask="url(#mask0_69_173)">
-                        <path
-                          d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
-                          fill="#FCFCFC"
-                        />
-                      </g>
-                    </svg>
-                  </button>
-                </a>
-              </div>
-            </div>
-            <div class="offer-card">
-              <div class="offer-info">
-                <div class="process"><span>03</span></div>
-                <h3>Pay for monthly Subscription</h3>
-                <p>
-                  Pay a monthly subscription of KSH 500 and get your account
-                  approved
-                </p>
-                <a href="sign-up">
-                  <button>
-                    Get Started
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <mask
-                        id="mask0_69_173"
-                        style="mask-type: alpha"
-                        maskUnits="userSpaceOnUse"
-                        x="0"
-                        y="0"
-                        width="24"
-                        height="24"
-                      >
-                        <rect width="24" height="24" fill="#D9D9D9" />
-                      </mask>
-                      <g mask="url(#mask0_69_173)">
-                        <path
-                          d="M12 20L10.575 18.6L16.175 13H4V11H16.175L10.575 5.4L12 4L20 12L12 20Z"
-                          fill="#FCFCFC"
-                        />
-                      </g>
-                    </svg>
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
       <section class="research-content" id="courts">
         <div class="research-container container">
           <div class="research-item">
@@ -228,9 +101,6 @@
               <h1>Know Your Courts</h1>
             </div>
             <div class="research-information one">
-              <!-- <div class="research-status">
-                <p>Ongoing Project</p>
-              </div> -->
               <div class="research-card">
                 <h3>
                   Promoting Justice, Empowering Communities - Improving Access
@@ -294,7 +164,6 @@ import TopLawyers from "../components/home/Top-Lawyers.vue";
 import SignupBanner from "../components/home/Signup-Banner.vue";
 import CardInfo from "../components/Cards/CardInfo.vue";
 import { mapState } from "vuex";
-import Services from "../components/home/Services.vue";
 import ContactComponent from "../components/home/ContactComponent.vue";
 export default {
   components: {
@@ -304,7 +173,6 @@ export default {
     Footer,
     TopLawyers,
     SignupBanner,
-    Services,
     CardInfo,
     ContactComponent
   },
