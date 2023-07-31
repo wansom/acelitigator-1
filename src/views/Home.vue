@@ -56,7 +56,7 @@
               </div>
             </div>
             <div class="project">
-              <img src="/images/home/africa.png" alt="africa image" />
+              <img src="/images/home/africa.png" alt="africa image" width="100%" height="100%"/>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@
           </div>
           <div class="overview-images">
             <div class="col one">
-              <img src="images/stella.jpg" alt="advocate" loading="lazy" height="280px" width="100%"/>
+              <img src="images/Purity-Mwangi.jpg" alt="advocate" loading="lazy" height="280px" width="100%"/>
               <img src="images/Susan-Mwango.jpg" alt="advocate" loading="lazy" height="280px" width="100%"/>
             </div>
             <div class="col two">
