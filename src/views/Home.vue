@@ -88,7 +88,7 @@
               <img src="images/Susan-Mwango.jpg" alt="advocate" loading="lazy" height="280px" width="100%"/>
             </div>
             <div class="col two">
-              <img src="images/brian.jpg" alt="advocate" height="280px" width="100%"/>
+              <img src="images/nelima.jpg" alt="advocate" height="280px" width="100%"/>
               <img src="images/Mahmoud-Shalima.jpg" alt="advocate" loading="lazy" height="280px" width="100%" />
             </div>
           </div>

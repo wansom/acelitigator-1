@@ -81,8 +81,8 @@
               <a href="//facebook.com/DialaLawyerAfrica/" target="blank" aria-label="learn more"><i class="fa fa-facebook"></i></a>
               <a href="//linkedin.com/company/dial-a-lawyer-africa-by-ace-litigator" target="blank" aria-label="learn more"><i
                   class="fa fa-linkedin"></i></a>
-              <a href="//instagram.com/dialalawyerafrica/" target="blank"><i class="fa fa-instagram" aria-label="learn more"></i></a>
-              <a href="//twitter.com/dialalawyer_" target="blank"><i class="fa fa-twitter" aria-label="learn more"></i></a>
+              <a href="//instagram.com/dialalawyerafrica/" target="blank" aria-label="learn more"><i class="fa fa-instagram" ></i></a>
+              <a href="//twitter.com/dialalawyer_" target="blank"  aria-label="learn more"><i class="fa fa-twitter"></i></a>
             </div>
           </div>
         </div>

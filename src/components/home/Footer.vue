@@ -2,7 +2,7 @@
    <footer>
       <div class="footer-container container mx-auto">
         <div class="col one">
-          <h4>Dial A Lawyer Africa</h4>
+          <h2>Dial A Lawyer Africa</h2>
           <p>
             Empowering You with Legal Knowledge: Dial a Lawyer Africa - Your
             Trusted Partner for Legal Advice. Our mission is to provide easy
