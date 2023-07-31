@@ -1,5 +1,6 @@
 
 const SitemapPlugin = require('sitemap-webpack-plugin').default
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 // You can write the paths as an array of strings or an array of objects
 const paths = [
   {
@@ -43,6 +44,23 @@ const paths = [
 
 module.exports = {
 	runtimeCompiler: true,
+	configureWebpack: {
+		plugins: [
+		  // Add the ImageminWebpWebpackPlugin configuration
+		  new ImageminWebpWebpackPlugin({
+			config: [{
+			  test: /\.(jpe?g|png)/,
+			  options: {
+				quality: 75
+			  }
+			}],
+			overrideExtension: true,
+			detailedLogs: false,
+			silent: false,
+			strict: true
+		  })
+		]
+	  },
 
 	chainWebpack: config => {
 		config
