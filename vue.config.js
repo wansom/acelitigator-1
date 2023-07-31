@@ -44,6 +44,9 @@ const paths = [
 
 module.exports = {
 	runtimeCompiler: true,
+	css: {
+		extract: true,
+	  },
 	configureWebpack: {
 		plugins: [
 		  // Add the ImageminWebpWebpackPlugin configuration
