@@ -44,6 +44,7 @@ import ProfileInformation from "../components/forms/ProfileInformation.vue";
 
 // Information card 1.
 import CardInfo from "../components/Cards/CardInfo";
+import AdminDashboard from "./AdminDashboard.vue";
 
 // Information card 2.
 import CardInfo2 from "../components/Cards/CardInfo2";
