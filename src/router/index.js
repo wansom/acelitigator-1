@@ -33,11 +33,6 @@ let routes = [
         component: () => import(/* webpackChunkName: "courts" */ '../views/Know-Your-Courts.vue'),
     },
     {
-        path: '/find-a-lawyer',
-        name: 'Find-a-Lawyer',
-        component: () => import(/* webpackChunkName: "lawyer" */ '../views/FindaAawyer.vue'),
-    },
-    {
         path: '/single-court',
         name: 'Single-Court',
         component: () => import(/* webpackChunkName: "singlecourt" */ '../views/Single-Court.vue'),
