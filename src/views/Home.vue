@@ -342,6 +342,19 @@ section.banner {
   font-size: 18px;
   color: #ffffff;
 }
+.banner-text .btn-primary:hover {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  background: transparent;
+  border-radius: 5px;
+  margin: auto;
+  font-size: 18px;
+  color: #ffffff;
+  border: 2px solid #000000;
+}
 .banner-text .btn-secondary {
   display: flex;
   flex-direction: row;
@@ -353,6 +366,20 @@ section.banner {
   margin: auto;
   font-size: 18px;
   color: #ffffff;
+ 
+}
+.banner-text .btn-secondary:hover {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  background: transparent;
+  border-radius: 5px;
+  margin: auto;
+  font-size: 18px;
+  color: #ffffff;
+  border: 2px solid #e6353b;
 }
 
 /* == || BANNER == */
@@ -427,6 +454,24 @@ section.sponsors {
 
   color: #000000;
   border: 2px solid#e6353b;
+
+  margin: 10px auto;
+}
+.overview-text button:hover {
+  outline: none;
+  width: 50%;
+  height: 50px;
+  background: transparent;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+
+  color: #ffffff;
+  background: #000000;
+  border: 2px solid#000;
 
   margin: 10px auto;
 }
@@ -879,6 +924,22 @@ section.sponsors {
   color: #fcfcfc;
   margin: 10px auto;
 }
+.project-info button:hover {
+  outline: none;
+  border: 0;
+  width: 95%;
+  height: 50px;
+  background: transparent ;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  margin: 10px auto;
+  border: 2px solid #e6353b ;
+}
 
 /* == || Projects == */
 /* == Think == */
@@ -1039,6 +1100,22 @@ section.sponsors {
   justify-content: center;
   align-items: center;
   background: #e6353b;
+  border-radius: 5px;
+}
+.research-card a :hover{
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
   border-radius: 5px;
 }
 /* == || RESEARCH == */
