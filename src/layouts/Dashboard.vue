@@ -306,11 +306,9 @@
                 </a-menu-item>
               </a-menu>
             </a-dropdown>
-            <a-dropdown class="ml-auto flex items-center md:ml-6">
-              <button
-                type="button"
-                class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-              >
+            <a-dropdown class="ml-4 flex  items-center md:ml-6">
+              <button type="button"
+                class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                 <span class="sr-only">View notifications</span>
                 <svg
                   class="h-6 w-6"
@@ -328,24 +326,21 @@
                 </svg>
               </button>
               <a-menu slot="overlay">
-               <div v-if="user.notifications.length">
+              
                 <a-menu-item v-for="(item,index) in user.notifications" :key="index">
+                  <div v-if="user.notifications.length">
                  <div class="flex items-center gap-4">
 
-                  <p>  <span class="mr-3 text-red-600">{{ item.date.toDate().toDateString() }}</span>{{ item.notification }}</p>
-                  <a-icon
-                    type="close"
-                    @click="
-                      () => {
-                        removeNotification(item);
-                      }
-                    "
-                />
-                 </div>
-                 
+                        <p class=" whitespace-normal"> <span class="mr-3 text-red-600">{{ item.date.toDate().toDateString() }}</span> <br>{{
+                          item.notification }}</p>
+                        <a-icon type="close" @click="() => {
+                            removeNotification(item);
+                          }
+                          " />
+                      </div>
+                  </div>
+                  <a-empty v-else />
                 </a-menu-item>
-               </div>
-               <a-empty v-else/>
                 <a-button
                 type="primary"
                 block
