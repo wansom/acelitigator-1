@@ -124,6 +124,7 @@
 </template>
 
 <script>
+import swal from "sweetalert"
 export default {
   data(){
     return{
@@ -146,7 +147,12 @@ export default {
         subject: "CONTACT FORM SUBMISSION",
         content: `full name:${values.name},email:${values.email},where did you hear about us:${values.platform},message:${values.message}`,
       }).then(()=>{
-        this.$message.success('message sent successfully')
+        swal({
+            title: "Thank You!",
+            text: `Your message has been sent successfully`,
+            icon: "success",
+          });
+        
       })
         }
       });
