@@ -6,7 +6,8 @@
           <img src="/images/dial-logo.png" alt="logo" style="height: 50px; object-fit: contain" />
         </router-link>
         <div>
-          <a-icon type="bars" style="font-size: 40px" @click="togleNav" />
+          <a-icon type="close-circle" style="font-size: 40px" @click="togleNav" v-if="isNavOpen" />
+          <a-icon type="bars" style="font-size: 40px" @click="togleNav" v-else />
         </div>
         <nav class="mobile-nav" v-if="isNavOpen">
           <ul>
