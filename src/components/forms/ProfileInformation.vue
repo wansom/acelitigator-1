@@ -3,7 +3,7 @@
     <a-row :gutter="24" type="flex" align="middle">
       <a-col :span="12" :md="6">
         <a-card
-          :class="current===1?'icon-card-active text-white':'icon-card'"
+          :class="current===1?'icon-card-active text-white rounded-lg':'icon-card rounded-lg'"
           @click="
             () => {
               next(1);
@@ -16,7 +16,7 @@
       </a-col>
       <a-col :span="12" :md="6">
         <a-card
-        :class="current===2?'icon-card-active text-white':'icon-card'"
+        :class="current===2?'icon-card-active text-white rounded-lg':'icon-card rounded-lg'"
           @click="
 
 
@@ -55,14 +55,14 @@
           }
         "
       >
-        <a-card :class="current===4?'icon-card-active text-white':'icon-card'">
+        <a-card :class="current===4?'icon-card-active text-white rounded-lg':'icon-card rounded-lg'">
           <a-icon type="file-protect" class="icon-list text-warning" />
           <p class="card-p">Documents Upload</p>
         </a-card>
       </a-col>
       <a-col :span="12" :md="6">
         <a-card
-        :class="current===5?'icon-card-active text-white':'icon-card'"
+        :class="current===5?'icon-card-active text-white rounded-lg':'icon-card rounded-lg'"
           @click="
             () => {
               next(5);
