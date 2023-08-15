@@ -721,7 +721,7 @@ export default {
             website: values.website ?? "",
             specialisation: values.specialisation ?? "",
             practise_areas: values.practise_areas.slice(0, 3) ?? [],
-            other_counties: values.other_counties,
+            other_counties: values.other_counties??[],
             current_position:values.current_position??"",
             step: "certificates",
             current: 2,
