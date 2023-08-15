@@ -2,7 +2,7 @@
   <div class="register-login-section spad">
     <div class="container mx-auto">
       <div class="flex items-center justify-center">
-        <div class=" w-full md:w-1/2">
+        <div class=" w-full md:w-1/2 px-3">
           <div class="login-form">
             <h2 class="text-lg">Login</h2>
             <a-form
