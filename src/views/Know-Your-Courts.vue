@@ -5,7 +5,7 @@
       <div class="container mx-auto py-10 px-6 card-container">
         <a-tabs type="card">
           <a-tab-pane  v-for="(court,index) of courts" :key="index" :tab="court.type" class="py-12">
-            <a-tabs default-active-key="0" :tab-position="tabPosition" >
+            <a-tabs :tab-position="tabPosition" >
               <a-tab-pane v-for="(tab,index) of court.courts" :key="index" :tab="tab"  >
                 <courts-card ></courts-card>
               </a-tab-pane>
