@@ -3,41 +3,16 @@
     <Header></Header>
     <section class="">
       <div class="container mx-auto py-10 px-6 card-container">
-    <a-tabs type="card">
-      <a-tab-pane key="1" tab="Federal Courts"  class="py-12">
-        <a-tabs default-active-key="1" :tab-position="tabPosition">
-      <a-tab-pane key="1.1" tab="Supreme Court ">
-        Content of Tab 1
-      </a-tab-pane>
-      <a-tab-pane key="1.2" tab="Court of Appeal ">
-        Content of Tab 2
-      </a-tab-pane>
-      <a-tab-pane key="1.3" tab="Federal High Court">
-        Content of Tab 3
-      </a-tab-pane>
-      <a-tab-pane key="1.4" tab="National Industrial Court">
-        Content of Tab 3
-      </a-tab-pane>
-    </a-tabs>
-      </a-tab-pane>
-      <a-tab-pane key="2" tab="State Courts"  class="py-10">
-        <a-tabs default-active-key="Abia State (17 LGAs)" :tab-position="tabPosition">
-      <a-tab-pane  v-for="state of counties"  :key="state" :tab="state">
-        Content of Tab {{ state }}
-      </a-tab-pane>
-    </a-tabs>
-      </a-tab-pane>
-      <a-tab-pane key="3" tab="Tribunals" class="py-10">
-        <a-tabs default-active-key="1" :tab-position="tabPosition">
-      <a-tab-pane key="1" tab="Federal Tribunals">
-        Content of Tab 1
-      </a-tab-pane>
-      <a-tab-pane key="2" tab="State Tribunals ">
-        Content of Tab 2
-      </a-tab-pane>
-    </a-tabs>
-      </a-tab-pane>
-    </a-tabs>
+        <a-tabs type="card">
+          <a-tab-pane  v-for="(court,index) of courts" :key="index" :tab="court.type" class="py-12">
+            <a-tabs default-active-key="0" :tab-position="tabPosition" >
+              <a-tab-pane v-for="(tab,index) of court.courts" :key="index" :tab="tab"  >
+                <courts-card ></courts-card>
+              </a-tab-pane>
+            </a-tabs>
+          </a-tab-pane>
+        
+        </a-tabs>
       </div>
     </section>
     <Footer></Footer>
@@ -50,11 +25,66 @@ import Footer from "../components/home/Footer.vue";
 import Breadcrum from "../components/Widgets/Breadcrum.vue";
 import KnowYourCourtsSidebar from "../components/Sidebars/Know-Your-Courts-Sidebar.vue";
 import KnowYourCourtsContent from "../components/Know-Your-Courts/Know-Your-Courts-Content.vue";
-import { mapState } from 'vuex';
+import { mapState } from "vuex";
+import CourtsCard from '../components/Know-Your-Courts/courts-card.vue';
 export default {
   data() {
     return {
-      tabPosition: 'left',
+      tabPosition: "left",
+      courts: [
+        {
+          type: "Federal Courts",
+          courts: [
+            " Supreme Court",
+            "Court of Appeal",
+            "Federal High Court",
+            "National Industrial Court",
+          ],
+        },
+        {
+          type: "State Courts",
+          courts: [
+            "Abia State ",
+            "Adamawa State",
+            "Akwa Ibom State ",
+            "Anambra State",
+            "Bauchi State",
+            "Benue State",
+            "Borno State",
+            "Cross River State",
+            "Delta State",
+            "Ebonyi State",
+            "Edo State",
+            "Ekiti State",
+            "Enugu State",
+            "Gombe State",
+            "Imo State",
+            "Jigawa State",
+            "Kaduna State",
+            "Kano State",
+            "Katsina State",
+            "Kebbi State",
+            "Kogi State",
+            "Kwara State",
+            "Lagos State",
+            "Nassarawa State",
+            "Niger State",
+            "Ogun State",
+            "Ondo State",
+            "Plateau State",
+            "Rivers State",
+            "Sokoto State",
+            "Taraba State",
+            "Yobe State",
+            "Zamfara State",
+            "Federal Capital Territory",
+          ],
+        },
+        {
+          type: "Tribunals",
+          courts: [" Federal Tribunals", "State Tribunals"],
+        },
+      ],
     };
   },
   components: {
@@ -63,10 +93,11 @@ export default {
     Breadcrum,
     KnowYourCourtsSidebar,
     KnowYourCourtsContent,
+    CourtsCard,
   },
-  computed:{
-    ...mapState(['counties'])
-  }
+  computed: {
+    ...mapState(["counties"]),
+  },
 };
 </script>
 
