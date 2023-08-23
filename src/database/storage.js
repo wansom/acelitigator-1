@@ -5,7 +5,8 @@ import {
   getDownloadURL,
   ref,
   uploadBytesResumable,
-  uploadBytes
+  uploadBytes,
+  listAll
 } from "firebase/storage";
 
 const FILES_PATH = "files";
@@ -157,3 +158,29 @@ export const uploadFileAndGetDownloadURL=async (userId,file)=> {
   const downloadURL = await getDownloadURL(storageRef);
   return downloadURL;
 }
+
+export const fetchDocumentLinks = async () => {
+  const folderPath = 'documents portal/';
+  const listRef = ref(storage, folderPath);
+
+  try {
+    const result = await listAll(listRef);
+    const docs = [];
+
+    for (let i = 0; i < result.items.length; i++) {
+      const docRef = result.items[i];
+      const url = await getDownloadURL(docRef);
+      docs.push({
+        name: docRef.name,
+        url: url
+      });
+    }
+
+    return docs;
+
+  } catch (error) {
+    console.error("Error fetching document links:", error);
+    throw error;
+  }
+};
+

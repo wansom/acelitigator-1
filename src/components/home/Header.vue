@@ -17,7 +17,7 @@
             </li>
             <li><a href="//kenyalaw.org" aria-label="read more">Know Your Courts</a></li>
             <li>
-              <a href="//acelitigator.com/litigation-documents" aria-label="read more">Resources</a>
+              <router-link to="/documentsPortal" aria-label="read more">Resources</router-link>
             </li>
             <li><router-link to="contact-us" aria-label="read more">Contact</router-link></li>
             <li><router-link to="sign-in" aria-label="read more">Login </router-link></li>
@@ -105,18 +105,8 @@
               </li>
               <li><router-link to="/know-your-courts" aria-label="learn more">Know Your Courts</router-link></li>
               <li>
-                <a href="#" aria-label="learn more">Resources</a>
-                <ul class="dropdown">
-                  <li>
-                    <a href="//acelitigator.com/litigation-documents" target="blank" aria-label="learn more">Legal Documents</a>
-                  </li>
-                  <li>
-                    <a href="//acelitigator.com/articles" target="blank" aria-label="learn more">Articles</a>
-                  </li>
-                  <li>
-                    <a href="//acelitigator.com/newsletters" target="blank" aria-label="learn more">Knowledge Hub</a>
-                  </li>
-                </ul>
+                <router-link to="/documentsPortal" aria-label="read more">Resources</router-link>
+               
               </li>
               <li><router-link to="/contact-us" aria-label="learn more">Contact</router-link></li>
             </ul>

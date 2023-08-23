@@ -128,6 +128,11 @@ let routes = [
         component: () => import(/* webpackChunkName: "advocatelist" */ '../views/Advocate-List.vue'),
     },
     {
+        path: '/documentsPortal',
+        name: 'DocumentsPortal',
+        component: () => import(/* webpackChunkName: "documentsPortal" */ '../views/DocumentsPortal.vue'),
+    },
+    {
         path: '/not-authorized',
         name: 'not-authorized',
         component: () => import(/* webpackChunkName: "notauthorized" */ '../views/NotAuthorized.vue'),
