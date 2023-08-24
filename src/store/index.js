@@ -353,6 +353,20 @@ export default new Vuex.Store({
         console.log(res)
       })
     },
+    async sendDocumentsMail({ dispatch }, values) {
+      await axios.post(
+        "https://us-central1-scanpal-f74da.cloudfunctions.net/barizi/mail/documents",
+        {
+          name: values.name,
+          email: values.email,
+          subject: values.subject,
+          content: values.content,
+          link:values.link
+        }
+      ).then((res)=>{
+        console.log(res)
+      })
+    },
     async fetchCourts({ commit }) {
       getAllCourts().then(({ data }) => {
         commit("setCourtData", data);
