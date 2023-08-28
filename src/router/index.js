@@ -23,11 +23,12 @@ let routes = [
         name: 'Contact-Us',
         component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue'),
     },
-    {
-        path: '/know-your-courts',
-        name: 'Know-Your-Courts',
-        component: () => import(/* webpackChunkName: "courts" */ '../views/Know-Your-Courts.vue'),
-    },
+    // {
+    //     path: '/know-your-courts',
+    //     name: 'Know-Your-Courts',
+        
+    //     component: () => import(/* webpackChunkName: "courts" */ '../views/Know-Your-Courts.vue'),
+    // },
     {
         path: '/find-a-lawyer',
         name: 'Find-a-Lawyer',
