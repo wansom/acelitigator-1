@@ -84,11 +84,11 @@
           </div>
           <div class="overview-images">
             <div class="col one">
-              <img src="images/Purity-Mwangi.jpg" alt="advocate" loading="lazy" height="280px" width="100%"/>
-              <img src="images/Susan-Mwango.jpg" alt="advocate" loading="lazy" height="280px" width="100%"/>
+              <img src="images/home/Aize-Audrey.jpg" alt="advocate" loading="lazy" height="280px" width="100%"/>
+              <img src="images/home/joshua-abe-sm.jpg" alt="advocate" loading="lazy" height="280px" width="100%"/>
             </div>
             <div class="col two">
-              <img src="images/nelima.jpg" alt="advocate" height="280px" width="100%"/>
+              <img src="images/home/theocalus.jpg" alt="advocate" height="280px" width="100%"/>
               <img src="images/Mahmoud-Shalima.jpg" alt="advocate" loading="lazy" height="280px" width="100%" />
             </div>
           </div>

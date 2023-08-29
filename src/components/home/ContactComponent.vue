@@ -24,7 +24,7 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                <span>+254 704 927 969</span>
+                <span>+2348036033651</span>
               </div>
               <div class="detail">
                 <svg

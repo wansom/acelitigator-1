@@ -1,6 +1,6 @@
 <template>
  <div>
-    <a-card :bordered="false" class="card-info hidden md:block mb-3"  style="height:300px; height: fit-content;">
+    <a-card :bordered="false" class="card-info hidden md:block mb-3 overflow-x-hidden"  style="height:300px; height: fit-content;">
     <a-row type="flex">
       <a-col class="col-img block md:hidden" :span="24" :md="12">
         <div>
@@ -10,7 +10,7 @@
         </div>
       </a-col>
       <a-col class="col-content" :span="24" :xl="12">
-        <div class="card-content">
+        <div class="card-content ">
          <a-row type="flex">
           <a-col :span="12"><p class="flex items-center "><a-icon type="user" class="mx-5" />{{ advocate.first_name }} {{ advocate.last_name }}</p></a-col>
           <a-col :span="12"><p class="flex items-start overflow-hidden overflow-ellipsis whitespace-nowrap"><a-icon type="solution" class="mx-5" />{{ advocate.job_title }}</p></a-col>
@@ -49,7 +49,7 @@
             <span class="text-red-600 whitespace-nowrap">Other Practise Areas</span>
           <div style="display: flex; flex-wrap: nowrap">
             <div
-              class="my-5"
+              class="my-5 "
               v-for="i of advocate.practise_areas"
               :key="i"
             >
@@ -75,7 +75,7 @@
       </a-col>
     </a-row>
   </a-card>
-  <div class="small-card block md:hidden">
+  <div class="small-card block md:hidden overflow-x-hidden">
     <a-row class="align-items-center mb-2">
       <a-col class="col-img " :span="12">
         <div>
