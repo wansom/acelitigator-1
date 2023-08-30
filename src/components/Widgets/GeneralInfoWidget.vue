@@ -217,7 +217,7 @@
                 ]"
                 placeholder=""
                 style="width: 100%"
-                addon-before="P105./"
+                addon-before="SCN./"
                 disabled
               />
             </a-form-item>
