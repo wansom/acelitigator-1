@@ -116,7 +116,7 @@
                   have the legal knowledge you need to succeed in and out of the
                   courtroom
                 </p>
-                <a href="//kenyalaw.org/kl/" class="flex gap-2 items-center" aria-label="learn more" target="blank"
+                <a href="http://kenyalaw.org" class="flex gap-2 items-center" aria-label="learn more" target="blank"
                   >Get to Know Your Courts
                   <svg
                     width="16"
