@@ -93,25 +93,6 @@
                 disabled
               />
             </a-form-item>
-            <!-- <a-form-item label="Practising Certificate Number">
-              <a-input
-                v-decorator="[
-                  'practise_number',
-                  {
-                    initialValue: user.practise_number,
-                    rules: [
-                      {
-                        required: true,
-                        message: 'enter number',
-                      },
-                    ],
-                  },
-                ]"
-                placeholder=""
-                style="width: 100%"
-                disabled
-              />
-            </a-form-item> -->
           </a-col>
         </a-row>
         <a-row :gutter="16" class="mb-5">

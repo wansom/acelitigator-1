@@ -2,7 +2,7 @@
   <div class="container mx-auto">
     <div>
       <h2 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">
-        Court Judges
+        Supreme Court Justices
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
         <div v-for="(judge,index) of judges" :key="index"
@@ -28,12 +28,6 @@
         </div>
 
       </div>
-    </div>
-    <div>
-      <h2 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">
-        Course List
-      </h2>
-      <p>Here is a course list for this court</p>
     </div>
   </div>
 </template>

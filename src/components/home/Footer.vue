@@ -18,15 +18,14 @@
           <ul>
           
             <li><a href="/find-a-lawyer">Find A Lawyer</a></li>
-            <li><a href="/sign-up">My Account</a></li>
+            <li><a href="/sign-in">My Account</a></li>
             <li><a href="/sign-up">Register</a></li>
           </ul>
         </div>
         <div class="col three">
           <h2>Company</h2>
           <ul>
-            <li><a href="//https://firebasestorage.googleapis.com/v0/b/scanpal-f74da.appspot.com/o/Privacy%20Policy%20200223.docx?alt=media&token=bd536806-a1ac-4361-a56a-ddfca9885a8f">Privacy Policy</a></li>
-            <li><a href="//https://firebasestorage.googleapis.com/v0/b/scanpal-f74da.appspot.com/o/Privacy%20Policy%20200223.docx?alt=media&token=bd536806-a1ac-4361-a56a-ddfca9885a8f">Terms of Service</a></li>
+            <li><a href="/know-your-courts">Know Your Courts</a></li>
             <li><a href="/contact-us">Contact Us</a></li>
           </ul>
         </div>
