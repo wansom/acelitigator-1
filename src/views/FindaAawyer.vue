@@ -60,28 +60,13 @@
             </menu>
           </transition-group>
         </div>
-        <div
-          class="grid grid-cols-1 lg:grid-cols-2 gap-4 bg-gray-200 px-20 py-10"
-          v-if="list.length > 0"
-        >
-          <div v-for="advocate in list" :key="advocate.id" class="">
-            <card-info :advocate="advocate"></card-info>
-          </div>
-        </div>
-        <div v-else class="flex items-center justify-center py-20">
-          <a-empty
-          class="flex flex-col items-center justify-center"
-            image="https://gw.alipayobjects.com/mdn/miniapp_social/afts/img/A*pevERLJC9v0AAAAAAAAAAABjAQAAAQ/original"
-            :image-style="{
-              height: '60px',
-            }"
-          >
-            <span slot="description">
-            No Advocates fit your description
-            </span>
-         
-          </a-empty>
-        </div>
+        <template>
+  <a-list :grid="{ gutter: 16, column: 2 }" :pagination="pagination" :data-source="list" class=" bg-gray-100 my-4" >
+    <a-list-item slot="renderItem" slot-scope="item, index">
+      <card-info :advocate="item"></card-info>
+    </a-list-item>
+  </a-list>
+</template>
       </main>
     </div>
     <Footer></Footer>
@@ -140,6 +125,11 @@ export default {
         experience: "By Experience",
         otherPractiseAreas: "By Other Practice areas",
         otherPractiseLocations: "By Other Practice Locations",
+      },
+      pagination: {
+        onChange: page => {
+        },
+        pageSize: 10,
       },
     };
   },
