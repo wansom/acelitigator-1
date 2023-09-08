@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="app" >
 		<component :is="layout">
 			<router-view />
 		</component>
@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import { auth } from "./database/index";
 	export default ({
 		computed: {
 			// Sets components name based on current route's specified layout, defaults to
