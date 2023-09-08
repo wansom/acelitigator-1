@@ -69,19 +69,19 @@
           </div>
         </div>
         <div v-else class="flex items-center justify-center py-20">
-          <a-empty
+    <a-empty
           class="flex flex-col items-center justify-center"
             image="https://gw.alipayobjects.com/mdn/miniapp_social/afts/img/A*pevERLJC9v0AAAAAAAAAAABjAQAAAQ/original"
             :image-style="{
               height: '60px',
             }"
           >
-            <span slot="description">
+      <span slot="description">
             No Advocates fit your description
-            </span>
+    </span>
          
-          </a-empty>
-        </div>
+  </a-empty>
+</div>
       </main>
     </div>
     <Footer></Footer>
@@ -140,6 +140,11 @@ export default {
         experience: "By Experience",
         otherPractiseAreas: "By Other Practice areas",
         otherPractiseLocations: "By Other Practice Locations",
+      },
+      pagination: {
+        onChange: page => {
+        },
+        pageSize: 10,
       },
     };
   },
