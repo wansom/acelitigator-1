@@ -103,7 +103,7 @@
       height: 576px;
       max-height: 576px;
       overflow: hidden;
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
     }
