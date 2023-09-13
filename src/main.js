@@ -19,6 +19,8 @@ import 'vue-advanced-cropper/dist/style.css';
 import store from './store'
 import { auth } from "./database/index";
 import './assets/tailwind.css'
+import './v2/css/v2.css'
+import './v2/css/responsive.css'
 import VueMeta from 'vue-meta'
 
 Vue.use(VueMeta)
