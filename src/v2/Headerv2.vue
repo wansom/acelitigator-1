@@ -13,8 +13,10 @@
                         </div>
                         <div class="menu-item-lf">
                             <button class="find-btn">FIND A LAWYER</button>
-                            <a href="#">Know Your Courts</a>
-                            <a href="#">Resources</a>
+                            <a href="//acelitigator.com/litigation-documents" aria-label="read more">Resources</a>
+                            <a href="http://kenyalaw.org/kl/index.php?id=8281"  aria-label="read more" target="blank">Know Your Courts</a>
+                            <router-link to="contact-us" aria-label="read more">Contact Us</router-link>
+                          
                         </div>
                         <div class="dropdown ">
                             <button class="dropbtn flex items-center ">For Lawyers <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" width="8" class="ml-2 h-3 w-3"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg></button>
@@ -23,19 +25,19 @@
                                 <div class="drop-extra">
                                     <h4>FOR LAWYERS</h4>
                                     <div class="drop-extra-links">
-                                        <a href="#">Marketing services</a>
-                                        <a href="#">SEO for law firms</a>
-                                        <a href="#">Legal copywriting</a>
-                                        <a href="#">Social media management</a>
-                                        <a href="#">Google Ads for law firms</a>
-                                        <a href="#">Legal job board</a>
+                                        <a href="contact-us">Marketing services</a>
+                                        <a href="contact-us">SEO for law firms</a>
+                                        <a href="contact-us">Legal copywriting</a>
+                                        <a href="contact-us">Social media management</a>
+                                        <a href="contact-us">Google Ads for law firms</a>
+                                        <a href="contact-us">Legal job board</a>
                                     </div>
                                 </div>
                                 <div class="drop-extra">
                                     <h4>MEMBERSHIP</h4>
                                     <div class="drop-extra-links">
-                                        <a href="#">How it works</a>
-                                        <a href="#">Pricing</a>
+                                        <!-- <a href="#">How it works</a>
+                                        <a href="#">Pricing</a> -->
                                         <div class="drop-extras-btns">
                                             <button class="login">Login</button>
                                             <span>or</span>

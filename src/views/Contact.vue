@@ -1,8 +1,8 @@
 <template>
   <div class="">
-    <Header></Header>
+   <headerv-2></headerv-2>
 <contact-component></contact-component>
-    <Footer></Footer>
+   <footerv-2/>
   </div>
 </template>
 
@@ -12,8 +12,10 @@ import Footer from "../components/home/Footer.vue";
 import Breadcrum from "../components/Widgets/Breadcrum.vue";
 import Map from "../components/Widgets/Map.vue";
 import ContactComponent from '../components/home/ContactComponent.vue';
+import Footerv2 from '../v2/Footerv2.vue';
+import Headerv2 from '../v2/Headerv2.vue';
 export default {
-  components: { Header, Footer, Breadcrum, Map, ContactComponent },
+  components: { Header, Footer, Breadcrum, Map, ContactComponent, Footerv2, Headerv2 },
   data() {
     return {
       title: 'Contact Us',

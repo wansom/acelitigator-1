@@ -26,11 +26,11 @@
                     ">
                     </div>
                 </div>
-                <div class="bn-img">
+                <div class="bn-img hidden md:block">
                     <svg fill="#ffffff" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
                         <polygon points="50,0 100,0 50,100 0,100"></polygon>
                     </svg>
-                    <img src="/images/find-lawyer.jpg" alt="Lawyers">
+                    <img src="images/banner.jpg" alt="Lawyers">
                 </div>
             </section>
             <section class="pr-area">
