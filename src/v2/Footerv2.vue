@@ -3,12 +3,13 @@
             <div class="ft-holder container">
                 <div class="top-ft">
                     <div class="ft-column social">
-                        <h1>Lazana</h1>
+                        <h1>Dial A Lawyer</h1>
                         <p>Find the right lawyer</p>
                         <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="//linkedin.com/company/dial-a-lawyer-africa-by-ace-litigator" target="blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="//facebook.com/DialaLawyerAfrica"><i class="fab fa-facebook" target="blank"></i></a>
+                            <a href="//instagram.com/dialalawyerafrica"><i class="fab fa-twitter" target="blank"></i></a>
+                            <a href="//twitter.com/dialalawyer_"><i class="fab fa-instagram" target="blank"></i></a>
                         </div>
                     </div>
                     <div class="ft-column link">
@@ -24,34 +25,33 @@
                     <div class="ft-column link">
                         <h4>POPULAR CITIES</h4>
                         <ul>
-                            <li><a href="#">New York Lawyers</a></li>
-                            <li><a href="#">Los Angeles Lawyers</a></li>
-                            <li><a href="#">Sydney Lawyers</a></li>
-                            <li><a href="#">Dubai Lawyers</a></li>
-                            <li><a href="#">Bangkok Lawyers</a></li>
+                            <li><a href="#">Nairobi Lawyers</a></li>
+                            <li><a href="#">Kisumu Lawyers</a></li>
+                            <li><a href="#">Mombasa Lawyers</a></li>
+                            <li><a href="#">Machakos Lawyers</a></li>
+                            <li><a href="#">Nakuru Lawyers</a></li>
                         </ul>
                     </div>
                     <div class="ft-column link">
                         <h4>FOR CLIENTS</h4>
                         <ul>
-                            <li><a href="#">Legal guides</a></li>
-                            <li><a href="#">Legal Q&A</a></li>
+                            <li><a href="//acelitigator.com/litigation-documents">Legal guides</a></li>
+                            <li><a href="http://kenyalaw.org/kl/index.php?id=8281">Know Your Courts</a></li>
                         </ul>
                     </div>
                     <div class="ft-column link">
                         <h4>FOR LAWYERS</h4>
                         <ul>
-                            <li><a href="#">How it works</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Blog for lawyers</a></li>
-                            <li><a href="#">Marketing services</a></li>
-                            <li><a href="#">Job board</a></li>
+                            <li><a href="dashboard">Pricing</a></li>
+                            <li><a href="dashboard">Advocate Chat</a></li>
+                            <li><a href="dashboard">Profile Views</a></li>
+                            <li><a href="dashboard">Job board</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="bottom-ft">
                     <div class="copyright">
-                        <p>© Lawzana Limited 2023. All rights reserved.</p>
+                        <p>© dialalawyerafrica Limited {{ new Date().getFullYear() }}. All rights reserved.</p>
                     </div>
                     <div class="ft-legal-links">
                         <a href="#">Privacy Policy</a>

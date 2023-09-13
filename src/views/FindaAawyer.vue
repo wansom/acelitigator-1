@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white container-fluid">
-    <Header></Header>
+    <headerv-2></headerv-2>
     <div>
       <main class="content container-fluid mx-auto px-5 lg:px-10">
         <div>
@@ -78,6 +78,7 @@ import Header from "../components/home/Header.vue";
 import { mapState } from "vuex";
 import CardInfo from "../components/Cards/CardInfo.vue";
 import Footer from "../components/home/Footer.vue";
+import Headerv2 from "../v2/Headerv2.vue";
 // inject svg spritesheet
 fetch("https://s3-us-west-2.amazonaws.com/s.cdpn.io/450744/mock-logos.svg")
   .then((response) => response.text())
@@ -92,6 +93,7 @@ export default {
     Header,
     CardInfo,
     Footer,
+    Headerv2,
     icon: { template: '<svg><use :xlink:href="use"/></svg>' },
   },
   props: ["use"],

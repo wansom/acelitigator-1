@@ -9,14 +9,14 @@
                             <h1>Find the best lawyers, <span>anywhere</span></h1>
                             <p>From family to business law, we guide you to the right lawyer.</p>
                             <div class="bn-btns">
-                                <button class="find-btn">Find Lawyers</button>
+                               <router-link to="/find-a-lawyer"> <button class="find-btn">Find Lawyers</button></router-link>
                                 <span class="bn-or">or</span>
                                 <div class="form">
                                     <div class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" width="18" class=""><path d="M272 192C272 236.2 236.2 272 192 272C147.8 272 112 236.2 112 192C112 147.8 147.8 112 192 112C236.2 112 272 147.8 272 192zM192 240C218.5 240 240 218.5 240 192C240 165.5 218.5 144 192 144C165.5 144 144 165.5 144 192C144 218.5 165.5 240 192 240zM384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192H384zM192 32C103.6 32 32 103.6 32 192C32 207.6 37.43 229 48.56 255.4C59.47 281.3 74.8 309.4 92.14 337.5C126.2 392.8 166.6 445.7 192 477.6C217.4 445.7 257.8 392.8 291.9 337.5C309.2 309.4 324.5 281.3 335.4 255.4C346.6 229 352 207.6 352 192C352 103.6 280.4 32 192 32z"></path></svg>
                                     </div>
                                     <form action="/">
-                                        <input type="text" placeholder="Browse law firms by city or country">
+                                        <input type="text" placeholder="Browse lawyers by County or State">
                                     </form>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@
                     <div class="pr-head">
                         <p class="top">PRACTICE AREAS</p>
                         <h2 class="heading">Not sure what service you need?</h2>
-                        <p class="btm">Browse law firms by practice area.</p>
+                        <p class="btm">Browse Lawyers by practice area.</p>
                     </div>
                     <div class="pr-cards">
                         <a href="#" class="pr-card">
@@ -138,8 +138,8 @@
                 <div class="hiworks-holder container">
                     <div class="hiworks-head">
                         <p class="top">HOW IT WORKS</p>
-                        <h2 class="heading">Let us guide you to the right law firm</h2>
-                        <p class="btm">Browse law firms by practice area.</p>
+                        <h2 class="heading">Let us guide you to the right lawyers</h2>
+                        <!-- <p class="btm">Browse law firms by practice area.</p> -->
                     </div>
                     <div class="hiworks-cards">
                         <div class="hiwork-card">
@@ -149,7 +149,7 @@
                             </div>
                             <div class="h-card-info">
                                 <h3>Define your needs</h3>
-                                <p>We guide you to provide your needs through an intelligent form.</p>
+                                <p>We guide you to provide your needs by filtering out lawyers by counties and practise areas.</p>
                             </div>
                         </div>
                         <div class="hiwork-card">
@@ -173,7 +173,7 @@
                         </div>
                     </div>
                     <div class="hiworks-btn">
-                        <button>Find Lawyer</button>
+                       <router-link to="/find-a-lawyer"> <button>Find Lawyer</button></router-link>
                     </div>
                 </div>
             </section>

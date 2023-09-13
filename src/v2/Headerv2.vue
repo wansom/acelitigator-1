@@ -12,7 +12,7 @@
                             <span :class="{'cancel-btn block active':showMobilenav,'cancel-btn hidden hide':!showMobilenav }"><i class="fas fa-times"></i></span>
                         </div>
                         <div class="menu-item-lf">
-                            <button class="find-btn">FIND A LAWYER</button>
+                           <router-link to="/find-a-lawyer"> <button class="find-btn">FIND A LAWYER</button></router-link>
                             <a href="//acelitigator.com/litigation-documents" aria-label="read more">Resources</a>
                             <a href="http://kenyalaw.org/kl/index.php?id=8281"  aria-label="read more" target="blank">Know Your Courts</a>
                             <router-link to="contact-us" aria-label="read more">Contact Us</router-link>
