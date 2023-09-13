@@ -1,9 +1,11 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0px ;
+    padding: 0px ;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Jost', sans-serif;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
 }
 
 /* == General == */
@@ -26,7 +28,7 @@ html {
     --back-color: rgb(255 255 255/var(--tw-bg-opacity));
 
     --color: #374151;
-    --active-color: #3b82f6;
+    --active-color: #e6353b;
     --black: #000000;
     --grey: #F9F9F9;
     --white: #ffffff;

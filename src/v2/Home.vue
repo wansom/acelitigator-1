@@ -30,7 +30,7 @@
                     <svg fill="#ffffff" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
                         <polygon points="50,0 100,0 50,100 0,100"></polygon>
                     </svg>
-                    <img src="css/img/find-lawyer.jpg" alt="Lawyers">
+                    <img src="/images/find-lawyer.jpg" alt="Lawyers">
                 </div>
             </section>
             <section class="pr-area">
@@ -42,91 +42,91 @@
                     </div>
                     <div class="pr-cards">
                         <a href="#" class="pr-card">
-                            <img src="css/img/services/accidents-injuries.jpg" alt="accident and injuries">
+                            <img src="/images/services/accidents-injuries.jpg" alt="accident and injuries">
                             <div class="pr-card-cnt">
                                 <span>Accident & Injuries</span>
                             </div>
                         </a>
                         <a href="#" class="pr-card">
-                            <img src="css/img/services/bankruptcy-debt.jpg" alt="bankruptcy debt">
+                            <img src="/images/services/bankruptcy-debt.jpg" alt="bankruptcy debt">
                             <div class="pr-card-cnt">
                                 <span>Bankruptcy</span>
                             </div>
                         </a>
                         <a href="#" class="pr-card">
-                            <img src="css/img/services/business.jpg" alt="bussiness">
+                            <img src="/images/services/business.jpg" alt="bussiness">
                             <div class="pr-card-cnt">
                                 <span>Bussiness</span>
                             </div>
                         </a>
                         <a href="#" class="pr-card">
-                            <img src="css/img/services/civil-human-rights.jpg" alt="civil human rights">
+                            <img src="/images/services/civil-human-rights.jpg" alt="civil human rights">
                             <div class="pr-card-cnt">
                                 <span>Civil Human Right</span>
                             </div>
                         </a>
                         <a href="#" class="pr-card">
-                            <img src="css/img/services/consumer-rights.jpg" alt="consumer rights">
+                            <img src="/images/services/consumer-rights.jpg" alt="consumer rights">
                             <div class="pr-card-cnt">
                                 <span>Consumer Rights</span>
                             </div>
                         </a>
                         <a href="#" class="pr-card">
-                            <img src="css/img/services/criminal-defense.jpg" alt="criminal defence">
+                            <img src="/images/services/criminal-defense.jpg" alt="criminal defence">
                             <div class="pr-card-cnt">
                                 <span>Criminal Defence</span>
                             </div>
                         </a>
                         <a href="#" class="pr-card">
-                            <img src="css/img/services/elder-law.jpg" alt="elder law">
+                            <img src="/images/services/elder-law.jpg" alt="elder law">
                             <div class="pr-card-cnt">
                                 <span>Elder Law</span>
                             </div>
                         </a>
                         <a href="#" class="pr-card">
-                            <img src="css/img/services/employment-labor.jpg" alt="Employment labor">
+                            <img src="/images/services/employment-labor.jpg" alt="Employment labor">
                             <div class="pr-card-cnt">
                                 <span>Employment Labor</span>
                             </div>
                         </a>
                         <a href="#" class="pr-card">
-                            <img src="css/img/services/family.jpg" alt="Family">
+                            <img src="/images/services/family.jpg" alt="Family">
                             <div class="pr-card-cnt">
                                 <span>Family</span>
                             </div>
                         </a>
                         <a href="#" class="pr-card">
-                            <img src="css/img/services/family.jpg" alt="immigration">
+                            <img src="/images/services/family.jpg" alt="immigration">
                             <div class="pr-card-cnt">
                                 <span>Immigration</span>
                             </div>
                         </a>
                         <a href="#" class="pr-card">
-                            <img src="css/img/services/insurance.jpg" alt="insurance">
+                            <img src="/images/services/insurance.jpg" alt="insurance">
                             <div class="pr-card-cnt">
                                 <span>Insurance</span>
                             </div>
                         </a>
                         <a href="#" class="pr-card">
-                            <img src="css/img/services/intellectual-property.jpg" alt="intellectual property">
+                            <img src="/images/services/intellectual-property.jpg" alt="intellectual property">
                             <div class="pr-card-cnt">
                                 <span>Intellectual Property</span>
                             </div>
                         </a>
                         <a href="#" class="pr-card">
-                            <img src="css/img/services/lawsuits-disputes.jpg" alt="Lawsuits disputes">
+                            <img src="/images/services/lawsuits-disputes.jpg" alt="Lawsuits disputes">
                             <div class="pr-card-cnt">
                                 <span>Lawsuits Disputes</span>
                             </div>
                         </a>
                         <a href="#" class="pr-card">
-                            <img src="css/img/services/media-technology-and-telecoms.jpg" alt="media technology and telecoms">
+                            <img src="/images/services/media-technology-and-telecoms.jpg" alt="media technology and telecoms">
                             <div class="pr-card-cnt">
                                 <span>Media, Technology & Telecoms</span>
                             </div>
                         </a>
                         <a href="#" class="pr-card">
-                            <img src="css/img/services/real-estate.jpg" alt="Real Estate">
+                            <img src="/images/services/real-estate.jpg" alt="Real Estate">
                             <div class="pr-card-cnt">
                                 <span>Real Estate</span>
                             </div>
