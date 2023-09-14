@@ -872,7 +872,7 @@ section.service-listings{
     justify-content: flex-start; 
 }
 .p-top-left .p-image{
-    width: 56px;
+    width: 156px;
     margin: 0px 20px 0px 0px;
 }
 .p-top-left .p-image img{
@@ -906,10 +906,7 @@ section.service-listings{
     justify-content: flex-start;
     flex-wrap: wrap;
 }
-.p-btm-left{
-    width: 100%;
-    max-width: 180px;
-}
+
 .p-btm-left p{
     margin: 0px 0px 10px;
 }
