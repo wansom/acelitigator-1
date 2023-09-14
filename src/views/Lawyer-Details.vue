@@ -1,13 +1,6 @@
 <template>
   <div>
-    <Header></Header>
-    <!-- <section class="product-shop spad page-details">
-      <div class="container">
-        <div class="row">
-          <detail-card  :advocate="advocate"></detail-card>
-        </div>
-      </div>
-    </section> -->
+    <headerv-2></headerv-2>
     <div class="container mx-auto my-5 px-5 lg:px-10 py-5 overflow-x-hidden">
         <div class="md:flex no-wrap md:-mx-2 ">
             <!-- Left Side -->
@@ -208,13 +201,15 @@
             </div>
         </div>
     </div>
-    <Footer></Footer>
+   <footerv-2-vue></footerv-2-vue>
   </div>
 </template>
 
 <script>
 import Header from "../components/home/Header.vue";
 import Footer from "../components/home/Footer.vue";
+import Headerv2 from "../v2/Headerv2.vue";
+import Footerv2Vue from "../v2/Footerv2.vue";
 import Breadcrum from "../components/Widgets/Breadcrum.vue";
 import DetailCard from '../components/Detail/Detail-card.vue';
 import RelatedAdvocates from '../components/Detail/Related-Advocates.vue';
@@ -224,7 +219,7 @@ import { updateAdvocate } from "../database/firestore";
 import { arrayUnion} from "firebase/firestore";
 import { mapState } from 'vuex';
 export default {
-  components: { Header, Footer, Breadcrum,DetailCard, RelatedAdvocates },
+  components: { Header, Footer, Breadcrum,DetailCard, RelatedAdvocates,Headerv2,Footerv2Vue },
   data(){
     return{
       advocate:{}

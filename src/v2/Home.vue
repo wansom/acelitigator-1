@@ -41,91 +41,91 @@
                         <p class="btm">Browse Lawyers by practice area.</p>
                     </div>
                     <div class="pr-cards">
-                        <a href="#" class="pr-card">
+                        <a href="/find-a-lawyer" class="pr-card">
                             <img src="/images/services/accidents-injuries.jpg" alt="accident and injuries">
                             <div class="pr-card-cnt">
                                 <span>Accident & Injuries</span>
                             </div>
                         </a>
-                        <a href="#" class="pr-card">
+                        <a href="/find-a-lawyer" class="pr-card">
                             <img src="/images/services/bankruptcy-debt.jpg" alt="bankruptcy debt">
                             <div class="pr-card-cnt">
                                 <span>Bankruptcy</span>
                             </div>
                         </a>
-                        <a href="#" class="pr-card">
+                        <a href="/find-a-lawyer" class="pr-card">
                             <img src="/images/services/business.jpg" alt="bussiness">
                             <div class="pr-card-cnt">
                                 <span>Bussiness</span>
                             </div>
                         </a>
-                        <a href="#" class="pr-card">
+                        <a href="/find-a-lawyer" class="pr-card">
                             <img src="/images/services/civil-human-rights.jpg" alt="civil human rights">
                             <div class="pr-card-cnt">
                                 <span>Civil Human Right</span>
                             </div>
                         </a>
-                        <a href="#" class="pr-card">
+                        <a href="/find-a-lawyer" class="pr-card">
                             <img src="/images/services/consumer-rights.jpg" alt="consumer rights">
                             <div class="pr-card-cnt">
                                 <span>Consumer Rights</span>
                             </div>
                         </a>
-                        <a href="#" class="pr-card">
+                        <a href="/find-a-lawyer" class="pr-card">
                             <img src="/images/services/criminal-defense.jpg" alt="criminal defence">
                             <div class="pr-card-cnt">
                                 <span>Criminal Defence</span>
                             </div>
                         </a>
-                        <a href="#" class="pr-card">
+                        <a href="/find-a-lawyer" class="pr-card">
                             <img src="/images/services/elder-law.jpg" alt="elder law">
                             <div class="pr-card-cnt">
                                 <span>Elder Law</span>
                             </div>
                         </a>
-                        <a href="#" class="pr-card">
+                        <a href="/find-a-lawyer" class="pr-card">
                             <img src="/images/services/employment-labor.jpg" alt="Employment labor">
                             <div class="pr-card-cnt">
                                 <span>Employment Labor</span>
                             </div>
                         </a>
-                        <a href="#" class="pr-card">
+                        <a href="/find-a-lawyer" class="pr-card">
                             <img src="/images/services/family.jpg" alt="Family">
                             <div class="pr-card-cnt">
                                 <span>Family</span>
                             </div>
                         </a>
-                        <a href="#" class="pr-card">
+                        <a href="/find-a-lawyer" class="pr-card">
                             <img src="/images/services/family.jpg" alt="immigration">
                             <div class="pr-card-cnt">
                                 <span>Immigration</span>
                             </div>
                         </a>
-                        <a href="#" class="pr-card">
+                        <a href="/find-a-lawyer" class="pr-card">
                             <img src="/images/services/insurance.jpg" alt="insurance">
                             <div class="pr-card-cnt">
                                 <span>Insurance</span>
                             </div>
                         </a>
-                        <a href="#" class="pr-card">
+                        <a href="/find-a-lawyer" class="pr-card">
                             <img src="/images/services/intellectual-property.jpg" alt="intellectual property">
                             <div class="pr-card-cnt">
                                 <span>Intellectual Property</span>
                             </div>
                         </a>
-                        <a href="#" class="pr-card">
+                        <a href="/find-a-lawyer" class="pr-card">
                             <img src="/images/services/lawsuits-disputes.jpg" alt="Lawsuits disputes">
                             <div class="pr-card-cnt">
                                 <span>Lawsuits Disputes</span>
                             </div>
                         </a>
-                        <a href="#" class="pr-card">
+                        <a href="/find-a-lawyer" class="pr-card">
                             <img src="/images/services/media-technology-and-telecoms.jpg" alt="media technology and telecoms">
                             <div class="pr-card-cnt">
                                 <span>Media, Technology & Telecoms</span>
                             </div>
                         </a>
-                        <a href="#" class="pr-card">
+                        <a href="/find-a-lawyer" class="pr-card">
                             <img src="/images/services/real-estate.jpg" alt="Real Estate">
                             <div class="pr-card-cnt">
                                 <span>Real Estate</span>
