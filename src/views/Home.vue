@@ -1,11 +1,11 @@
 <template>
   <div>
-    <Header></Header>
+    <headerv-2></headerv-2>
     <main>
       <section class="banner">
         <div class="banner-mask">
-          <div class="banner-container container">
-            <div class="banner-text">
+          <div class="banner-container container ">
+            <div class="banner-text mt-40">
               <h1>Aiding access to justice across the African continent.</h1>
               <p>
                 Our mission is to aid access to justice across Africa by linking
@@ -151,7 +151,7 @@
       </section>
       <contact-component></contact-component>
     </main>
-    <Footer></Footer>
+    <footerv-2></footerv-2>
   </div>
 </template>
 
@@ -165,6 +165,8 @@ import SignupBanner from "../components/home/Signup-Banner.vue";
 import CardInfo from "../components/Cards/CardInfo.vue";
 import { mapState } from "vuex";
 import ContactComponent from "../components/home/ContactComponent.vue";
+import Headerv2 from '../v2/Headerv2.vue';
+import Footerv2 from '../v2/Footerv2.vue';
 export default {
   components: {
     Hero,
@@ -174,7 +176,9 @@ export default {
     TopLawyers,
     SignupBanner,
     CardInfo,
-    ContactComponent
+    ContactComponent,
+    Headerv2,
+    Footerv2
   },
   data() {
     return {

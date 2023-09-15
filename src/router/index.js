@@ -11,7 +11,7 @@ let routes = [
     {
         path: '/',
         name: 'Home',
-        component: () => import(/* webpackChunkName: "home" */ '../v2/Home.vue'),
+        component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue'),
     },
     {
         path: '/advocate/:id',
