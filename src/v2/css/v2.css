@@ -194,7 +194,6 @@ nav .links a:hover {
 .drop-extras-btns{
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
 }
 .drop-extras-btns button{
     border: 0px;
