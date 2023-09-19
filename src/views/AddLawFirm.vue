@@ -1,9 +1,7 @@
 <template>
   <div>
     <headerv-2></headerv-2>
-    <main class="container mx-auto px-28">
         <law-firm-form></law-firm-form>
-    </main>
     <footerv-2></footerv-2>
   </div>
 </template>

@@ -30,6 +30,7 @@ const LAWYERS_PATH='all_advocates'
 const MPESA_PATH='mpesa_responses'
 const TRANSACTIONS_PATH = 'transactions';
 const COURTS_PATH= 'courts'
+const LAW_FIRM='law_firms'
 const MESSAGE_PATH = roomId => {
 	return `${ROOMS_PATH}/${roomId}/${MESSAGES_PATH}`
 }
@@ -85,6 +86,25 @@ export const getAdvocate = userId => {
 }
 export const updateAdvocate = (userId, data) => {
 	return updateDocument(advocateRef(userId), data)
+}
+//ADVOCATES
+const firmsRef = collection(firestoreDb, LAW_FIRM)
+const firmRef = userId => {
+	return doc(firestoreDb, LAW_FIRM, userId)
+}
+export const getAllFirms = () => {
+	return getDocuments(query(firmsRef))
+}
+export const addFirm=(values)=>{
+return setDocument(LAW_FIRM,values.uid,values)
+}
+
+
+export const getFirm = userId => {
+	return getDocument(firmRef(userId))
+}
+export const updateFirm = (userId, data) => {
+	return updateDocument(firmRef(userId), data)
 }
 
 //REQUESTS
