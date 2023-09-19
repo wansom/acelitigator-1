@@ -23,12 +23,18 @@ let routes = [
         name: 'Contact-Us',
         component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue'),
     },
-    // {
-    //     path: '/know-your-courts',
-    //     name: 'Know-Your-Courts',
+    {
+        path: '/law-firms',
+        name: 'LawFirms',
         
-    //     component: () => import(/* webpackChunkName: "courts" */ '../views/Know-Your-Courts.vue'),
-    // },
+        component: () => import(/* webpackChunkName: "law firms" */ '../views/LawFirms.vue'),
+    },
+    {
+        path: '/firm/:id',
+        name: 'Firm',
+        
+        component: () => import(/* webpackChunkName: "law firms" */ '../views/FirmDetails.vue'),
+    },
     {
         path: '/find-a-lawyer',
         name: 'Find-a-Lawyer',

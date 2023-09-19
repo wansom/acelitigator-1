@@ -64,7 +64,7 @@
           >
             <polygon points="50,0 100,0 50,100 0,100"></polygon>
           </svg>
-          <img src="images/banner.jpg" alt="Lawyers" />
+          <img src="images/banner.jpg" alt="Lawyers" loading="lazy" />
         </div>
       </section>
       <section class="pr-area">
@@ -78,7 +78,7 @@
             <a href="/find-a-lawyer" class="pr-card">
               <img
                 src="/images/services/bankcrapt.jpg"
-                alt="accident and injuries"
+                alt="accident and injuries" loading="lazy"
               />
               <div class="pr-card-cnt">
                 <span>Bankruptcy Law and Recovery</span>
@@ -87,14 +87,14 @@
             <a href="/find-a-lawyer" class="pr-card">
               <img
                 src="/images/services/bankruptcy-debt.jpg"
-                alt="bankruptcy debt"
+                alt="bankruptcy debt" loading="lazy"
               />
               <div class="pr-card-cnt">
                 <span>Corporate, Commercial Law</span>
               </div>
             </a>
             <a href="/find-a-lawyer" class="pr-card">
-              <img src="/images/services/handshake.jpg" alt="bussiness" />
+              <img src="/images/services/handshake.jpg" alt="bussiness" loading="lazy"/>
               <div class="pr-card-cnt">
                 <span>Alternative Dispute Resolution</span>
               </div>
@@ -102,7 +102,7 @@
             <a href="/find-a-lawyer" class="pr-card">
               <img
                 src="/images/services/civil-human-rights.jpg"
-                alt="civil human rights"
+                alt="civil human rights" loading="lazy"
               />
               <div class="pr-card-cnt">
                 <span>Civil Litigation</span>
@@ -111,7 +111,7 @@
             <a href="/find-a-lawyer" class="pr-card">
               <img
                 src="/images/services/consumerrights.jpg"
-                alt="consumer rights"
+                alt="consumer rights" loading="lazy"
               />
               <div class="pr-card-cnt">
                 <span>Consumer Rights</span>
@@ -120,7 +120,7 @@
             <a href="/find-a-lawyer" class="pr-card">
               <img
                 src="/images/services/criminal-defense.jpg"
-                alt="criminal defence"
+                alt="criminal defence" loading="lazy"
               />
               <div class="pr-card-cnt">
                 <span>Criminal Defence</span>
@@ -135,26 +135,26 @@
             <a href="/find-a-lawyer" class="pr-card">
               <img
                 src="/images/services/employment-labor.jpg"
-                alt="Employment labor"
+                alt="Employment labor" loading="lazy"
               />
               <div class="pr-card-cnt">
                 <span>Labor (Employment) Law</span>
               </div>
             </a>
             <a href="/find-a-lawyer" class="pr-card">
-              <img src="/images/services/families.jpg" alt="Family" />
+              <img src="/images/services/families.jpg" alt="Family" loading="lazy" />
               <div class="pr-card-cnt">
                 <span>Family</span>
               </div>
             </a>
             <a href="/find-a-lawyer" class="pr-card">
-              <img src="/images/services/immigrations.jpg" alt="immigration" />
+              <img src="/images/services/immigrations.jpg" alt="immigration" loading="lazy"/>
               <div class="pr-card-cnt">
                 <span>Immigration</span>
               </div>
             </a>
             <a href="/find-a-lawyer" class="pr-card">
-              <img src="/images/services/insurances.jpg" alt="insurance" />
+              <img src="/images/services/insurances.jpg" alt="insurance" loading="lazy"/>
               <div class="pr-card-cnt">
                 <span>Insurance</span>
               </div>
@@ -162,7 +162,7 @@
             <a href="/find-a-lawyer" class="pr-card">
               <img
                 src="/images/services/ip.jpg"
-                alt="intellectual property"
+                alt="intellectual property" loading="lazy"
               />
               <div class="pr-card-cnt">
                 <span>Intellectual Property</span>
@@ -171,7 +171,7 @@
             <a href="/find-a-lawyer" class="pr-card">
               <img
                 src="/images/services/lawsuits-disputes.jpg"
-                alt="Lawsuits disputes"
+                alt="Lawsuits disputes" loading="lazy"
               />
               <div class="pr-card-cnt">
                 <span>Lawsuits Disputes</span>
@@ -180,14 +180,14 @@
             <a href="/find-a-lawyer" class="pr-card">
               <img
                 src="/images/services/telco.jpg"
-                alt="media technology and telecoms"
+                alt="media technology and telecoms" loading="lazy"
               />
               <div class="pr-card-cnt">
                 <span>Media, Technology & Telecoms</span>
               </div>
             </a>
             <a href="/find-a-lawyer" class="pr-card">
-              <img src="/images/services/estate.jpg" alt="Real Estate" />
+              <img src="/images/services/estate.jpg" alt="Real Estate" loading="lazy"/>
               <div class="pr-card-cnt">
                 <span>Real Estate</span>
               </div>
