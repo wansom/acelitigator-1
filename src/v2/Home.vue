@@ -77,11 +77,11 @@
           <div class="pr-cards">
             <a href="/find-a-lawyer" class="pr-card">
               <img
-                src="/images/services/accidents-injuries.jpg"
+                src="/images/services/bankcrapt.jpg"
                 alt="accident and injuries"
               />
               <div class="pr-card-cnt">
-                <span>Accident & Injuries</span>
+                <span>Bankruptcy Law and Recovery</span>
               </div>
             </a>
             <a href="/find-a-lawyer" class="pr-card">
@@ -90,13 +90,13 @@
                 alt="bankruptcy debt"
               />
               <div class="pr-card-cnt">
-                <span>Bankruptcy</span>
+                <span>Corporate, Commercial Law</span>
               </div>
             </a>
             <a href="/find-a-lawyer" class="pr-card">
-              <img src="/images/services/business.jpg" alt="bussiness" />
+              <img src="/images/services/handshake.jpg" alt="bussiness" />
               <div class="pr-card-cnt">
-                <span>Bussiness</span>
+                <span>Alternative Dispute Resolution</span>
               </div>
             </a>
             <a href="/find-a-lawyer" class="pr-card">
@@ -105,12 +105,12 @@
                 alt="civil human rights"
               />
               <div class="pr-card-cnt">
-                <span>Civil Human Right</span>
+                <span>Civil Litigation</span>
               </div>
             </a>
             <a href="/find-a-lawyer" class="pr-card">
               <img
-                src="/images/services/consumer-rights.jpg"
+                src="/images/services/consumerrights.jpg"
                 alt="consumer rights"
               />
               <div class="pr-card-cnt">
@@ -127,9 +127,9 @@
               </div>
             </a>
             <a href="/find-a-lawyer" class="pr-card">
-              <img src="/images/services/elder-law.jpg" alt="elder law" />
+              <img src="/images/services/power.jpg" alt="Government Relations Practice" />
               <div class="pr-card-cnt">
-                <span>Elder Law</span>
+                <span>Government Relations Practice</span>
               </div>
             </a>
             <a href="/find-a-lawyer" class="pr-card">
@@ -138,30 +138,30 @@
                 alt="Employment labor"
               />
               <div class="pr-card-cnt">
-                <span>Employment Labor</span>
+                <span>Labor (Employment) Law</span>
               </div>
             </a>
             <a href="/find-a-lawyer" class="pr-card">
-              <img src="/images/services/family.jpg" alt="Family" />
+              <img src="/images/services/families.jpg" alt="Family" />
               <div class="pr-card-cnt">
                 <span>Family</span>
               </div>
             </a>
             <a href="/find-a-lawyer" class="pr-card">
-              <img src="/images/services/family.jpg" alt="immigration" />
+              <img src="/images/services/immigrations.jpg" alt="immigration" />
               <div class="pr-card-cnt">
                 <span>Immigration</span>
               </div>
             </a>
             <a href="/find-a-lawyer" class="pr-card">
-              <img src="/images/services/insurance.jpg" alt="insurance" />
+              <img src="/images/services/insurances.jpg" alt="insurance" />
               <div class="pr-card-cnt">
                 <span>Insurance</span>
               </div>
             </a>
             <a href="/find-a-lawyer" class="pr-card">
               <img
-                src="/images/services/intellectual-property.jpg"
+                src="/images/services/ip.jpg"
                 alt="intellectual property"
               />
               <div class="pr-card-cnt">
@@ -179,7 +179,7 @@
             </a>
             <a href="/find-a-lawyer" class="pr-card">
               <img
-                src="/images/services/media-technology-and-telecoms.jpg"
+                src="/images/services/telco.jpg"
                 alt="media technology and telecoms"
               />
               <div class="pr-card-cnt">
@@ -187,7 +187,7 @@
               </div>
             </a>
             <a href="/find-a-lawyer" class="pr-card">
-              <img src="/images/services/real-estate.jpg" alt="Real Estate" />
+              <img src="/images/services/estate.jpg" alt="Real Estate" />
               <div class="pr-card-cnt">
                 <span>Real Estate</span>
               </div>
