@@ -1,7 +1,7 @@
 <template>
        <header>
             <nav>
-                <div class="nav-container container mx-auto px-28">
+                <div class="nav-container container mx-auto">
                     <div class="logo">
                         <a href="/">
                             <img src="/images/dial-logo.png" alt="logo">

@@ -7,10 +7,11 @@ import {
   updateAdvocate,
   getAllCourts,
   addCourt,
+  addFirm,
 } from "../database/firestore";
 import swal from "sweetalert";
 import { createUser, signIn, logout, passwordReset } from "../database/auth";
-import { arrayUnion, onSnapshot, collection,query,where } from "firebase/firestore";
+import { arrayUnion, onSnapshot, collection, query, where } from "firebase/firestore";
 import { auth, firestoreDb } from "../database/index";
 const axios = require("axios").default;
 
@@ -27,7 +28,7 @@ export default new Vuex.Store({
     loading: false,
     current: 1,
 
-    
+
     practiseAreas: [
       "	Admiralty (Maritime) and Aviation Law",
       "Bankruptcy Law and Recovery",
@@ -165,25 +166,68 @@ export default new Vuex.Store({
               notification: `Your account was created successfully. Proceed to complete your profile`,
               date: new Date(),
             }),
-          }).then(async() => {
+          }).then(async () => {
             dispatch("changeLoading", false);
-              router.push("/dashboard");
-              await dispatch("sendMail", {
+            router.push("/dashboard");
+            await dispatch("sendMail", {
               name: data.first_name,
               email: data.email,
               subject: "Dial A lawyer Account",
               content:
                 "Your Account has been created successfully. You can now log into your account and complete your profile befor your account is activated",
             });
-         
+
           });
         })
-        .catch((err) => { 
+        .catch((err) => {
           swal({
             title: "`This email count is already in use by another account!",
             text: `please enter another email and try again`,
             icon: "error",
-          });   
+          });
+          dispatch("changeLoading", false);
+        });
+    },
+
+    registerFirm({ commit, dispatch }, data) {
+      dispatch("changeLoading", true);
+      console.log(data)
+      createUser({
+        email: data.email,
+        password: data.password,
+      })
+        .then((result) => {
+          addFirm({
+            name: data.name,
+            email: data.email,
+            password: data.password,
+            uid: result.user.uid,
+            status: "firm",
+            _id: result.user.uid,
+            notifications: arrayUnion({
+              notification: `Your account was created successfully. Proceed to complete your profile`,
+              date: new Date(),
+            }),
+          }).then(async () => {
+            dispatch("changeLoading", false);
+            router.push("/dashboard");
+            await dispatch("sendMail", {
+              name: data.first_name,
+              email: data.email,
+              subject: "Dial A lawyer Account",
+              content:
+                "Your Account has been created successfully. You can now log into your account and complete your profile befor your account is activated",
+            });
+
+          });
+        })
+        .catch((err) => {
+          console.log(err)
+          swal({
+            title: "Something Went Wrong while creating account!",
+            text: `please try again`,
+            icon: "error",
+          });
           dispatch("changeLoading", false);
         });
     },
@@ -261,8 +305,8 @@ export default new Vuex.Store({
               title: "Account submitted for review!",
               text: `Your details have been submitted successfully.Your account will be reviewed within 48 hours`,
               icon: "success",
-            })  
-          }else{
+            })
+          } else {
             swal({
               title: "Progress Saved.",
               text: `Info updated Successfully. Click next to continue.`,
@@ -325,7 +369,7 @@ export default new Vuex.Store({
           subject: values.subject,
           content: values.content,
         }
-      ).then((res)=>{
+      ).then((res) => {
         console.log(res)
       })
     },
@@ -384,10 +428,10 @@ export default new Vuex.Store({
     async fetchActiveAdvocates({ dispatch, commit }) {
       const LAWYERS_PATH = "nigeria_lawyers";
       const myCollection = collection(firestoreDb, LAWYERS_PATH);
-    
+
       // Create a query against the collection
       const queryToExecute = query(myCollection, where("status", "==", "active"));
-    
+
       const unsubscribe = onSnapshot(
         queryToExecute,
         (snapshot) => {
@@ -403,7 +447,7 @@ export default new Vuex.Store({
           console.log(error.message);
         }
       );
-    
+
       // Return a function to detach the listener when the action is no longer needed
       return unsubscribe;
     },
