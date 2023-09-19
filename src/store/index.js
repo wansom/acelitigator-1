@@ -27,8 +27,9 @@ export default new Vuex.Store({
     request: {},
     loading: false,
     current: 1,
-    practiseAreas:[
-      " Asset Tracing & Recovery",
+
+
+    practiseAreas: [
       "	Admiralty (Maritime) and Aviation Law",
       "Bankruptcy Law and Recovery",
       "Corporate, Commercial and Conveyancing ",
@@ -355,20 +356,6 @@ export default new Vuex.Store({
           content: values.content,
         }
       ).then((res) => {
-        console.log(res)
-      })
-    },
-    async sendDocumentsMail({ dispatch }, values) {
-      await axios.post(
-        "https://us-central1-scanpal-f74da.cloudfunctions.net/barizi/mail/documents",
-        {
-          name: values.name,
-          email: values.email,
-          subject: values.subject,
-          content: values.content,
-          link:values.link
-        }
-      ).then((res)=>{
         console.log(res)
       })
     },
