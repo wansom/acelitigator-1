@@ -99,7 +99,7 @@
                       <div class="profile-info">
                         <div class="p-top">
                           <div class="p-top-left">
-                            <div class="p-image">
+                            <div class="p-image w-[156px]">
                               <img
                                 :src="item.profile_photo"
                                 alt="profile photo"
