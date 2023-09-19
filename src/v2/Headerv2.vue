@@ -1,7 +1,7 @@
 <template>
        <header>
             <nav>
-                <div class="nav-container container mx-auto">
+                <div class="nav-container container mx-auto px-28">
                     <div class="logo">
                         <a href="/">
                             <img src="/images/dial-logo.png" alt="logo">
@@ -37,8 +37,8 @@
                                 <div class="drop-extra">
                                     <h4>MEMBERSHIP</h4>
                                     <div class="drop-extra-links">
-                                        <!-- <a href="#">How it works</a>
-                                        <a href="#">Pricing</a> -->
+                                        <router-link to="/add-firm">Register Law Firm</router-link>
+                                        
                                         <div class="drop-extras-btns flex">
                                             <router-link to="/sign-in"><button class="login">Login</button></router-link>
                                             

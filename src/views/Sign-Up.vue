@@ -1,9 +1,10 @@
 <template>
   <div>
-    <Header></Header>
+    <headerv-2></headerv-2>
+    <FormulateInput type="text" />
 	<RegisterForm></RegisterForm>
   <!-- <test-form/> -->
-	<Footer></Footer>
+	<footerv-2></footerv-2>
   </div>
 </template>
 
@@ -12,6 +13,9 @@ import Header from '../components/home/Header.vue';
 import Footer from '../components/home/Footer.vue';
 import Breadcrum from '../components/Widgets/Breadcrum.vue';
 import RegisterForm from '../components/forms/Register-Form.vue';
+import TestForm from '../components/forms/TestForm.vue';
+import Footerv2 from '../v2/Footerv2.vue';
+import Headerv2 from '../v2/Headerv2.vue';
 export default {
   data(){
     return{
@@ -41,7 +45,7 @@ export default {
       ]
     }
   },
-  components:{Header,Footer,Breadcrum,RegisterForm},
+  components:{Header,Footer,Breadcrum,RegisterForm, TestForm, Footerv2, Headerv2},
 
 };
 </script>

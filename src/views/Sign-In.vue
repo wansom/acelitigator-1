@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Header></Header>
+    <headerv-2></headerv-2>
     <LoginForm></LoginForm>
-    <Footer></Footer>
+    <footerv-2></footerv-2>
   </div>
 </template>
 
@@ -11,8 +11,10 @@ import Header from "../components/home/Header.vue";
 import Footer from "../components/home/Footer.vue";
 import Breadcrum from "../components/Widgets/Breadcrum.vue";
 import LoginForm from "../components/forms/Login-Form.vue";
+import Headerv2 from '../v2/Headerv2.vue';
+import Footerv2 from '../v2/Footerv2.vue';
 export default {
-  components: { Header, Footer, Breadcrum, LoginForm },
+  components: { Header, Footer, Breadcrum, LoginForm, Headerv2, Footerv2 },
   data() {
     return {
       title: 'Account',
