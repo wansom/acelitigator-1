@@ -39,10 +39,11 @@
                                     <div class="drop-extra-links">
                                         <!-- <a href="#">How it works</a>
                                         <a href="#">Pricing</a> -->
-                                        <div class="drop-extras-btns">
-                                            <button class="login">Login</button>
+                                        <div class="drop-extras-btns flex">
+                                            <router-link to="/sign-in"><button class="login">Login</button></router-link>
+                                            
                                             <span>or</span>
-                                            <button class="register">Register</button>
+                                           <router-link to="/sign-up"> <button class="register">Register</button></router-link>
                                         </div>
                                     </div>
                                 </div>
