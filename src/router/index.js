@@ -116,6 +116,11 @@ let routes = [
         component: () => import(/* webpackChunkName: "signup" */ '../views/Sign-Up.vue'),
     },
     {
+        path: '/add-firm',
+        name: 'AddFirm',
+        component: () => import(/* webpackChunkName: "signup" */ '../views/AddLawFirm.vue'),
+    },
+    {
         path: '/forgot-password',
         name: 'Forgot-Password',
         component: () => import(/* webpackChunkName: "forgotpassword" */ '../views/Forgot-Password.vue'),
