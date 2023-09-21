@@ -30,7 +30,7 @@
           :span="12" :md="6"
           @click="
             () => {
-              next(4);
+              next(3);
             }
           "
         >
@@ -60,7 +60,7 @@
         <firm-offices-form :user="user"></firm-offices-form>
       </div>
       <div class="my-10" v-if="current == 3">
-        <firm-advocates-view></firm-advocates-view>
+        <firm-advocates-view  :user="user"></firm-advocates-view>
       </div>
     </div>
   </template>
@@ -68,8 +68,8 @@
   import { auth } from "../../database/index";
   import { mapState } from "vuex";
 import FirmOfficesForm from './FirmOfficesForm.vue';
-import FirmAdvocatesView from './FirmAdvocatesView.vue';
 import FirmDetailsForm from './FirmDetailsForm.vue';
+import FirmAdvocatesView from './FirmAdvocatesView.vue';
   export default {
     data() {
       return {};
@@ -84,8 +84,8 @@ import FirmDetailsForm from './FirmDetailsForm.vue';
     },
     components: {
         FirmOfficesForm,
-        FirmAdvocatesView,
         FirmDetailsForm,
+        FirmAdvocatesView,
     },
     computed: {
       ...mapState(["allAdvocates", "current"]),

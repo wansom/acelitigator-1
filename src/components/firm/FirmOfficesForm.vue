@@ -7,87 +7,7 @@
       <a-form :form="form" layout="vertical" >
         <a-row :gutter="16">
           <a-col :span="24" :md="12">
-            <a-form-item label="Company Name">
-              <a-input
-                v-decorator="[
-                  'name',
-
-                  {
-                    initialValue: user.name,
-
-                    rules: [
-                      { required: true, message: 'Please enter Company name' },
-                    ],
-                  },
-                ]"
-                placeholder="Please enter your Company name"
-              />
-            </a-form-item>
-          </a-col>
-          <a-col :span="24" :md="12">
-            <a-form-item label="Website(Optional)">
-              <a-input
-                v-decorator="[
-                  'website',
-                  {
-                    initialValue: user.last_name,
-                    rules: [
-                      {
-                        required: false,
-                        message: 'website',
-                      },
-                    ],
-                  },
-                ]"
-                placeholder=""
-                addon-before="https://"
-              />
-            </a-form-item>
-          </a-col>
-        </a-row>
-        <a-row :gutter="16">
-          <a-col :span="24" :md="12">
-            <a-form-item label="Official Email">
-              <a-input
-                v-decorator="[
-                  'email',
-                  {
-                    initialValue: user.email,
-                    rules: [
-                      { required: true, message: 'Please select your email' },
-                    ],
-                  },
-                ]"
-                placeholder="Please a valid email"
-                type="email"
-                disabled
-              />
-            </a-form-item>
-          </a-col>
-          <a-col :span="12">
-            <a-form-item label="Phone Number">
-              <a-input
-                v-decorator="[
-                  'phone',
-                  {
-                    initialValue: user.phone,
-                    rules: [
-                      {
-                        required: true,
-                        message: 'Please enter your phone number',
-                      },
-                    ],
-                  },
-                ]"
-                placeholder="Please enter a valid phone number"
-                type="email"
-              />
-            </a-form-item>
-          </a-col>
-        </a-row>
-        <a-row :gutter="16">
-          <a-col :span="24" :md="12">
-            <a-form-item label="Primary practice Location(County)">
+            <a-form-item label="Primary Office Location(County)">
               <a-select
                 v-decorator="[
                   'location',
@@ -110,10 +30,10 @@
             </a-form-item>
           </a-col>
           <a-col :span="24" :md="12">
-            <a-form-item label="Other Counties of practice(Optional)"
+            <a-form-item label="Languages"
               ><a-tooltip
                 slot="suffix"
-                title="Enter Freelance if currently unemployed"
+                title="Enter all Languages your firm can handle cases in"
               >
                 <a-icon type="info-circle" style="color: rgba(0, 0, 0, 0.45)" />
               </a-tooltip>
@@ -122,14 +42,14 @@
                 style="width: 100%"
                 placeholder="Type or search"
                 v-decorator="[
-                  'other_counties',
+                  'languages',
                   {
-                    initialValue: user.other_counties,
-                    rules: [{ required: false, message: 'field is required' }],
+                    initialValue: user.languages,
+                    rules: [{ required: true, message: 'field is required' }],
                   },
                 ]"
               >
-                <a-select-option v-for="i in counties" :key="i">
+                <a-select-option v-for="i in languages" :key="i">
                   {{ i }}
                 </a-select-option>
               </a-select>
@@ -138,41 +58,46 @@
         </a-row>
         <a-row :gutter="16">
           <a-col :span="24" :md="12">
-            <a-form-item label="Website(Optional)">
+            <a-form-item label="Address">
               <a-input
                 v-decorator="[
-                  'website',
+                  'address',
                   {
-                    initialValue: user.website,
+                    initialValue: user.address,
                     rules: [
                       {
                         required: false,
-                        message: 'Please enter your job title',
+                        message: 'Please enter your address',
                       },
                     ],
                   },
                 ]"
                 style="width: 100%"
+                placeholder="address"
               />
             </a-form-item>
           </a-col>
           <a-col :span="24" :md="12">
-            <a-form-item label="Job Title">
-              <a-input
+            <a-form-item label="Free Consultation">
+              <a-select
                 v-decorator="[
-                  'job_title',
+                  'consultation',
                   {
-                    initialValue: user.job_title,
+                    initialValue: user.consultation,
                     rules: [
-                      {
-                        required: true,
-                        message: 'Please enter your job title',
-                      },
+                      { required: true, message: 'Field is required' },
                     ],
                   },
                 ]"
-                style="width: 100%"
-              />
+              >
+                <a-select-option
+                  v-for="county in freeConsultation"
+                  :key="county"
+                  :value="county"
+                >
+                  {{ county }}
+                </a-select-option>
+              </a-select>
             </a-form-item>
           </a-col>
         </a-row>
@@ -262,71 +187,35 @@
         </a-row>
         <a-row :gutter="16">
           <a-col :span="24">
-            <a-form-item label="Short Biography">
-              <a-textarea
-                v-decorator="[
-                  'biography',
+            <a-form-item label="Registration Certificate">
+              <a-upload-dragger
+              v-decorator="[
+                  'reg_certificate',
                   {
-                    initialValue: user.biography,
-                    rules: [
-                      {
-                        required: true,
-                        message: 'Please enter your biography',
-                      },
-                    ],
+                    initialValue: user.reg_certificate,
+                    rules: [{ required: true, message: 'Certificate  is required' }],
                   },
                 ]"
-                :rows="4"
-                placeholder="Enter a short biography"
-              />
+                accept="application/pdf"
+                :multiple="false"
+                list-type="picture"
+                :before-upload="handleBeforeUpload"
+                :show-upload-list="false"
+                :custom-request="uploadAdmissionCert"
+              >
+
+                <div >
+                  <p class="ant-upload-drag-icon">
+                    <a-icon type="inbox" />
+                  </p>
+                  <p class="ant-upload-text">
+                    Click or drag file to this area to upload Certificate
+                  </p>
+                </div>
+              </a-upload-dragger>
+             
             </a-form-item>
-          </a-col>
-        </a-row>
-        <a-row :gutter="16">
-          <a-col :span="24" :md="12">
-            <a-form-item label="Date of Admission to the Bar.">
-              <a-date-picker
-                :disabled-date="disabledDate"
-                v-decorator="[
-                  'practise_start',
-                  {
-                    initialValue: user.practise_start,
-                    rules: [
-                      {
-                        required: true,
-                        message:
-                          'Please enter Year of Admission to the Nigerian Bar.',
-                      },
-                    ],
-                  },
-                ]"
-                placeholder="Select date"
-                style="width: 100%"
-              />
-            </a-form-item>
-          </a-col>
-        </a-row>
-        <a-row :gutter="16">
-          <a-col :span="24" :md="12">
-            <a-form-item label="Profile Picture">
-              <input
-              class="block w-50 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-              id="multiple_files"
-              type="file"
-              accept="image/*"
-              @change="loadImage"
-            />
-              
-            </a-form-item>
-            <a-progress :percent="uploadProgress" />
-          </a-col>
-          <a-col :span="24" :md="12">
-            <a-avatar
-              :src="user.profile_photo"
-              :size="160"
-              v-if="user.profile_photo"
-            />
-            <a-avatar icon="user" v-else :size="160" />
+            <a-progress :percent="uploadProgress" v-if="uploadProgress>0" />
           </a-col>
         </a-row>
         <a-checkbox @change="changeTerms" class="mb-3" :checked="terms">
@@ -334,42 +223,6 @@
           visibile to all potential clients
         </a-checkbox>
       </a-form>
-      <div>
-        <a-modal v-model="showModal" title="Resize Image to Fit" on-ok="handleOk">
-          <template slot="footer">
-            <a-button key="back" @click="handleCancel"> Close </a-button>
-            <a-button
-            
-              key="submit"
-              type="primary"
-              :loading="loading"
-              @click="uploadToFirestore"
-            >
-              Upload
-            </a-button>
-            
-          </template>
-          <cropper
-            class="cropper"
-            ref="cropper"
-            :src="image.src"
-            :stencil-props="{
-              handlers: {},
-              movable: false,
-              resizable: false,
-              aspectRatio: 1,
-            }"
-            :resize-image="{
-              adjustStencil: false,
-            }"
-            image-restriction="stencil"
-            :stencil-size="{
-              width: 144,
-              height: 144,
-            }"
-          />
-        </a-modal>
-      </div>
       <div>
         <a-button
           type="primary"
@@ -439,6 +292,19 @@ export default {
         width: 200,
         height: 200,
       },
+      freeConsultation:[
+'No Free Consultation',
+'15 minutes',
+'30 Minutes',
+'45 Minutes',
+'1 Hour'
+      ],
+      languages:[
+        'English',
+        'Kiswahili',
+        'French',
+        'Arabic'
+      ],
       img: "https://images.unsplash.com/photo-1600984575359-310ae7b6bdf2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80",
       result: {
         coordinates: null,
@@ -469,97 +335,30 @@ export default {
         type: null,
       };
     },
-    loadImage(event) {
-			const { files } = event.target;
-			if (files && files[0]) {
-				// 1. Revoke the object URL, to allow the garbage collector to destroy the uploaded before file
-				if (this.image.src) {
-					URL.revokeObjectURL(this.image.src)
-				}
-				// 2. Create the blob link to the file to optimize performance:
-				const blob = URL.createObjectURL(files[0]);
-				// this.image = {
-				//    src: blob,
-				//    type: files[0].type
-				// }
-				
-				// Create a new FileReader to read this image binary data
-				const reader = new FileReader();
-        
-				// Define a callback function to run, when FileReader finishes its job
-				reader.onload = (e) => {
-					// Note: arrow function used here, so that "this.image" refers to the image of Vue component
-					this.image = {
-						// Set the image source (it will look like blob:http://example.com/2c5270a5-18b5-406e-a4fb-07427f5e7b94)
-						src: blob,
-						// Determine the image type to preserve it during the extracting the image from canvas:
-						type: getMimeType(e.target.result, files[0].type),
-					};
-				};
-   
-				// Start the reader job - read file as a data url (base64 format)
-				reader.readAsArrayBuffer(files[0]);
-        this.showModal = true;
-			}
-		},
-    uploadToFirestore() {
-      const { canvas } = this.$refs.cropper.getResult();
-      if (canvas) {
-        canvas.toBlob((blob) => {
-          const storageRef = ref(
-            storage,
-            "profilePictures/" + this.user.first_name
-          );
-          const uploadTask = uploadBytesResumable(storageRef, blob);
-
-          uploadTask.on(
-
-            "state_changed",
-            (snapshot) => {
-              this.showModal = false;
-              // Track the upload progress
-              const progress =
-                (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-              this.uploadProgress = Math.round(progress);
-            },
-            (error) => {
-              // Handle the upload error
-              message.error("Failed to upload profile picture");
-              console.error(error);
-            },
-            () => {
-              // Get the download URL of the uploaded file
-              getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-                updateAdvocate(this.user.id, { profile_photo: downloadURL });
-              });
-            }
-          );
-        }, "image/jpeg");
-      }
-      return false;
+    handleBeforeUpload(file) {
+      // Validate the file type, size, etc., if needed
     },
-    uploadProfilePicture({ file }) {
-      const storageRef = ref(storage, "profilePictures/" + file.name);
+    uploadAdmissionCert({ file }) {
+      const storageRef = ref(storage, "certificates/" + file.name);
       const uploadTask = uploadBytesResumable(storageRef, file);
 
       uploadTask.on(
         "state_changed",
         (snapshot) => {
           // Track the upload progress
-          this.showModal = false;
           const progress =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           this.uploadProgress = Math.round(progress);
         },
         (error) => {
           // Handle the upload error
-          message.error("Failed to upload profile picture");
+          message.error("Failed to upload");
           console.error(error);
         },
         () => {
           // Get the download URL of the uploaded file
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-            updateAdvocate(this.user.id, { profile_photo: downloadURL });
+            updateAdvocate(this.user.id, { reg_certificate: downloadURL });
           });
         }
       );
@@ -602,31 +401,20 @@ export default {
     updateFileProgress(progress) {
       this.uploadProgress = progress;
     },
-    handleBeforeUpload(file) {
-      // Validate the file type, size, etc., if needed
-    },
     async handleSubmit(e) {
       e.preventDefault();
       this.form.validateFields(async (err, values) => {
         if (!err) {
           const payload = {
-            first_name: values.first_name ?? "",
-            last_name: values.last_name ?? "",
-            phone: values.phone ?? "",
-            job_title: values.job_title ?? "",
-            biography: values.biography ?? "",
-            email: values.email ?? "",
+            address: values.address ?? "",
             location: values.location ?? "",
-            website: values.website ?? "",
+            languages: values.languages ?? "",
             specialisation: values.specialisation ?? "",
-            practise_areas: values.practise_areas.slice(0, 3) ?? [],
-            other_counties: values.other_counties,
-            step: "general information",
-            current: 2,
-            practise_start:
-              typeof this.user.practise_start === "string"
-                ? this.user.practise_start
-                : values.practise_start.format(),
+            practise_areas: values.practise_areas ?? [],
+            step: "offices",
+            current: 3,
+            consultation:values.consultation,
+              
             twitter: values.twitter ?? "",
             linkedIn: values.linkedIn ?? "",
           };
