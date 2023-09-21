@@ -161,7 +161,7 @@
             />
               
             </a-form-item>
-            <a-progress :percent="uploadProgress" />
+            <a-progress :percent="uploadProgress" v-if="uploadProgress>0"  />
           </a-col>
           <a-col :span="24" :md="12">
             <a-avatar
