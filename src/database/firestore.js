@@ -30,7 +30,7 @@ const LAWYERS_PATH='nigeria_lawyers'
 const MPESA_PATH='mpesa_responses'
 const TRANSACTIONS_PATH = 'transactions';
 const COURTS_PATH= 'courts'
-const LAW_FIRM='law_firms'
+const LAW_FIRM='nigeria_lawyers'
 const MESSAGE_PATH = roomId => {
 	return `${ROOMS_PATH}/${roomId}/${MESSAGES_PATH}`
 }

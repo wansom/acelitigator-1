@@ -19,9 +19,10 @@
 			</a-col>
 		</a-row>
     <admin-dashboard v-if="user.status=='admin'"></admin-dashboard>
+    <dashboard-overview v-if="user.status=='firm'"></dashboard-overview>
     <!-- / Table & Timeline -->
     <!-- / Charts -->
-    <profile-information v-if="user.status!='admin'&&user.status !='active'"></profile-information>
+    <profile-information v-if="user.status!='admin'&&user.status !='active'&&user.status !='firm'"></profile-information>
   </div>
 </template>
 
@@ -51,6 +52,7 @@ import CardInvoices from "../components/Cards/CardInvoices"
 import AdminDashboard from "./AdminDashboard.vue";
 import { mapState } from "vuex";
 import * as fb from "../firebase";
+import DashboardOverview from '../components/firm/DashboardOverview.vue';
 export default {
   components: {
     CardBarChart,
@@ -62,7 +64,8 @@ export default {
     CardInfo2,
     ProfileInformation,
     CardInvoices,
-    AdminDashboard
+    AdminDashboard,
+    DashboardOverview
   },
   data() {
     return {

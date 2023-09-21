@@ -121,6 +121,21 @@ let routes = [
         component: () => import(/* webpackChunkName: "signup" */ '../views/AddLawFirm.vue'),
     },
     {
+        path: '/add-firm-details',
+        name: 'AddFirmDetails',
+        component: () => import(/* webpackChunkName: "firmdetailsform" */ '../components/firm/FirmDetailsForm.vue'),
+    },
+    {
+        path: '/add-firm-offices',
+        name: 'AddFirmOffices',
+        component: () => import(/* webpackChunkName: "firmdetailsform" */ '../components/firm/FirmOfficesForm.vue'),
+    },
+    {
+        path: '/add-firm-advocates',
+        name: 'AddFirmAdvocates',
+        component: () => import(/* webpackChunkName: "firmdetailsform" */ '../components/firm/FirmAdvocatesView.vue'),
+    },
+    {
         path: '/forgot-password',
         name: 'Forgot-Password',
         component: () => import(/* webpackChunkName: "forgotpassword" */ '../views/Forgot-Password.vue'),
