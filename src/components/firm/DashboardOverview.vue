@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="bg-[#EFF3F9]">
       <a-row :gutter="24" type="flex" align="middle">
         <a-col :span="12" :md="6">
           <a-card
@@ -54,10 +54,10 @@
         </a-col>
       </a-row>
       <div class="my-10" v-if="current == 1">
-      <firm-details-form></firm-details-form>
+      <firm-details-form :user="user"></firm-details-form>
       </div>
       <div class="my-10" v-if="current == 2">
-        <firm-offices-form></firm-offices-form>
+        <firm-offices-form :user="user"></firm-offices-form>
       </div>
       <div class="my-10" v-if="current == 3">
         <firm-advocates-view></firm-advocates-view>
