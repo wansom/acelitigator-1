@@ -44,7 +44,7 @@
           :class="current===5?'icon-card-active text-white rounded-lg':'icon-card rounded-lg'"
             @click="
               () => {
-                next(5);
+                next(4);
               }
             "
           >
@@ -62,6 +62,9 @@
       <div class="my-10" v-if="current == 3">
         <firm-advocates-view  :user="user"></firm-advocates-view>
       </div>
+      <div class="my-10" v-if="current == 4">
+        <subscription-payment :user="user"></subscription-payment>
+      </div>
     </div>
   </template>
   <script>
@@ -70,6 +73,7 @@
 import FirmOfficesForm from './FirmOfficesForm.vue';
 import FirmDetailsForm from './FirmDetailsForm.vue';
 import FirmAdvocatesView from './FirmAdvocatesView.vue';
+import SubscriptionPayment from '../forms/Subscription-Payment.vue';
   export default {
     data() {
       return {};
@@ -86,6 +90,7 @@ import FirmAdvocatesView from './FirmAdvocatesView.vue';
         FirmOfficesForm,
         FirmDetailsForm,
         FirmAdvocatesView,
+        SubscriptionPayment,
     },
     computed: {
       ...mapState(["allAdvocates", "current"]),
