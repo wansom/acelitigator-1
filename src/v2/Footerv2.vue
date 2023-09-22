@@ -15,21 +15,21 @@
                     <div class="ft-column link">
                         <h4>POPULAR COUNTRIES</h4>
                         <ul>
-                            <li><a href="#">Kenya Lawyers</a></li>
-                            <li><a href="#">Uganda Lawyers</a></li>
-                            <li><a href="#">Ethopia Lawyers</a></li>
-                            <li><a href="#">Rwanda Lawyers</a></li>
-                            <li><a href="#">Tanzania Lawyers</a></li>
+                            <li><a href="/find-a-lawyer">Kenya Lawyers</a></li>
+                            <li><a href="/find-a-lawyer">Uganda Lawyers</a></li>
+                            <li><a href="/find-a-lawyer">Ethopia Lawyers</a></li>
+                            <li><a href="/find-a-lawyer">Rwanda Lawyers</a></li>
+                            <li><a href="/find-a-lawyer">Tanzania Lawyers</a></li>
                         </ul>
                     </div>
                     <div class="ft-column link">
                         <h4>POPULAR CITIES</h4>
                         <ul>
-                            <li><a href="#">Nairobi Lawyers</a></li>
-                            <li><a href="#">Kisumu Lawyers</a></li>
-                            <li><a href="#">Mombasa Lawyers</a></li>
-                            <li><a href="#">Machakos Lawyers</a></li>
-                            <li><a href="#">Nakuru Lawyers</a></li>
+                            <li><a href="/find-a-lawyer">Nairobi Lawyers</a></li>
+                            <li><a href="/find-a-lawyer">Kisumu Lawyers</a></li>
+                            <li><a href="/find-a-lawyer">Mombasa Lawyers</a></li>
+                            <li><a href="/find-a-lawyer">Machakos Lawyers</a></li>
+                            <li><a href="/find-a-lawyer">Nakuru Lawyers</a></li>
                         </ul>
                     </div>
                     <div class="ft-column link">
