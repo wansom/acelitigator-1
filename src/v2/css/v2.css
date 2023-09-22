@@ -883,12 +883,7 @@ section.service-listings{
     align-items: flex-start;
     justify-content: flex-start; 
 }
-.p-top-left .p-image{
-    margin: 0px 20px 0px 0px;
-}
-.p-top-left .p-image img{
-    width: 100%;
-}
+
 .p-top-left h2{
     font-size: 20px;
     font-weight: 500;
