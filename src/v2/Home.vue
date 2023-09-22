@@ -71,8 +71,7 @@
         <div class="pr-area-holder container">
           <div class="pr-head">
             <p class="top">PRACTICE AREAS</p>
-            <h2 class="heading">Not sure what service you need?</h2>
-            <p class="btm">Browse Lawyers by practice area.</p>
+            <h2 class="heading">If not sure of the service that you require,<br/> browse using the practice area.</h2>
           </div>
           <div class="pr-cards">
             <a href="/find-a-lawyer" class="pr-card">
