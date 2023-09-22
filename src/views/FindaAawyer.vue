@@ -80,7 +80,7 @@
                     ></path>
                   </svg>
                 </div>
-                <router-link to="/contact-us"><button>Find my Lawyer</button> <br /></router-link>
+                <router-link to="/contact-us"><button>Find A law Firm</button> <br /></router-link>
                 <span class="btm">Free. Takes 2 min.</span>
               </div>
             </div>
