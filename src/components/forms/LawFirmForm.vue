@@ -3,8 +3,7 @@
     <div class="container mx-auto">
       <div class="flex items-center justify-center">
         <div class="w-full md:w-1/2 px-10">
-          <div class="register-form  border-2 border-solid border-gray-200 rounded-lg p-3">
-            <h2>Register Law Firm</h2>
+          <div class="register-form w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-3">
             <a-form
               id="components-form-demo-normal-login"
               :form="form"
