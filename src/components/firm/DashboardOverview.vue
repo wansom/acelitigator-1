@@ -63,7 +63,7 @@
         <firm-advocates-view  :user="user"></firm-advocates-view>
       </div>
       <div class="my-10" v-if="current == 4">
-        <subscription-payment :user="user"></subscription-payment>
+        <firm-payment :user="user"></firm-payment>
       </div>
     </div>
   </template>
@@ -74,6 +74,7 @@ import FirmOfficesForm from './FirmOfficesForm.vue';
 import FirmDetailsForm from './FirmDetailsForm.vue';
 import FirmAdvocatesView from './FirmAdvocatesView.vue';
 import SubscriptionPayment from '../forms/Subscription-Payment.vue';
+import FirmPayment from './FirmPayment.vue';
   export default {
     data() {
       return {};
@@ -91,6 +92,7 @@ import SubscriptionPayment from '../forms/Subscription-Payment.vue';
         FirmDetailsForm,
         FirmAdvocatesView,
         SubscriptionPayment,
+        FirmPayment,
     },
     computed: {
       ...mapState(["allAdvocates", "current"]),
