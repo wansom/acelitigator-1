@@ -1,10 +1,9 @@
 <template>
-  <div class="register-login-section spad">
+  <div class="register-login-section spad ">
     <div class="container mx-auto">
       <div class="flex items-center justify-center">
-        <div class="w-full md:w-1/2 px-10">
+        <div class="w-full md:w-1/2 px-10  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <div class="register-form">
-            <h2>CREATE ACCOUNT</h2>
             <a-form
               id="components-form-demo-normal-login"
               :form="form"

@@ -13,7 +13,7 @@
                         </div>
                         <div class="menu-item-lf">
                            <router-link to="/find-a-lawyer"> <button class="find-btn">FIND A LAWYER</button></router-link>
-                          <router-link to="/law-firms">Law Firms</router-link>
+                          <router-link to="/law-firms">Find Law Firms</router-link>
                             <a href="//acelitigator.com/litigation-documents" aria-label="read more">Resources</a>
                             <router-link to="contact-us" aria-label="read more">Contact Us</router-link>
                           
@@ -24,25 +24,23 @@
                             <div class="dropdown-extras">
                                 <div class="drop-extra">
                                     <h4>FOR LAWYERS</h4>
-                                    <div class="drop-extra-links">
-                                        <a href="contact-us">Marketing services</a>
-                                        <a href="contact-us">SEO for law firms</a>
-                                        <a href="contact-us">Legal copywriting</a>
-                                        <a href="contact-us">Social media management</a>
-                                        <a href="contact-us">Google Ads for law firms</a>
-                                        <a href="contact-us">Legal job board</a>
-                                    </div>
-                                </div>
-                                <div class="drop-extra">
-                                    <h4>MEMBERSHIP</h4>
-                                    <div class="drop-extra-links">
-                                        <router-link to="/add-firm">Register Law Firm</router-link>
-                                        
-                                        <div class="drop-extras-btns flex">
+                                    <hr class="w-full h-2">
+                                    <div class="drop-extras-btns flex">
                                             <router-link to="/sign-in"><button class="login">Login</button></router-link>
                                             
                                             <span>or</span>
                                            <router-link to="/sign-up"> <button class="register">Register</button></router-link>
+                                        </div>
+                                </div>
+                                <div class="drop-extra">
+                                    <h4 class="uppercase">For Law Firms</h4>
+                                    <hr class="w-full h-2">
+                                    <div class="drop-extra-links">  
+                                        <div class="drop-extras-btns flex">
+                                            <router-link to="/sign-up"><button class="login">Login</button></router-link>
+                                            
+                                            <span>or</span>
+                                           <router-link to="/add-firm"> <button class="register">Register</button></router-link>
                                         </div>
                                     </div>
                                 </div>
