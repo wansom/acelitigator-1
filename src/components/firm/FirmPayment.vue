@@ -22,7 +22,7 @@
       </template>
       </a-result>
       <a-result
-      v-else-if="user.status == 'active'"
+      v-else-if="user.status == 'firm active'"
       status="success"
       title="Your Account currently is Active!"
       :sub-title="'You will be required to renew your subscription on' +'-'+ user.subscription_date"
@@ -38,17 +38,7 @@
         </a-button>
       </template>
     </a-result>
-    <CardPaymentMethods v-else :user="user"></CardPaymentMethods>
-      <!-- <a-result
-        v-else
-        status="500"
-        title="Profile Not Submitted"
-        sub-title="Sorry, You can only make payment once your profile has been approved"
-      >
-        <template #extra>
-          <a-button type="primary"> Submit Profile </a-button>
-        </template>
-      </a-result> -->
+    <firm-card-payment v-else :user="user"></firm-card-payment>
     </a-card>
   </template>
   
@@ -56,6 +46,7 @@
   import CardPaymentMethods from "../Cards/CardPaymentMethods.vue";
   import { mapState } from "vuex";
   import {auth} from "../../database/index"
+import FirmCardPayment from './FirmCardPayment.vue';
   export default {
     data() {
       return {
@@ -63,7 +54,7 @@
         status: "approved",
       };
     },
-    components: { CardPaymentMethods },
+    components: { CardPaymentMethods, FirmCardPayment },
     computed: {
       ...mapState(["allAdvocates"]),
   

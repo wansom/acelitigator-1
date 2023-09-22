@@ -19,10 +19,10 @@
 			</a-col>
 		</a-row>
     <admin-dashboard v-if="user.status=='admin'"></admin-dashboard>
-    <dashboard-overview v-if="user.status=='firm'"></dashboard-overview>
+    <dashboard-overview v-if="user.status=='firm'||user.status =='firm active'"></dashboard-overview>
     <!-- / Table & Timeline -->
     <!-- / Charts -->
-    <profile-information v-if="user.status!='admin'&&user.status !='active'&&user.status !='firm'"></profile-information>
+    <profile-information v-if="user.status!='admin'&&user.status !='active'&&user.status !='firm'&&user.status !='firm active'"></profile-information>
   </div>
 </template>
 

@@ -34,14 +34,14 @@
             }
           "
         >
-          <a-card :class="current===4?'icon-card-active text-white rounded-lg':'icon-card rounded-lg'">
+          <a-card :class="current===3?'icon-card-active text-white rounded-lg':'icon-card rounded-lg'">
             <a-icon type="team" class="icon-list text-warning" />
             <p class="card-p">Our Team</p>
           </a-card>
         </a-col>
         <a-col :span="12" :md="6">
           <a-card
-          :class="current===5?'icon-card-active text-white rounded-lg':'icon-card rounded-lg'"
+          :class="current===4?'icon-card-active text-white rounded-lg':'icon-card rounded-lg'"
             @click="
               () => {
                 next(4);
