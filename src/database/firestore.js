@@ -87,6 +87,38 @@ export const getAdvocate = userId => {
 export const updateAdvocate = (userId, data) => {
 	return updateDocument(advocateRef(userId), data)
 }
+export const updateTeamMember=async(userId, member, operation)=>{  
+	switch (operation) {
+	  case 'add':
+		await updateDoc(advocateRef(userId), {
+		  teamMembers: arrayUnion(member)
+		});
+		break;
+	  case 'remove':
+		await updateDoc(userRef, {
+		  teamMembers: arrayRemove(member)
+		});
+		break;
+	  case 'update':
+		const userSnap = await getDoc(userRef);
+		if (userSnap.exists()) {
+		  const teamMembers = userSnap.data().teamMembers || [];
+		  const index = teamMembers.findIndex(m => m.email === member.email);
+  
+		  if (index !== -1) {
+			teamMembers[index] = member;
+			await updateDoc(userRef, { teamMembers });
+		  } else {
+			console.log('Member not found in teamMembers array');
+		  }
+		} else {
+		  console.log('User document does not exist');
+		}
+		break;
+	  default:
+		console.log('Invalid operation specified');
+		break;
+	}}
 //ADVOCATES
 const firmsRef = collection(firestoreDb, LAW_FIRM)
 const firmRef = userId => {
