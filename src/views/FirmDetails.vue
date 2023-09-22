@@ -5,14 +5,14 @@
             <section class="profile-bn">
                 <div class="profile-bn-container container">
                     <div class="profile-back-img">
-                        <img src="/images/profiles/16800684247642.jpg" alt="Lawyers firm">
+                        <img src="/images/profiles/nairobi-upperhill.jpg" alt="Lawyers firm">
                     </div>
                     <div class="pfile-pg-name">
                         <div class="pfile-pg-nm-img">
                             <img src="/images/profiles/profile.jpg" alt="Lawyers Firm Profile Image">
                             <div class="pfile-pg-names">
                                 <h2 class="pfl-name">SORASAK LAW</h2>
-                                <p class="pfl-location"><a href="#">Bangkok</a>, <a href="#">Thailand</a></p>
+                                <p class="pfl-location"><a href="#">Nairobi</a>, <a href="#">Kenya</a></p>
                             </div>
                         </div>
                         <button>Contact Us</button>
