@@ -15,7 +15,7 @@
                                 <p class="pfl-location"><a href="#">Nairobi</a>, <a href="#">Kenya</a></p>
                             </div>
                         </div>
-                        <button>Contact Us</button>
+                        <button @click="openMailClient">Contact Us</button>
                     </div>
                 </div>
             </section>
@@ -339,6 +339,12 @@ import Footerv2 from '../v2/Footerv2.vue'
 import Headerv2 from '../v2/Headerv2.vue'
 export default {
   components: { Headerv2, Footerv2 },
+  methods:{
+    openMailClient() {
+      const url = `mailto:director@acelitigator.com`;
+      window.open(url);
+    },
+  }
 
 }
 </script>
