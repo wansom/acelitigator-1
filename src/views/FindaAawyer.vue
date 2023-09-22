@@ -100,16 +100,16 @@
                     <div class="side-rgt-card">
                       <div class="profile-info">
                         <div class="p-top">
-                          <div class="p-top-left">
-                            <div class="p-image w-[156px]">
+                          <div class="p-top-left flex-col md:flex-row">
+                            <div class="p-image w-full md:w-[156px] md:mr-5">
                               <img
                                 :src="item.profile_photo"
                                 alt="profile photo"
-                                class="h-40 w-52 rounded-lg object-cover"
+                                class="h-50 w-full md:h-40 md:w-52 rounded-lg object-contain"
                               />
                             </div>
                             <div class="p-name">
-                              <h2>
+                              <h2 class=" whitespace-nowrap">
                                 {{ item.first_name }} {{ item.last_name }}
                               </h2>
                               <p
@@ -126,14 +126,14 @@
                                   item.location
                                 }}
                               </p>
-                              <p class="flex items-center">
+                              <p class="flex items-center whitespace-nowrap">
                                 <a-icon type="calendar" class="mx-5" />{{
                                   new Date().getFullYear() -
                                   new Date(item.practise_start).getFullYear()
                                 }}Year(s) Experience
                               </p>
                               <p
-                                class="lowercase flex items-center"
+                                class="lowercase flex items-center whitespace-nowrap"
                                 v-if="item.current_employer"
                               >
                                 <a-icon type="bank" class="mx-5" />{{
@@ -153,9 +153,6 @@
                               </p>
                             </div>
                           </div>
-                          <!-- <div class="p-top-right">
-                                                <p>Free Consultation: <span>15 mins</span></p>
-                                            </div> -->
                         </div>
                         <div class="p-btm">
                           <div class="p-btm-left">
