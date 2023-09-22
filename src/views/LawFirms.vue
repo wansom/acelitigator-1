@@ -90,9 +90,11 @@
                             <input type="text" placeholder="Enter a city or country">
                         </form>
                     </div> -->
-                    <div class="arrow-dwn">
+                    <a href="#search">
+                        <div class="arrow-dwn">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" width="30" height="30" class=""><defs></defs><path class="fa-primary" d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 402.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 476.9 232.2 480 224 480z"></path><path class="fa-secondary" d="M224 288C215.8 288 207.6 284.9 201.4 278.6l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 210.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 284.9 232.2 288 224 288z"></path></svg>
                     </div>
+                    </a>
                 </div>
             </section>
             <section class="service-listings">
@@ -115,7 +117,7 @@
                         <span class="s-name">Law Firms</span>
                     </div>
                 </div>
-                <div class="s-listings">
+                <div class="s-listings" id="search">
                     <div class="sv-lg-container container">
                         <div class="side-lft">
                             <div class="side-lg-card">

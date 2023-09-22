@@ -24,6 +24,7 @@
                             <input type="text" placeholder="Enter a city or country">
                         </form>
                     </div> -->
+           <a href="#search">
             <div class="arrow-dwn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -44,9 +45,10 @@
                 ></path>
               </svg>
             </div>
+           </a>
           </div>
         </section>
-        <div class="s-listings">
+        <div class="s-listings" id="search">
           <div class="sv-lg-container container">
             <div class="side-lft">
               <div class="side-lg-card">
