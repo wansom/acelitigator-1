@@ -65,7 +65,7 @@
             <a-form-item label="Short Biography">
               <a-textarea
                 v-decorator="[
-                  'description',
+                  'biography',
                   {
                     rules: [{ required: true, message: 'Please enter url description' }],
                   },
@@ -76,7 +76,7 @@
             </a-form-item>
           </a-col>
         </a-row>
-        <a-row :gutter="16">
+        <!-- <a-row :gutter="16">
           <a-col :span="24" :md="12">
             <a-form-item label="Company Logo ">
               <input
@@ -98,7 +98,7 @@
             />
             <a-avatar icon="user" v-else :size="160" />
           </a-col>
-        </a-row>
+        </a-row> -->
       </a-form>
       <div
         :style="{
@@ -305,6 +305,20 @@ function getMimeType(file, fallback = null) {
       );
 
       return false; // Prevent default upload behavior
+    },
+    async handleSubmit(e) {
+      e.preventDefault();
+      this.form.validateFields(async (err, values) => {
+        if (!err) {
+          const payload = {
+            name: values.name ?? "",
+            job_title: values.job_title ?? "",
+            biography:values.biography??""
+          };
+
+          this.$store.dispatch("updateUser", payload);
+        }
+      });
     },
   }
 	})
