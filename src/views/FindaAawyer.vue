@@ -6,24 +6,32 @@
       <main class="content container-fluid mx-auto px-5 lg:px-10">
         <section class="service-bn">
           <div class="service-bn-container container">
-            <h1 class="title">Find the Best Lawyers</h1>
-            <!-- <p class="p-info">Share your needs with us, get contacted by law firms.</p> -->
-            <!-- <div class="service-btn">
-                        <button>Find my Lawyer</button><br/>
-                        <span>Free. Takes 2 min.</span>
-                    </div> -->
+            <h1 class="title">Find the Best Lawyers</h1>                 
             <p class="p-info-nd">
               Share your needs with us, refine your search by selecting a
               practise area and county
             </p>
-            <!-- <div class="service-form">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-5">
+              <div class="service-form">
                         <div class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" width="18" class=""><path d="M272 192C272 236.2 236.2 272 192 272C147.8 272 112 236.2 112 192C112 147.8 147.8 112 192 112C236.2 112 272 147.8 272 192zM192 240C218.5 240 240 218.5 240 192C240 165.5 218.5 144 192 144C165.5 144 144 165.5 144 192C144 218.5 165.5 240 192 240zM384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192H384zM192 32C103.6 32 32 103.6 32 192C32 207.6 37.43 229 48.56 255.4C59.47 281.3 74.8 309.4 92.14 337.5C126.2 392.8 166.6 445.7 192 477.6C217.4 445.7 257.8 392.8 291.9 337.5C309.2 309.4 324.5 281.3 335.4 255.4C346.6 229 352 207.6 352 192C352 103.6 280.4 32 192 32z"></path></svg>
                         </div>
                         <form action="/">
                             <input type="text" placeholder="Enter a city or country">
                         </form>
-                    </div> -->
+                    </div> 
+                  
+                    <div class="service-form">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" width="18" class=""><path d="M272 192C272 236.2 236.2 272 192 272C147.8 272 112 236.2 112 192C112 147.8 147.8 112 192 112C236.2 112 272 147.8 272 192zM192 240C218.5 240 240 218.5 240 192C240 165.5 218.5 144 192 144C165.5 144 144 165.5 144 192C144 218.5 165.5 240 192 240zM384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192H384zM192 32C103.6 32 32 103.6 32 192C32 207.6 37.43 229 48.56 255.4C59.47 281.3 74.8 309.4 92.14 337.5C126.2 392.8 166.6 445.7 192 477.6C217.4 445.7 257.8 392.8 291.9 337.5C309.2 309.4 324.5 281.3 335.4 255.4C346.6 229 352 207.6 352 192C352 103.6 280.4 32 192 32z"></path></svg>
+                        </div>
+                        <form action="/">
+                            <input type="text" placeholder="Enter a city or country">
+                        </form>
+                    </div>
+                    <a-button type="primary" size="large" class="px-40">Search</a-button>
+                    </div>
+           
            <a href="#search">
             <div class="arrow-dwn">
               <svg

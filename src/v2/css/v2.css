@@ -662,7 +662,6 @@ section.service-bn{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin: auto;
     width: fit-content;
 }
 .service-form .icon{
