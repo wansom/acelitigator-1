@@ -352,7 +352,7 @@ export default new Vuex.Store({
         {
           name: values.name,
           email: values.email,
-          subject: values.subject,
+          subject: values.subject,     
           content: values.content,
         }
       ).then((res) => {
