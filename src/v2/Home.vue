@@ -85,7 +85,7 @@
             </a>
             <a href="/find-a-lawyer" class="pr-card">
               <img
-                src="/images/services/bankruptcy-debt.jpg"
+                src="/images/services/handshake.jpg"
                 alt="bankruptcy debt" loading="lazy"
               />
               <div class="pr-card-cnt">
@@ -93,7 +93,7 @@
               </div>
             </a>
             <a href="/find-a-lawyer" class="pr-card">
-              <img src="/images/services/handshake.jpg" alt="bussiness" loading="lazy"/>
+              <img src="/images/services/black-handshake.jpg" alt="bussiness" loading="lazy"/>
               <div class="pr-card-cnt">
                 <span>Alternative Dispute Resolution</span>
               </div>
@@ -160,7 +160,7 @@
             </a>
             <a href="/find-a-lawyer" class="pr-card">
               <img
-                src="/images/services/ip.jpg"
+                src="/images/services/ips.jpg"
                 alt="intellectual property" loading="lazy"
               />
               <div class="pr-card-cnt">
