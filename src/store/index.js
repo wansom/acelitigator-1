@@ -27,6 +27,7 @@ export default new Vuex.Store({
     request: {},
     loading: false,
     current: 1,
+    lawFirms:[],
 
 
     practiseAreas: [
@@ -110,6 +111,9 @@ export default new Vuex.Store({
     },
     setAdvocates(state, val) {
       state.advocates = val;
+    },
+    setLawFirms(state,val){
+      state.lawFirms=val
     },
     setRequests(state, val) {
       state.requests = val;
@@ -425,6 +429,32 @@ export default new Vuex.Store({
             ...doc.data(),
           }));
           commit("setAdvocates", data);
+        },
+        (error) => {
+          dispatch("changeLoading", false);
+          commit("setFirebaseError", error.message);
+          console.log(error.message);
+        }
+      );
+
+      // Return a function to detach the listener when the action is no longer needed
+      return unsubscribe;
+    },
+    async fetchActiveFirms({ dispatch, commit }) {
+      const LAWYERS_PATH = "all_advocates";
+      const myCollection = collection(firestoreDb, LAWYERS_PATH);
+
+      // Create a query against the collection
+      const queryToExecute = query(myCollection, where("status", "==", "firm active"));
+
+      const unsubscribe = onSnapshot(
+        queryToExecute,
+        (snapshot) => {
+          const data = snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }));
+          commit("setLawFirms", data);
         },
         (error) => {
           dispatch("changeLoading", false);
