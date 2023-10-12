@@ -13,7 +13,6 @@ import Header from '../components/home/Header.vue';
 import Footer from '../components/home/Footer.vue';
 import Breadcrum from '../components/Widgets/Breadcrum.vue';
 import RegisterForm from '../components/forms/Register-Form.vue';
-import TestForm from '../components/forms/TestForm.vue';
 import Footerv2 from '../v2/Footerv2.vue';
 import Headerv2 from '../v2/Headerv2.vue';
 export default {
@@ -45,7 +44,7 @@ export default {
       ]
     }
   },
-  components:{Header,Footer,Breadcrum,RegisterForm, TestForm, Footerv2, Headerv2},
+  components:{Header,Footer,Breadcrum,RegisterForm, Footerv2, Headerv2},
 
 };
 </script>
