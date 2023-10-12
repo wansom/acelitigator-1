@@ -37,7 +37,7 @@
                                     <hr class="w-full h-2">
                                     <div class="drop-extra-links">  
                                         <div class="drop-extras-btns flex">
-                                            <router-link to="/sign-up"><button class="login">Login</button></router-link>
+                                            <router-link to="/sign-in"><button class="login">Login</button></router-link>
                                             
                                             <span>or</span>
                                            <router-link to="/add-firm"> <button class="register">Register</button></router-link>

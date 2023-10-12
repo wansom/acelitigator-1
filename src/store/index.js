@@ -177,7 +177,6 @@ export default new Vuex.Store({
 
     registerFirm({ commit, dispatch }, data) {
       dispatch("changeLoading", true);
-      console.log(data)
       createUser({
         email: data.email,
         password: data.password,
