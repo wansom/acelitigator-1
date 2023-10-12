@@ -7,7 +7,7 @@
       <a-form :form="form" layout="vertical" >
         <a-row :gutter="16">
           <a-col :span="24" :md="12">
-            <a-form-item label="Primary Office Location(County)">
+            <a-form-item label="Primary Office Location">
               <a-select
                 v-decorator="[
                   'location',
