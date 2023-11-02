@@ -57,11 +57,11 @@
                         <span>Similar Profiles</span>
                     </div>
                     <div class="grid grid-cols-3" >
-                        <div class="text-center my-2" v-for="advocate of advocates.slice(0,3)" :key="advocate.id">
+                        <div class="text-center my-2" v-for="advocate of advocates.filter((i)=>i.id!=advocate.id).slice(0,3)" :key="advocate.id">
                             <img class="h-16 w-16 rounded-full mx-auto object-cover"
                             :src="advocate.profile_photo"
                                 alt="">
-                            <a href="#" class="text-main-color">{{ advocate.first_name }}<sapn class="mx-1"></sapn>{{ advocate.last_name }}</a>
+                            <a :href="'/advocate/'+advocate.id" class="text-main-color hover:text-red-500">{{ advocate.first_name }}<sapn class="mx-1"></sapn>{{ advocate.last_name }}</a>
                         </div>
                     </div>
                 </div>
