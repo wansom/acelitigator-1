@@ -762,12 +762,8 @@ section.service-listings{
 }
 .side-lft{
     width: 100%;
-    max-width: 310px;
-    min-width: 280px;
-    margin: 10px;
 }
 .side-lg-card{
-    margin: 10px 0px 0px;
     text-align: center;
     background-color: var(--white);
     border-radius: 10px;

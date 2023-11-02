@@ -10,28 +10,7 @@
             <p class="p-info-nd">
               Share your needs with us, refine your search by selecting a
               practise area and county
-            </p>
-            <!-- <div class="flex flex-col md:flex-row items-center justify-center gap-5">
-              <div class="service-form">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" width="18" class=""><path d="M272 192C272 236.2 236.2 272 192 272C147.8 272 112 236.2 112 192C112 147.8 147.8 112 192 112C236.2 112 272 147.8 272 192zM192 240C218.5 240 240 218.5 240 192C240 165.5 218.5 144 192 144C165.5 144 144 165.5 144 192C144 218.5 165.5 240 192 240zM384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192H384zM192 32C103.6 32 32 103.6 32 192C32 207.6 37.43 229 48.56 255.4C59.47 281.3 74.8 309.4 92.14 337.5C126.2 392.8 166.6 445.7 192 477.6C217.4 445.7 257.8 392.8 291.9 337.5C309.2 309.4 324.5 281.3 335.4 255.4C346.6 229 352 207.6 352 192C352 103.6 280.4 32 192 32z"></path></svg>
-                        </div>
-                        <form action="/">
-                            <input type="text" placeholder="Enter a city or country">
-                        </form>
-                    </div> 
-                  
-                    <div class="service-form">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" width="18" class=""><path d="M272 192C272 236.2 236.2 272 192 272C147.8 272 112 236.2 112 192C112 147.8 147.8 112 192 112C236.2 112 272 147.8 272 192zM192 240C218.5 240 240 218.5 240 192C240 165.5 218.5 144 192 144C165.5 144 144 165.5 144 192C144 218.5 165.5 240 192 240zM384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192H384zM192 32C103.6 32 32 103.6 32 192C32 207.6 37.43 229 48.56 255.4C59.47 281.3 74.8 309.4 92.14 337.5C126.2 392.8 166.6 445.7 192 477.6C217.4 445.7 257.8 392.8 291.9 337.5C309.2 309.4 324.5 281.3 335.4 255.4C346.6 229 352 207.6 352 192C352 103.6 280.4 32 192 32z"></path></svg>
-                        </div>
-                        <form action="/">
-                            <input type="text" placeholder="Enter a city or country">
-                        </form>
-                    </div>
-                    <a-button type="primary" size="large" class="px-40">Search</a-button>
-                    </div> -->
-           
+            </p>          
            <a href="#search">
             <div class="arrow-dwn">
               <svg
@@ -56,8 +35,191 @@
            </a>
           </div>
         </section>
-        <div class="s-listings" id="search">
-          <div class="sv-lg-container container">
+        <div class="s-listings">
+  <div>
+    <div class="relative z-40 lg:hidden" role="dialog" aria-modal="true">
+      <div class="fixed inset-0 bg-black bg-opacity-25"></div>
+
+      <div class="fixed inset-0 z-40 flex">
+        <div class="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl">
+          <div class="flex items-center justify-between px-4">
+            <h2 class="text-lg font-medium text-gray-900">Filters</h2>
+            <button type="button" class="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-white p-2 text-gray-400">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Filters -->
+          <form class="mt-4 border-t border-gray-200">
+            <h3 class="sr-only">Categories</h3>
+            <ul role="list" class="px-2 py-3 font-medium text-gray-900">
+              <li>
+                <a href="#" class="block px-2 py-3">Totes</a>
+              </li>
+              <li>
+                <a href="#" class="block px-2 py-3">Backpacks</a>
+              </li>
+              <li>
+                <a href="#" class="block px-2 py-3">Travel Bags</a>
+              </li>
+              <li>
+                <a href="#" class="block px-2 py-3">Hip Bags</a>
+              </li>
+              <li>
+                <a href="#" class="block px-2 py-3">Laptop Sleeves</a>
+              </li>
+            </ul>
+
+            <div class="border-t border-gray-200 px-4 py-6">
+              <h3 class="-mx-2 -my-3 flow-root">
+                <!-- Expand/collapse section button -->
+                <button type="button" class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500" aria-controls="filter-section-mobile-0" aria-expanded="false">
+                  <span class="font-medium text-gray-900">Color</span>
+                  <span class="ml-6 flex items-center">
+                    <!-- Expand icon, show/hide based on section open state. -->
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                    </svg>
+                    <!-- Collapse icon, show/hide based on section open state. -->
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <!-- Filter section, show/hide based on section state. -->
+              <div class="pt-6" id="filter-section-mobile-0">
+                <div class="space-y-6">
+                  <div class="flex items-center">
+                    <input id="filter-mobile-color-0" name="color[]" value="white" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-color-0" class="ml-3 min-w-0 flex-1 text-gray-500">White</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-color-1" name="color[]" value="beige" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-color-1" class="ml-3 min-w-0 flex-1 text-gray-500">Beige</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-color-2" name="color[]" value="blue" type="checkbox" checked class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-color-2" class="ml-3 min-w-0 flex-1 text-gray-500">Blue</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-color-3" name="color[]" value="brown" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-color-3" class="ml-3 min-w-0 flex-1 text-gray-500">Brown</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-color-4" name="color[]" value="green" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-color-4" class="ml-3 min-w-0 flex-1 text-gray-500">Green</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-color-5" name="color[]" value="purple" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-color-5" class="ml-3 min-w-0 flex-1 text-gray-500">Purple</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="border-t border-gray-200 px-4 py-6">
+              <h3 class="-mx-2 -my-3 flow-root">
+                <!-- Expand/collapse section button -->
+                <button type="button" class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500" aria-controls="filter-section-mobile-1" aria-expanded="false">
+                  <span class="font-medium text-gray-900">Category</span>
+                  <span class="ml-6 flex items-center">
+                    <!-- Expand icon, show/hide based on section open state. -->
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                    </svg>
+                    <!-- Collapse icon, show/hide based on section open state. -->
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <!-- Filter section, show/hide based on section state. -->
+              <div class="pt-6" id="filter-section-mobile-1">
+                <div class="space-y-6">
+                  <div class="flex items-center">
+                    <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-category-0" class="ml-3 min-w-0 flex-1 text-gray-500">New Arrivals</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-category-1" name="category[]" value="sale" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-category-1" class="ml-3 min-w-0 flex-1 text-gray-500">Sale</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-category-2" name="category[]" value="travel" type="checkbox" checked class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-category-2" class="ml-3 min-w-0 flex-1 text-gray-500">Travel</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-category-3" name="category[]" value="organization" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-category-3" class="ml-3 min-w-0 flex-1 text-gray-500">Organization</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-category-4" name="category[]" value="accessories" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-category-4" class="ml-3 min-w-0 flex-1 text-gray-500">Accessories</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="border-t border-gray-200 px-4 py-6">
+              <h3 class="-mx-2 -my-3 flow-root">
+                <!-- Expand/collapse section button -->
+                <button type="button" class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500" aria-controls="filter-section-mobile-2" aria-expanded="false">
+                  <span class="font-medium text-gray-900">Size</span>
+                  <span class="ml-6 flex items-center">
+                    <!-- Expand icon, show/hide based on section open state. -->
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                    </svg>
+                    <!-- Collapse icon, show/hide based on section open state. -->
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <!-- Filter section, show/hide based on section state. -->
+              <div class="pt-6" id="filter-section-mobile-2">
+                <div class="space-y-6">
+                  <div class="flex items-center">
+                    <input id="filter-mobile-size-0" name="size[]" value="2l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-size-0" class="ml-3 min-w-0 flex-1 text-gray-500">2L</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-size-1" name="size[]" value="6l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-size-1" class="ml-3 min-w-0 flex-1 text-gray-500">6L</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-size-2" name="size[]" value="12l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-size-2" class="ml-3 min-w-0 flex-1 text-gray-500">12L</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-size-3" name="size[]" value="18l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-size-3" class="ml-3 min-w-0 flex-1 text-gray-500">18L</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-size-4" name="size[]" value="20l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-size-4" class="ml-3 min-w-0 flex-1 text-gray-500">20L</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-size-5" name="size[]" value="40l" type="checkbox" checked class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-size-5" class="ml-3 min-w-0 flex-1 text-gray-500">40L</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section aria-labelledby="products-heading" class="pb-24 pt-6">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
+          <!-- Filters -->
+          <form class="hidden lg:block my-4">
             <div class="side-lft">
               <div class="side-lg-card">
                 <div class="icon">
@@ -94,11 +256,146 @@
                 <span class="btm">Free. Takes 2 min.</span>
               </div>
             </div>
-            <div class="side-rgt">
-              <!-- <div class="side-rgt-head">
-                                <h2>List of the best lawyers</h2>
-                            </div> -->
-              <a-list
+            <div class="border-b border-gray-200 py-6">
+              <h3 class="-my-3 flow-root">
+                <!-- Expand/collapse section button -->
+                <button type="button" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-0" aria-expanded="false">
+                  <span class="font-medium text-gray-900">Primary Practise Areas</span>
+                  <span class="ml-6 flex items-center">
+                    <!-- Expand icon, show/hide based on section open state. -->
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                    </svg>
+                    <!-- Collapse icon, show/hide based on section open state. -->
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <!-- Filter section, show/hide based on section state. -->
+              <div class="p-6 bg-white" id="filter-section-0">
+                <div class="space-y-4">
+                  <div class="flex items-center">
+                    <input id="filter-color-0" name="color[]" value="white" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-color-0" class="ml-3 text-sm text-gray-600">White</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-color-1" name="color[]" value="beige" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-color-1" class="ml-3 text-sm text-gray-600">Beige</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-color-2" name="color[]" value="blue" type="checkbox" checked class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-color-2" class="ml-3 text-sm text-gray-600">Blue</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-color-3" name="color[]" value="brown" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-color-3" class="ml-3 text-sm text-gray-600">Brown</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-color-4" name="color[]" value="green" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-color-4" class="ml-3 text-sm text-gray-600">Green</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-color-5" name="color[]" value="purple" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-color-5" class="ml-3 text-sm text-gray-600">Purple</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="border-b border-gray-200 py-6">
+              <h3 class="-my-3 flow-root">
+                <!-- Expand/collapse section button -->
+                <button type="button" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-1" aria-expanded="false">
+                  <span class="font-medium text-gray-900">Secondary Practice Areas</span>
+                  <span class="ml-6 flex items-center">
+                    <!-- Expand icon, show/hide based on section open state. -->
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                    </svg>
+                    <!-- Collapse icon, show/hide based on section open state. -->
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <!-- Filter section, show/hide based on section state. -->
+              <div class="p-6 bg-white" id="filter-section-1">
+                <div class="space-y-4">
+                  <div class="flex items-center">
+                    <input id="filter-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-category-0" class="ml-3 text-sm text-gray-600">New Arrivals</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-category-1" name="category[]" value="sale" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-category-1" class="ml-3 text-sm text-gray-600">Sale</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-category-2" name="category[]" value="travel" type="checkbox" checked class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-category-2" class="ml-3 text-sm text-gray-600">Travel</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-category-3" name="category[]" value="organization" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-category-3" class="ml-3 text-sm text-gray-600">Organization</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-category-4" name="category[]" value="accessories" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-category-4" class="ml-3 text-sm text-gray-600">Accessories</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="border-b border-gray-200 py-6">
+              <h3 class="-my-3 flow-root">
+                <!-- Expand/collapse section button -->
+                <button type="button" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-2" aria-expanded="false">
+                  <span class="font-medium text-gray-900">State</span>
+                  <span class="ml-6 flex items-center">
+                    <!-- Expand icon, show/hide based on section open state. -->
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                    </svg>
+                    <!-- Collapse icon, show/hide based on section open state. -->
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <!-- Filter section, show/hide based on section state. -->
+              <div class="p-6 bg-white" id="filter-section-2">
+                <div class="space-y-4">
+                  <div class="flex items-center">
+                    <input id="filter-size-0" name="size[]" value="2l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-size-0" class="ml-3 text-sm text-gray-600">2L</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-size-1" name="size[]" value="6l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-size-1" class="ml-3 text-sm text-gray-600">6L</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-size-2" name="size[]" value="12l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-size-2" class="ml-3 text-sm text-gray-600">12L</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-size-3" name="size[]" value="18l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-size-3" class="ml-3 text-sm text-gray-600">18L</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-size-4" name="size[]" value="20l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-size-4" class="ml-3 text-sm text-gray-600">20L</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-size-5" name="size[]" value="40l" type="checkbox" checked class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-size-5" class="ml-3 text-sm text-gray-600">40L</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="lg:col-span-3">
+            <a-list
                 item-layout="horizontal"
                 :pagination="pagination"
                 :data-source="list"
@@ -267,11 +564,18 @@
                   </div>
                 </a-list-item>
               </a-list>
-            </div>
           </div>
         </div>
+      </section>
+    </main>
+  </div>
+</div>
+
       </main>
     </div>
+
+
+
     <footerv-2-vue></footerv-2-vue>
   </div>
 </template>
