@@ -2,7 +2,7 @@
   "name": "ace-litigator",
   "version": "1.0.0",
   "private": true,
-  "description": "Advocate listing platform",
+  "description": "Find a Lawyer in Nigeria",
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
@@ -46,7 +46,7 @@
     "vue-loader": "16.8.3",
     "vue-template-compiler": "2.6.14"
   },
-  "homepage": "https://acelitigator.com/about-us/",
+  "homepage": "https://ng.dialalawyer.africs/about-us/",
   "license": "MIT",
-  "repository": "https://acelitigator.com/about-us/"
+  "repository": "https://ng.dialalawyer.africa/about-us/"
 }

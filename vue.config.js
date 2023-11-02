@@ -69,7 +69,7 @@ module.exports = {
 		config
 			.plugin('html')
 			.tap(args => {
-				args[0].title = 'Dial A Lawyer'
+				args[0].title = 'Dial A Lawyer Nigeria'
 				
 				return args
 			})
@@ -78,7 +78,7 @@ module.exports = {
 				.plugin('sitemap')
 				.use(SitemapPlugin, [
 				  {
-					base: 'https://dialalawyer.africa',
+					base: 'https://ng.dialalawyer.africa',
 					paths: paths,
 					options: {
 					  filename: 'sitemap.xml',
