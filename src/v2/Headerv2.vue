@@ -14,7 +14,7 @@
                         <div class="menu-item-lf">
                            <router-link to="/find-a-lawyer"> <button class="find-btn">FIND A LAWYER</button></router-link>
                           <router-link to="/law-firms" class="uppercase">FIND A LAW FIRM</router-link>
-                            <a href="//acelitigator.com/litigation-documents" aria-label="read more" class="uppercase">RESOURCES</a>
+                            <a href="/documentsPortal" aria-label="read more" class="uppercase">RESOURCES</a>
                             <router-link to="contact-us" aria-label="read more" class="uppercase">CONTACT US</router-link>
                           
                         </div>
