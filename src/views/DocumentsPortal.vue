@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header></Header>
+<headerv-2></headerv-2>
     <div class="container mx-auto px-5 py-12 md:px-12">
       <div>
         <a-list
@@ -70,8 +70,9 @@ import {
   listAll,
 } from "firebase/storage";
 import swal from 'sweetalert';
+import Headerv2 from '../v2/Headerv2.vue';
 export default {
-  components: { Header, Footer },
+  components: { Header, Footer, Headerv2 },
   data() {
     return {
         documents: [],
