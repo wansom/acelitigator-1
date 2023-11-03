@@ -13,30 +13,16 @@
                         </div>
                     </div>
                     <div class="ft-column link">
-                        <h4>POPULAR COUNTRIES</h4>
+                        <h4>POPULAR PRACTISE AREAS</h4>
                         <ul>
-                            <li><a href="/find-a-lawyer">Kenya Lawyers</a></li>
-                            <li><a href="/find-a-lawyer">Uganda Lawyers</a></li>
-                            <li><a href="/find-a-lawyer">Ethopia Lawyers</a></li>
-                            <li><a href="/find-a-lawyer">Rwanda Lawyers</a></li>
-                            <li><a href="/find-a-lawyer">Tanzania Lawyers</a></li>
+                            <li v-for="(area,index) of practiseAreas.slice(0,4)" :key="index"><a href="/find-a-lawyer">{{ area }}</a></li>
                         </ul>
                     </div>
                     <div class="ft-column link">
-                        <h4>POPULAR CITIES</h4>
+                        <h4>POPULAR STATES</h4>
                         <ul>
-                            <li><a href="/find-a-lawyer">Nairobi Lawyers</a></li>
-                            <li><a href="/find-a-lawyer">Kisumu Lawyers</a></li>
-                            <li><a href="/find-a-lawyer">Mombasa Lawyers</a></li>
-                            <li><a href="/find-a-lawyer">Machakos Lawyers</a></li>
-                            <li><a href="/find-a-lawyer">Nakuru Lawyers</a></li>
-                        </ul>
-                    </div>
-                    <div class="ft-column link">
-                        <h4>FOR CLIENTS</h4>
-                        <ul>
-                            <li><a href="//acelitigator.com/litigation-documents">Legal guides</a></li>
-                            <li><a href="http://kenyalaw.org/kl/index.php?id=8281">Know Your Courts</a></li>
+                            <li v-for="(county,index) of counties.slice(0,7)" :key="index"><a href="/find-a-lawyer">{{ county }}</a></li>
+                           
                         </ul>
                     </div>
                     <div class="ft-column link">
