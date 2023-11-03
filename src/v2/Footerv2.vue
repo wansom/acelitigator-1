@@ -64,7 +64,11 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
+    computed:{
+        ...mapState(['counties','practiseAreas'])
+    }
 
 }
 </script>

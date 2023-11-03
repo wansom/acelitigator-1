@@ -27,7 +27,7 @@
             <a-button type="primary"  slot="actions" @click="()=>{showModal(item)}">GET DOCUMENT</a-button>
            
             <a-list-item-meta description="">
-              <a slot="title" href="">{{ item.name }}</a>
+              <a slot="title" href="">{{ index }}{{ item.name }}</a>
               <a-avatar slot="avatar" src="/images/doc-icon.jpg" />
             </a-list-item-meta>
           </a-list-item>
@@ -56,7 +56,7 @@
     </a-modal>
       </div>
     </div>
-    <Footer></Footer>
+    <footerv-2></footerv-2>
   </div>
 </template>
 
@@ -71,8 +71,9 @@ import {
 } from "firebase/storage";
 import swal from 'sweetalert';
 import Headerv2 from '../v2/Headerv2.vue';
+import Footerv2 from '../v2/Footerv2.vue';
 export default {
-  components: { Header, Footer, Headerv2 },
+  components: { Header, Footer, Headerv2, Footerv2 },
   data() {
     return {
         documents: [],
