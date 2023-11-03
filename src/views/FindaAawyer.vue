@@ -330,6 +330,13 @@
                                 :src="item.profile_photo"
                                 alt="profile photo"
                                 class="h-50 w-full md:h-40 md:w-52 rounded-lg object-contain"
+                                v-if="item.profile_photo"
+                              />
+                              <img
+                                src="/images/dial-logo.png"
+                                alt="profile photo"
+                                class="h-50 w-full md:h-40 md:w-52 rounded-lg object-contain"
+                                v-else
                               />
                             </div>
                             <div class="p-name">
