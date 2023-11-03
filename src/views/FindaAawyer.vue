@@ -259,146 +259,65 @@
             <div class="border-b border-gray-200 py-6">
               <h3 class="-my-3 flow-root">
                 <!-- Expand/collapse section button -->
-                <button type="button" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-0" aria-expanded="false">
-                  <span class="font-medium text-gray-900">Primary Practise Areas</span>
+                <button type="button" class="flex w-full items-center justify-between px-2 bg-red-500 text-white py-3 text-sm  hover:text-gray-500" aria-controls="filter-section-0" aria-expanded="false">
+                  <span class="font-medium text-gray-900">Filter By Primary Practise Areas</span>
                   <span class="ml-6 flex items-center">
                     <!-- Expand icon, show/hide based on section open state. -->
-                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" @click="areasOpen=true">
                       <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
                     </svg>
                     <!-- Collapse icon, show/hide based on section open state. -->
-                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" @click="areasOpen=false">
                       <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
                     </svg>
                   </span>
                 </button>
               </h3>
               <!-- Filter section, show/hide based on section state. -->
-              <div class="p-6 bg-white" id="filter-section-0">
+              <div class="p-6 bg-white" id="filter-section-0" v-if="areasOpen">
                 <div class="space-y-4">
-                  <div class="flex items-center">
-                    <input id="filter-color-0" name="color[]" value="white" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                    <label for="filter-color-0" class="ml-3 text-sm text-gray-600">White</label>
+                  <div class="flex items-center" v-for="(practise,index) of practiseAreas" :key="index">
+                    <input v-model="selectedPracticeAreas" :id="'filter-color-' + index" :name="practise" :value="practise" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"  @change="scrollToTop">
+            <label :for="'filter-color-' + index" class="ml-3 text-sm text-gray-600">{{ practise }}</label>
                   </div>
-                  <div class="flex items-center">
-                    <input id="filter-color-1" name="color[]" value="beige" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                    <label for="filter-color-1" class="ml-3 text-sm text-gray-600">Beige</label>
-                  </div>
-                  <div class="flex items-center">
-                    <input id="filter-color-2" name="color[]" value="blue" type="checkbox" checked class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                    <label for="filter-color-2" class="ml-3 text-sm text-gray-600">Blue</label>
-                  </div>
-                  <div class="flex items-center">
-                    <input id="filter-color-3" name="color[]" value="brown" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                    <label for="filter-color-3" class="ml-3 text-sm text-gray-600">Brown</label>
-                  </div>
-                  <div class="flex items-center">
-                    <input id="filter-color-4" name="color[]" value="green" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                    <label for="filter-color-4" class="ml-3 text-sm text-gray-600">Green</label>
-                  </div>
-                  <div class="flex items-center">
-                    <input id="filter-color-5" name="color[]" value="purple" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                    <label for="filter-color-5" class="ml-3 text-sm text-gray-600">Purple</label>
-                  </div>
+
                 </div>
               </div>
             </div>
             <div class="border-b border-gray-200 py-6">
               <h3 class="-my-3 flow-root">
                 <!-- Expand/collapse section button -->
-                <button type="button" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-1" aria-expanded="false">
-                  <span class="font-medium text-gray-900">Secondary Practice Areas</span>
+                <button type="button" class="flex w-full items-center justify-between px-2 bg-red-500 text-white py-3 text-sm hover:text-gray-500" aria-controls="filter-section-1" aria-expanded="false">
+                  <span class="font-medium text-gray-900">Filter By State</span>
                   <span class="ml-6 flex items-center">
                     <!-- Expand icon, show/hide based on section open state. -->
-                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" @click="statesOpen=true">
                       <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
                     </svg>
                     <!-- Collapse icon, show/hide based on section open state. -->
-                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" @click="statesOpen=false">
                       <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
                     </svg>
                   </span>
                 </button>
               </h3>
               <!-- Filter section, show/hide based on section state. -->
-              <div class="p-6 bg-white" id="filter-section-1">
+              <div class="p-6 bg-white" id="filter-section-1" v-if="statesOpen">
                 <div class="space-y-4">
-                  <div class="flex items-center">
-                    <input id="filter-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                    <label for="filter-category-0" class="ml-3 text-sm text-gray-600">New Arrivals</label>
-                  </div>
-                  <div class="flex items-center">
-                    <input id="filter-category-1" name="category[]" value="sale" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                    <label for="filter-category-1" class="ml-3 text-sm text-gray-600">Sale</label>
-                  </div>
-                  <div class="flex items-center">
-                    <input id="filter-category-2" name="category[]" value="travel" type="checkbox" checked class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                    <label for="filter-category-2" class="ml-3 text-sm text-gray-600">Travel</label>
-                  </div>
-                  <div class="flex items-center">
-                    <input id="filter-category-3" name="category[]" value="organization" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                    <label for="filter-category-3" class="ml-3 text-sm text-gray-600">Organization</label>
-                  </div>
-                  <div class="flex items-center">
-                    <input id="filter-category-4" name="category[]" value="accessories" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                    <label for="filter-category-4" class="ml-3 text-sm text-gray-600">Accessories</label>
+                  <div class="flex items-center" v-for="(state,index) of counties" :key="index">
+                    <input v-model="selectedStates" :id="'filter-category-' + index" :name="state" :value="state" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" @change="  scrollToTop">
+                    <label :for="'filter-category-' + index" class="ml-3 text-sm text-gray-600">{{ state }}</label>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="border-b border-gray-200 py-6">
-              <h3 class="-my-3 flow-root">
-                <!-- Expand/collapse section button -->
-                <button type="button" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-2" aria-expanded="false">
-                  <span class="font-medium text-gray-900">State</span>
-                  <span class="ml-6 flex items-center">
-                    <!-- Expand icon, show/hide based on section open state. -->
-                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
-                    </svg>
-                    <!-- Collapse icon, show/hide based on section open state. -->
-                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
-                    </svg>
-                  </span>
-                </button>
-              </h3>
-              <!-- Filter section, show/hide based on section state. -->
-              <div class="p-6 bg-white" id="filter-section-2">
-                <div class="space-y-4">
-                  <div class="flex items-center">
-                    <input id="filter-size-0" name="size[]" value="2l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                    <label for="filter-size-0" class="ml-3 text-sm text-gray-600">2L</label>
-                  </div>
-                  <div class="flex items-center">
-                    <input id="filter-size-1" name="size[]" value="6l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                    <label for="filter-size-1" class="ml-3 text-sm text-gray-600">6L</label>
-                  </div>
-                  <div class="flex items-center">
-                    <input id="filter-size-2" name="size[]" value="12l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                    <label for="filter-size-2" class="ml-3 text-sm text-gray-600">12L</label>
-                  </div>
-                  <div class="flex items-center">
-                    <input id="filter-size-3" name="size[]" value="18l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                    <label for="filter-size-3" class="ml-3 text-sm text-gray-600">18L</label>
-                  </div>
-                  <div class="flex items-center">
-                    <input id="filter-size-4" name="size[]" value="20l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                    <label for="filter-size-4" class="ml-3 text-sm text-gray-600">20L</label>
-                  </div>
-                  <div class="flex items-center">
-                    <input id="filter-size-5" name="size[]" value="40l" type="checkbox" checked class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                    <label for="filter-size-5" class="ml-3 text-sm text-gray-600">40L</label>
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </form>
           <div class="lg:col-span-3">
             <a-list
                 item-layout="horizontal"
                 :pagination="pagination"
-                :data-source="list"
+                :data-source="filteredAdvocates"
               >
                 <a-list-item slot="renderItem" slot-scope="item, index">
                   <div class="side-rgt-cards">
@@ -609,41 +528,25 @@ export default {
   props: ["use"],
   data() {
     return {
-      title: "Find A Lawyer",
+      title: "Find A Lawyer in Nigeria",
       description:
         "Our mission is to aid access to justice across Africa by linking verified legal professionals in the justice sector to the market",
       url: "https://dialalawyer.africa",
       image: "https://dialalawyer.africa/images/banner.jpg",
       modal: false,
-      dropdown: { height: 0 },
-      experience: { min: 10, max: 0 },
       pagination: {
         onChange: (page) => {
-          console.log(page);
+          window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
         },
-        pageSize: 4,
+        pageSize: 7,
       },
-      filters: {
-        counties: {},
-        practiseAreas: {},
-        experience: 0,
-        otherPractiseAreas: {}, // new
-        otherPractiseLocations: {},
-      },
-      menus: {
-        counties: false,
-        practiseAreas: false,
-        experience: false,
-        otherPractiseAreas: false,
-        otherPractiseLocations: false,
-      },
-      menuLabels: {
-        counties: "By State",
-        practiseAreas: "By Practice area",
-        experience: "By Experience",
-        otherPractiseAreas: "By Other Practice areas",
-        otherPractiseLocations: "By Other Practice Locations",
-      },
+      selectedPracticeAreas: [],
+      selectedStates: [],
+      areasOpen:true,
+      statesOpen:true
     };
   },
   computed: {
@@ -656,103 +559,31 @@ export default {
       "firebaseEror",
       "counties",
     ]),
-    activeMenu() {
-      return Object.keys(this.menus).reduce(
-        ($$, set, i) => (this.menus[set] ? i : $$),
-        -1
-      );
+    filteredAdvocates() {
+      return this.advocates.filter(advocate => {
+        const hasSelectedPracticeArea = this.selectedPracticeAreas.length === 0 || this.selectedPracticeAreas.includes(advocate.specialisation);
+        const hasSelectedState = this.selectedStates.length === 0 || this.selectedStates.includes(advocate.location);
+        return hasSelectedPracticeArea && hasSelectedState;
+      });
     },
-    list() {
-      let {
-        counties,
-        practiseAreas,
-        otherPractiseAreas,
-        otherPractiseLocations,
-      } = this.activeFilters;
 
-      return this.advocates.filter(
-        ({
-          location,
-          other_counties,
-          specialisation,
-          practise_areas,
-          experience,
-        }) => {
-          if (experience < this.filters.experience) return false;
-          if (counties.length && !~counties.indexOf(location)) return false;
-          if (practiseAreas.length && !~practiseAreas.indexOf(specialisation))
-            return false;
-          if (
-            otherPractiseAreas.length &&
-            !practise_areas.some(
-              (specialisation) => ~otherPractiseAreas.indexOf(specialisation)
-            )
-          )
-            return false;
-          if (
-            otherPractiseLocations.length &&
-            !other_counties.some(
-              (location) => ~otherPractiseLocations.indexOf(location)
-            )
-          )
-            return false;
 
-          return true;
-        }
-      );
-    },
-    activeFilters() {
-      let {
-        counties,
-        practiseAreas,
-        otherPractiseAreas,
-        otherPractiseLocations,
-      } = this.filters;
-
-      return {
-        counties: Object.keys(counties).filter((c) => counties[c]),
-        practiseAreas: Object.keys(practiseAreas).filter(
-          (c) => practiseAreas[c]
-        ),
-        otherPractiseAreas: Object.keys(otherPractiseAreas).filter(
-          (c) => otherPractiseAreas[c]
-        ),
-        otherPractiseLocations: Object.keys(otherPractiseLocations).filter(
-          (c) => otherPractiseLocations[c]
-        ),
-        experience:
-          this.filters.experience > this.experience.min
-            ? [this.filters.experience]
-            : [],
-      };
-    },
   },
   methods: {
-    setFilter(filter, option) {
-      if (filter === "counties") {
-        this.filters[filter][option] = !this.filters[filter][option];
-      } else {
-        setTimeout(() => {
-          this.clearFilter(filter, option, this.filters[filter][option]);
-        }, 100);
-      }
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     },
-    clearFilter(filter, except, active) {
-      if (filter === "experience") {
-        this.filters[filter] = this.experience.min;
-      } else {
-        Object.keys(this.filters[filter]).forEach((option) => {
-          this.filters[filter][option] = except === option && !active;
-        });
-      }
+
+    clearFilter() {
+    
+      this.selectedPracticeAreas=[],
+      this.selectedStates=[]
     },
     clearAllFilters() {
       Object.keys(this.filters).forEach(this.clearFilter);
-    },
-    setMenu(menu, active) {
-      Object.keys(this.menus).forEach((tab) => {
-        this.menus[tab] = !active && tab === menu;
-      });
     },
     openPhoneDialer(advocate) {
       const url = `tel:${advocate.phone}`;
@@ -765,25 +596,6 @@ export default {
   },
   beforeMount() {
     this.$store.dispatch("fetchActiveAdvocates");
-    this.counties.forEach((county) => {
-      this.$set(this.filters.counties, county, false);
-    });
-    this.practiseAreas.forEach((area) => {
-      this.$set(this.filters.practiseAreas, area, false);
-    });
-    this.practiseAreas.forEach((area) => {
-      this.$set(this.filters.otherPractiseAreas, area, false);
-    });
-    this.counties.forEach((location) => {
-      this.$set(this.filters.otherPractiseLocations, location, false);
-    });
-    this.allAdvocates.forEach(({ experience }) => {
-      if (this.experience.max < experience) this.experience.max = experience;
-      if (this.experience.min > experience) {
-        this.experience.min = experience;
-        this.filters.experience = experience;
-      }
-    });
   },
 
   metaInfo() {
