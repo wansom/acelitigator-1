@@ -35,16 +35,24 @@ export default new Vuex.Store({
       "Bankruptcy Law and Recovery",
       "Corporate, Commercial and Conveyancing ",
       "Alternative Dispute Resolution ",
+     "Dispute Resolution (Litigation and ADR)",
       "Criminal Law",
       "Civil Litigation",
+      "Corporate Advisory and Company Secretarial",
       "Family Law",
       "Immigration Law",
       "Intellectual Property Law",
       "Labor (Employment) Law",
       "Tax Law",
-      "Technology Law ",
-      "Corporate Governance Law ",
-      "Government Relations Practice"
+      "Real Estate",
+      "Telecommunication (Telecommunications & Media)",
+
+      "Transportation (Aviation, Logistics, Maritime, Shipping etc)",
+   "Government Relations Practice",
+"   International trade",
+"Regulatory Compliance"
+
+
     ],
     counties: [
       "Nairobi",
