@@ -82,14 +82,6 @@
                 <div class="service-bn-container container">
                     <h1 class="title">Get the best Law Firms</h1>
                     <p class="p-info-nd">Or refine your search by selecting a city, get contacted by law firms.</p>
-                    <!-- <div class="service-form">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" width="18" class=""><path d="M272 192C272 236.2 236.2 272 192 272C147.8 272 112 236.2 112 192C112 147.8 147.8 112 192 112C236.2 112 272 147.8 272 192zM192 240C218.5 240 240 218.5 240 192C240 165.5 218.5 144 192 144C165.5 144 144 165.5 144 192C144 218.5 165.5 240 192 240zM384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192H384zM192 32C103.6 32 32 103.6 32 192C32 207.6 37.43 229 48.56 255.4C59.47 281.3 74.8 309.4 92.14 337.5C126.2 392.8 166.6 445.7 192 477.6C217.4 445.7 257.8 392.8 291.9 337.5C309.2 309.4 324.5 281.3 335.4 255.4C346.6 229 352 207.6 352 192C352 103.6 280.4 32 192 32z"></path></svg>
-                        </div>
-                        <form action="/">
-                            <input type="text" placeholder="Enter a city or country">
-                        </form>
-                    </div> -->
                     <a href="#search">
                         <div class="arrow-dwn">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" width="30" height="30" class=""><defs></defs><path class="fa-primary" d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 402.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 476.9 232.2 480 224 480z"></path><path class="fa-secondary" d="M224 288C215.8 288 207.6 284.9 201.4 278.6l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 210.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 284.9 232.2 288 224 288z"></path></svg>
@@ -118,8 +110,9 @@
                     </div>
                 </div>
                 <div class="s-listings" id="search">
-                    <div class="sv-lg-container container">
-                        <div class="side-lft">
+                    <div class="sv-lg-container container mx-auto flex flex-col md:flex-row ">
+                     <div class="md:basis-1/3 mt-4">
+                      <div class="side-lft">
                             <div class="side-lg-card">
                                 <div class="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" width="16" class="ml-1 inline-flex"><path d="M144 416c-17.67 0-32 14.33-32 32s14.33 32.01 32 32.01s32-14.34 32-32.01S161.7 416 144 416zM211.2 32H104C46.66 32 0 78.66 0 136v16C0 165.3 10.75 176 24 176S48 165.3 48 152v-16c0-30.88 25.12-56 56-56h107.2C244.7 80 272 107.3 272 140.8c0 22.66-12.44 43.27-32.5 53.81L167 232.8C137.1 248 120 277.9 120 310.6V328c0 13.25 10.75 24.01 24 24.01S168 341.3 168 328V310.6c0-14.89 8.188-28.47 21.38-35.41l72.47-38.14C297.7 218.2 320 181.3 320 140.8C320 80.81 271.2 32 211.2 32z"></path></svg>
@@ -135,6 +128,7 @@
                                 <span class="btm">Free. Takes 2 min.</span>
                             </div>
                         </div>
+                     </div>
                         <div class="side-rgt">
                           <a-list
                 item-layout="horizontal"
@@ -325,6 +319,7 @@
                            
 
                         </div>
+                      
                     </div>
                 </div>
             </section>
