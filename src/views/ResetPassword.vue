@@ -96,7 +96,6 @@ import router from "../router";
           confirmPasswordReset(auth,oobCode,values.password).then(()=>{
             router.push('/sign-in')
           }).catch((err)=>{
-            console.log(err)
           })
           
         }

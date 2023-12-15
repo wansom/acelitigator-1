@@ -80,7 +80,6 @@ export default {
     methods:{
         toggleNav(){
             this.showMobilenav=!this.showMobilenav
-            console.log(this.showMobilenav);
         }
     }
 

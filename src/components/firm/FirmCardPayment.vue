@@ -229,7 +229,6 @@
           })
           .catch(function (error) {
             // handle error
-            console.log(error);
             swal({
               title: "OOPS!",
               text: `something went wrong`,

@@ -66,7 +66,6 @@ export default {
       this.visible = true;
     },
     handleOk(e) {
-      console.log(e);
       this.visible = false;
     },
   },

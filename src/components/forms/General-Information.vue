@@ -743,7 +743,6 @@ export default {
       });
     },
     handleChange(value) {
-      console.log(value);
       this.form.setFieldsValue({
         note: `Hi, ${value === "male" ? "man" : "lady"}!`,
       });

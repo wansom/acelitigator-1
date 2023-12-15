@@ -198,10 +198,10 @@ export default {
   },
   watch: {
     startValue(val) {
-      console.log("startValue", val);
+return;
     },
     endValue(val) {
-      console.log("endValue", val);
+      return
     },
   },
   methods: {
@@ -216,11 +216,6 @@ export default {
     },
     handleRangeChange(dates) {
       const [startDate, endDate] = dates;
-      console.log(
-        "Selected range:",
-        startDate.format("YYYY-MM"),
-        endDate.format("YYYY-MM")
-      );
     },
     disabledStartDate(startValue) {
       const endValue = this.endValue;

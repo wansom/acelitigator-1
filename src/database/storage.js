@@ -28,16 +28,6 @@ export const uploadFiles=async(files)=> {
 
   try {
     const downloadURLs = await Promise.all(promises);
-    // const userDocRef = doc(db, 'users', this.userId);
-
-    // await updateDoc(userDocRef, {
-    //   certificate1: downloadURLs[0],
-    //   certificate2: downloadURLs[1],
-    //   certificate3: downloadURLs[2],
-    //   certificate4: downloadURLs[3],
-    // });
-
-    console.log('User information updated successfully.',downloadURLs);
   } catch (error) {
     console.error('Error updating user information:', error);
   }
