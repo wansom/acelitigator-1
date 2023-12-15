@@ -209,7 +209,6 @@ return;
         (error) => {
           // Handle the upload error
           message.error("Failed to upload profile picture");
-          console.error(error);
         },
         () => {
           // Get the download URL of the uploaded file
@@ -236,7 +235,6 @@ return;
         (error) => {
           // Handle the upload error
           message.error("Failed to upload profile picture");
-          console.error(error);
         },
         () => {
           // Get the download URL of the uploaded file
