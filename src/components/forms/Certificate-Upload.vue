@@ -171,10 +171,10 @@ export default {
   },
   watch: {
     startValue(val) {
-      console.log("startValue", val);
+     return
     },
     endValue(val) {
-      console.log("endValue", val);
+return;
     },
   },
   methods: {

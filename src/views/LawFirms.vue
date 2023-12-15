@@ -340,7 +340,6 @@ export default {
       visible: false,
       pagination: {
         onChange: (page) => {
-          console.log(page);
         },
         pageSize: 4,
       },
