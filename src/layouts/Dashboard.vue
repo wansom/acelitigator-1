@@ -172,7 +172,7 @@
               </button>
               <a-menu slot="overlay">
                 <a-menu-item>
-                  <router-link to="/profile"> Profile</router-link>
+                  <router-link to="/profile" v-if="user.status!='firm active'"> Profile</router-link>
                 </a-menu-item>
                 <a-menu-item>
                   <router-link to="/forgot-password">Change Password</router-link>
