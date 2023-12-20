@@ -277,10 +277,10 @@
     },
     watch: {
       startValue(val) {
-        console.log("startValue", val);
+       
       },
       endValue(val) {
-        console.log("endValue", val);
+     
       },
     },
     methods: {
@@ -310,7 +310,7 @@
       handleSubmit(e) {
         e.preventDefault();
         this.form.validateFields((err, values) => {
-          console.log(values)
+         
           if (!err) {
             const payload = {
               current_employer:values.current_employer?? "",

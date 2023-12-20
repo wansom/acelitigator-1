@@ -229,7 +229,6 @@ export default {
   methods: {
     showNav() {
       this.visibleNav = !this.visibleNav;
-      console.log("button clicked", this.visibleNav);
     },
   },
 };

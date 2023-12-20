@@ -171,10 +171,10 @@ export default {
   },
   watch: {
     startValue(val) {
-      console.log("startValue", val);
+     return
     },
     endValue(val) {
-      console.log("endValue", val);
+return;
     },
   },
   methods: {
@@ -209,7 +209,6 @@ export default {
         (error) => {
           // Handle the upload error
           message.error("Failed to upload profile picture");
-          console.error(error);
         },
         () => {
           // Get the download URL of the uploaded file
@@ -236,7 +235,6 @@ export default {
         (error) => {
           // Handle the upload error
           message.error("Failed to upload profile picture");
-          console.error(error);
         },
         () => {
           // Get the download URL of the uploaded file

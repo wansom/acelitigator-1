@@ -1201,3 +1201,12 @@ section.profile-bn{
     margin: 4px;
 }
 /* == || PROFILE PAGE == */
+.cookie-button{
+    height: 38px;
+    width: 148px;
+    border-radius: 10px;
+    font-weight: 500;
+    border: 0px;
+    color: var(--white);
+    background-color: var(--active-color);
+}

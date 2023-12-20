@@ -109,14 +109,14 @@ export const updateTeamMember=async(userId, member, operation)=>{
 			teamMembers[index] = member;
 			await updateDoc(userRef, { teamMembers });
 		  } else {
-			console.log('Member not found in teamMembers array');
+			
 		  }
 		} else {
-		  console.log('User document does not exist');
+		 
 		}
 		break;
 	  default:
-		console.log('Invalid operation specified');
+		
 		break;
 	}}
 //ADVOCATES
@@ -165,7 +165,7 @@ export const courtSnapshots=()=>{
 				id: doc.id,
 				...doc.data()
 			  })
-			  console.log(doc)
+			 
 		})
 	})
 	return getData()

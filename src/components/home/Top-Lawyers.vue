@@ -63,10 +63,8 @@ export default {
   },
   methods: {
     handleChange(current) {
-      console.log(curr);
     },
     onPageChange(page) {
-      console.log(page)
       this.currentPage = page;
     },
     loadMore() {

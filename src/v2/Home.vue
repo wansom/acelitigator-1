@@ -293,7 +293,6 @@ export default {
   },
   methods:{
     handleChange(value) {
-      console.log(`Selected: ${value}`);
       router.push('/find-a-lawyer')
     },
 
