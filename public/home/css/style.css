@@ -1472,7 +1472,9 @@ ol {
 .footer-left .footer-logo {
   margin-bottom: 24px;
 }
-
+.ant-form-item{
+  margin-bottom: 0px !important;
+}
 .footer-left .footer-logo a {
   display: inline-block;
 }

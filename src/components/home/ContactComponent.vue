@@ -92,7 +92,7 @@
         ></iframe>
       </div>
       <div class="contact-form">
-        <a-form :form="form" class="login-form" @submit="handleSubmit">
+        <a-form :form="form" class="login-for" @submit="handleSubmit">
           <a-form-item label="Your Name">
             <a-input
               v-decorator="[
