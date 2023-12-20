@@ -386,10 +386,8 @@ export default {
   },
   watch: {
     startValue(val) {
-      console.log("startValue", val);
     },
     endValue(val) {
-      console.log("endValue", val);
     },
   },
   methods: {
@@ -420,7 +418,6 @@ export default {
     },
     handleEndOpenChange(current,open) {
       this.endOpen = open;
-      console.log(current)
       this.disabledPrev1Date=current
     },
     handleStartOpenChange2(open) {
@@ -448,7 +445,6 @@ export default {
       this.endOpen4 = open;
     },
     onChange(val) {
-      console.log(val);
     },
     prev1disabledStartDate(startValue) {
       const endValue = this.endValue;

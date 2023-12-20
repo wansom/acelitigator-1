@@ -441,7 +441,7 @@ export default {
   props: ["use"],
   data() {
     return {
-      title: "Find A Lawyer in Nigeria",
+      title: "Lawyers",
       description:
         "Our mission is to aid access to justice across Africa by linking verified legal professionals in the justice sector to the market",
       url: "https://dialalawyer.africa",
@@ -519,7 +519,7 @@ export default {
         {
           name: "description",
           content:
-            "Our mission is to aid access to justice across Africa by linking verified legal professionals in the justice sector to the market",
+            "Find a Lawyer by State and practise Area in Nigeria. Connect with experienced lawyers in Nigeria through DialALawyer. Find legal advice and services tailored to your needs.",
         },
         // Open Graph (for Facebook, LinkedIn, etc.)
         { property: "og:title", content: this.title },

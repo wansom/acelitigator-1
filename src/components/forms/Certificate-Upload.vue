@@ -286,10 +286,10 @@ export default {
   },
   watch: {
     startValue(val) {
-      console.log("startValue", val);
+     return
     },
     endValue(val) {
-      console.log("endValue", val);
+return;
     },
   },
   methods: {
@@ -422,10 +422,8 @@ export default {
               current: 5,
             };
             await this.$store.dispatch("updateUser", payload);
-
-            console.log("User information updated successfully.", downloadURLs);
           } catch (error) {
-            console.error("Error updating user information:", error);
+            throw error
           }
           // Upload each file to Firebase Storage and get download URLs
           const fileRefs = [];

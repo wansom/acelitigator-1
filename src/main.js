@@ -45,15 +45,15 @@ auth.onAuthStateChanged((user) => {
       store,
       metaInfo: {
         // if no title is specified, "Dial a Lawyer" will be used as a default title
-        title: 'Dial a Lawyer Nigeria', 
+        title: 'Find a Lawyer in Nigeria - DialALawyer', 
         // all titles will be injected into this template
         titleTemplate: '%s | Dial a Lawyer Nigeria',
         meta: [
           { property: 'og:site_name', content: 'Dial a Lawyer Nigeria' },
           { property: 'og:image', content: 'https://ng.dialalawyer.africa/img/banner.251176c6.jpg'},
-          { property: 'og:description', content: 'Our mission is to aid access to justice across Africa by linking verified legal professionals in the justice sector to the market' },
+          { name: 'description', content: 'Find a Lawyer by State and practise Area in Nigeria. Connect with experienced lawyers in Nigeria through DialALawyer. Find legal advice and services tailored to your needs.' },
           { name: 'twitter:site', content: '@dialalawyer' },
-          { name: 'twitter:description', content: 'Our mission is to aid access to justice across Africa by linking verified legal professionals in the justice sector to the market' },
+          { name: 'twitter:description', content: 'Connect with experienced lawyers in Nigeria through DialALawyer. Find legal advice and services tailored to your needs.' },
           // other meta tags...
         ]
       },

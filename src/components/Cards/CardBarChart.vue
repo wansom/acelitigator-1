@@ -197,7 +197,6 @@ yearlyChartData() {
   },
   methods:{
     loadData(value){
-      console.log(this.filteredProfileViewsData,value)
       this.selectedTimePeriod =value
     },
     updateChartLabels(value) {
@@ -213,7 +212,6 @@ yearlyChartData() {
       if(this.selectedTimePeriod=="thisYear"){
         this.profileViewsData=this.yearlyChartData
       }
-      console.log(this.profileViewsData)
       this.chart.destroy() ;
       let ctx = this.$refs.chart.getContext("2d");
 
@@ -286,7 +284,6 @@ yearlyChartData() {
   },
   mounted() {
   // Set initial chart data and labels
-console.log(this.selectedTimePeriod)
 if(this.selectedTimePeriod=="thisWeek"){
         this.profileViewsData=this.weeklyChartData
       }
@@ -296,7 +293,6 @@ if(this.selectedTimePeriod=="thisWeek"){
       if(this.selectedTimePeriod=="thisYear"){
         this.profileViewsData=this.yearlyChartData
       }
-      console.log(this.profileViewsData)
 let ctx = this.$refs.chart.getContext("2d");
 
 			this.chart = new Chart(ctx, {

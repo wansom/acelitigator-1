@@ -245,7 +245,6 @@ export default {
   },
   watch: {
     selectedItems(val) {
-      console.log(`selected:`, val);
     },
   },
   computed: {
@@ -419,7 +418,7 @@ export default {
 
       this.listenUsersOnlineStatus(formattedRooms);
       this.listenRooms(query);
-      // setTimeout(() => console.log('TOTAL', this.dbRequestCount), 2000)
+      
     },
 
     listenLastMessage(room) {
@@ -997,12 +996,6 @@ export default {
       this.removeRoomId = null;
       this.removeUserId = "";
     },
-
-    // ,incrementDbCounter(type, size) {
-    // 	size = size || 1
-    // 	this.dbRequestCount += size
-    // 	console.log(type, size)
-    // }
   },
 };
 </script>

@@ -159,7 +159,7 @@ export default new Vuex.Store({
             uid: result.user.uid,
             status: "incomplete",
             profile_visits: [],
-            username: `${data.first_name}${data.last_name}`,
+            username: `${data.first_name}''${data.last_name}`,
             _id: result.user.uid,
             notifications: arrayUnion({
               notification: `Your account was created successfully. Proceed to complete your profile`,
@@ -219,7 +219,7 @@ export default new Vuex.Store({
           });
         })
         .catch((err) => {
-          console.log(err)
+         
           swal({
             title: "Something Went Wrong while creating account!",
             text: `please try again`,
@@ -280,7 +280,7 @@ export default new Vuex.Store({
         })
         .catch((err) => {
           dispatch("changeLoading", false);
-          console.log(err.message)
+         
           swal({
             title: "Passowerd Reset",
             text: `something went wrong`,
@@ -328,7 +328,7 @@ export default new Vuex.Store({
           dispatch("changeStep", data.current);
         })
         .catch((err) => {
-          console.log(err);
+         
           dispatch("changeLoading", false);
           swal({
             title: "OOPS!",
@@ -341,7 +341,6 @@ export default new Vuex.Store({
     //set selected time period
     changeTimeLine({ commit }, val) {
       commit("setSelectedTimePeriod", val);
-      console.log(val)
     },
     //mpesa
     async intiatePayments({ dispatch }, values) {
@@ -367,7 +366,6 @@ export default new Vuex.Store({
           content: values.content,
         }
       ).then((res) => {
-        console.log(res)
       })
     },
     async fetchCourts({ commit }) {
@@ -382,7 +380,6 @@ export default new Vuex.Store({
           commit("setRequests", data);
         })
         .catch((err) => {
-          console.log(err);
         });
     },
     subscribeToCollection({ commit }) {
@@ -415,7 +412,6 @@ export default new Vuex.Store({
         (error) => {
           dispatch("changeLoading", false);
           commit("setFirebaseError", error.message);
-          console.log(error.message);
         }
       );
 
@@ -441,7 +437,6 @@ export default new Vuex.Store({
         (error) => {
           dispatch("changeLoading", false);
           commit("setFirebaseError", error.message);
-          console.log(error.message);
         }
       );
 
@@ -467,7 +462,6 @@ export default new Vuex.Store({
         (error) => {
           dispatch("changeLoading", false);
           commit("setFirebaseError", error.message);
-          console.log(error.message);
         }
       );
 

@@ -219,6 +219,7 @@ import { updateAdvocate } from "../database/firestore";
 import { arrayUnion} from "firebase/firestore";
 import { mapState } from 'vuex';
 export default {
+    
   components: { Header, Footer, Breadcrum,DetailCard, RelatedAdvocates,Headerv2,Footerv2Vue },
   data(){
     return{
@@ -255,6 +256,18 @@ export default {
     this.fetchDetails();
     this.$store.dispatch('fetchActiveAdvocates')
   },
+  metaInfo: {
+        // if no title is specified, "Dial a Lawyer" will be used as a default title
+        title: this.advocate?.username, 
+        // all titles will be injected into this template
+        titleTemplate: '%s | Dial a Lawyer Nigeria',
+        meta: [
+          { property: 'og:image', content: 'https://ng.dialalawyer.africa/img/banner.251176c6.jpg'},
+          { name: 'description', content: 'Find a Lawyer by State and practise Area in Nigeria. Connect with experienced lawyers in Nigeria through DialALawyer. Find legal advice and services tailored to your needs.' },
+          { name: 'twitter:site', content: '@dialalawyer' },
+          { name: 'twitter:description', content: 'Connect with experienced lawyers in Nigeria through DialALawyer. Find legal advice and services tailored to your needs.' },
+        ]
+      },
 };
 </script> 
 

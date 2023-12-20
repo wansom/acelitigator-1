@@ -95,7 +95,6 @@ import Footerv2 from "../v2/Footerv2.vue";
           confirmPasswordReset(auth,oobCode,values.password).then(()=>{
             router.push('/sign-in')
           }).catch((err)=>{
-            console.log(err)
           })
           
         }

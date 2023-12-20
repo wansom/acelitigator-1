@@ -3,11 +3,22 @@
 		<component :is="layout">
 			<router-view />
 		</component>
+		<cookie-law
+      message="This website uses cookies to ensure you get the best experience on our website."
+      button-text="Got it!"
+	  buttonClass="cookie-button"
+      :enable-cookie="true"
+    ></cookie-law>
 	</div>
 </template>
 
 <script>
+import CookieLaw from 'vue-cookie-law';
 	export default ({
+		components: {
+    CookieLaw,
+  },
+
 		computed: {
 			// Sets components name based on current route's specified layout, defaults to
 			// <layout-default></layout-default> component.

@@ -8,7 +8,7 @@
                         <div class="social-icons">
                             <a href="//linkedin.com/company/dial-a-lawyer-africa-by-ace-litigator" target="blank"><i class="fab fa-linkedin"></i></a>
                             <a href="//facebook.com/DialaLawyerAfrica"><i class="fab fa-facebook" target="blank"></i></a>
-                            <a href="//instagram.com/dialalawyerafrica"><i class="fab fa-twitter" target="blank"></i></a>
+                            <a href="//instagram.com/dialalawyerafrica"><i class="fab fa-x-twitter" target="blank"></i></a>
                             <a href="//twitter.com/dialalawyer_"><i class="fab fa-instagram" target="blank"></i></a>
                         </div>
                     </div>

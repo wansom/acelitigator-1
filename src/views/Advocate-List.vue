@@ -378,7 +378,6 @@ export default {
       filteredItems2: [],
       pagination: {
         onChange: (page) => {
-          console.log(page);
         },
         pageSize: 3,
       },
@@ -402,7 +401,6 @@ export default {
       });
       // //add new experience
       this.filtersAppied.push(element);
-      console.log(this.filtersAppied);
     },
     setActive: function (element) {
       if (this.filtersAppied.indexOf(element) > -1) {
@@ -410,7 +408,6 @@ export default {
       } else {
         this.filtersAppied.push(element);
       }
-      console.log(this.filtersAppied)
     },
     isActive: function (menuItem) {
       return this.filtersAppied.indexOf(menuItem) > -1;
