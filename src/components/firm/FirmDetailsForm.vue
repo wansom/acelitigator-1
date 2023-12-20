@@ -459,7 +459,8 @@ export default {
             team: values.team ?? "",
             description: values.description ?? "",
             email: values.email,
-            year_founded:values.year_founded?.format()?? "",
+            year_founded: typeof this.user.year_founded==='string'? this.user.year_founded==='string':values.year_founded?.format(),
+
             step: "general information",
             current: 2,
           };

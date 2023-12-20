@@ -1,18 +1,17 @@
 <template>
 <div>
-    <Header></Header>
+    <headerv-2></headerv-2>
     <forgot-password-form></forgot-password-form>
-    <Footer></Footer>
+    <footerv-2></footerv-2>
 </div>
 </template>
 
 <script>
-import Header from "../components/home/Header.vue";
-import Footer from "../components/home/Footer.vue";
-import Breadcrum from "../components/Widgets/Breadcrum.vue";
 import ForgotPasswordForm from '../components/forms/ForgotPasswordForm.vue';
+import Footerv2 from '../v2/Footerv2.vue';
+import Headerv2 from '../v2/Headerv2.vue';
 export default {
-    components:{Header,Footer,Breadcrum, ForgotPasswordForm}
+    components:{ForgotPasswordForm, Footerv2, Headerv2}
 
 }
 </script>
