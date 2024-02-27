@@ -508,7 +508,7 @@ export default {
         canvas.toBlob((blob) => {
           const storageRef = ref(
             storage,
-            "profilePictures/" + this.user.first_name
+            "profilePictures/" + this.user.id
           );
           const uploadTask = uploadBytesResumable(storageRef, blob);
 
@@ -539,7 +539,7 @@ export default {
       return false;
     },
     uploadProfilePicture({ file }) {
-      const storageRef = ref(storage, "profilePictures/" + file.name);
+      const storageRef = ref(storage, "profilePictures/" + this.user.id);
       const uploadTask = uploadBytesResumable(storageRef, file);
 
       uploadTask.on(

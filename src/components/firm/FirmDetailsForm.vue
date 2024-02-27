@@ -351,7 +351,7 @@ export default {
         canvas.toBlob((blob) => {
           const storageRef = ref(
             storage,
-            "logos/" + this.user.first_name
+            "logos/" + this.user.name
           );
           const uploadTask = uploadBytesResumable(storageRef, blob);
 
