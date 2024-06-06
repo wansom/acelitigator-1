@@ -185,7 +185,7 @@ router.beforeEach((to, from, next) => {
 	const requiresAdmin = to.matched.some(record => record.meta.requiresAdmin)
 	if (requiresAuth && !auth.currentUser) {
 	  next("/sign-in");
-	}  else if (requiresAuth && requiresAdmin && auth.currentUser.email !='director@acelitigator.com') {
+	}  else if (requiresAuth && requiresAdmin && auth.currentUser.email !='director@acelitigator.com'&& auth.currentUser.email !='admin@acelitigator.com') {
 		next('not-authorized') //redirect to not-authorized page
 	  }
 	else {

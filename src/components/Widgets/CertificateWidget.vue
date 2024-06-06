@@ -169,6 +169,24 @@
         </a-button>
       </div>
     </div>
+    <a-modal v-model="visible" title="Add Comments" on-ok="handleOk">
+          <template slot="footer">
+            <a-button key="back" @click="onClose"> Close </a-button>
+            <a-button
+            
+              key="submit"
+              type="primary"
+              :loading="loading"
+              @click="handleChange"
+            >
+              Submit
+            </a-button>
+            
+          </template>
+          <div>         
+            <input type="text" id="comment" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="add comment" v-model="comments" />
+        </div>
+        </a-modal>
   </a-card>
 </template>
 
@@ -188,7 +206,9 @@ export default {
       form: this.$form.createForm(this, { name: "coordinated" }),
       loading: false,
       visible: false,
+      comments:'',
       url: "",
+      approveStatus:''
     };
   },
   watch: {
@@ -206,38 +226,37 @@ export default {
     onClose() {
       this.visible = false;
     },
-    handleChange() {},
-    handlePrevious() {},
-    handleSubmit(status) {
+    handleChange() {
       this.loading = true;
       const payload = {
-        status: status == "approved" ? "active" : "declined",
+        status: this.approveStatus == "approved" ? "active" : "declined",
         date_joined:new Date(),
         subscription_date: new Date(
           new Date().setMonth(new Date().getMonth() + 1)
         ).toDateString(),
         notifications: arrayUnion({
-          notification: `your account has been activated successfully`,
+          notification: `your account has been updated successfully`,
           date: new Date(),
         }),
       };
       
       updateRequest(this.user.uid, payload).then(() => {
         router.push("/dashboard");
-        if (status == "declined") {
+        if (this.approveStatus == "declined") {
           this.$store.dispatch("sendMail", {
             name: this.user.first_name,
             email: this.user.email,
             subject: "Dial A Lawyer Account",
-            content:
-              "Your account request has been declined please contact admin for more information",
+            content: `Your account request has been declined for the following reason:${this.comments}`,
           });
         } else {
           this.$store.dispatch("sendMail", {
             name: this.user.first_name,
             email: this.user.email,
             subject: "Dial A Lawyer Account",
-            content: `Your account request has been activated successfully. You have an active subscription valid till ${new Date(
+            content: this.comments?`Your account request has been activated successfully. You have an active subscription valid till ${new Date(
+              new Date().setMonth(new Date().getMonth() + 1)
+            )}. Message from admin:${this.comments}`: `Your account request has been activated successfully. You have an active subscription valid till ${new Date(
               new Date().setMonth(new Date().getMonth() + 1)
             )}`,
           });
@@ -245,6 +264,12 @@ export default {
 
         this.loading = false;
       });
+    },
+    handlePrevious() {},
+    handleSubmit(status) {
+      this.visible=true
+      this.approveStatus=status
+
     },
   },
   computed: {},
